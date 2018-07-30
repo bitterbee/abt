@@ -1,0 +1,7 @@
+include ':app'
+
+include ':abtest'
+project(':abtest').projectDir = new File('module/abtest')
+
+include ':abtestuicreator'
+project(':abtestuicreator').projectDir = new File('module/abtestuicreator')

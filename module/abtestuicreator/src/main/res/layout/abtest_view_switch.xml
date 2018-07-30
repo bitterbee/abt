@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.netease.tools.abtestuicreator.view.MovableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_abtest_switchbtn_bg"
+    android:orientation="horizontal"
+    android:paddingBottom="2dp"
+    android:paddingLeft="4dp"
+    android:paddingRight="2dp"
+    android:paddingTop="2dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="编辑开关"
+        android:textColor="#ffffff"/>
+
+    <CheckBox
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+</com.netease.tools.abtestuicreator.view.MovableLayout>
