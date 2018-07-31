@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
 
-import com.netease.tools.abtestuicreator.R;
+import com.netease.libs.abtestbase.model.UIProp;
 
 /**
  * Created by zyl06 on 2018/7/30.
@@ -38,7 +38,7 @@ public class TextStringEditAttrView extends EditAttrView<String> {
     }
 
     private void init() {
-        mName.setText(R.string.abtest_text_key);
+        mName.setText(UIProp.PROP_TEXT_STRING);
     }
 
     @Override

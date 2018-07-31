@@ -17,14 +17,14 @@ public class ColorUtil {
         String greenHex = To00Hex(g);
         String redHex = To00Hex(r);
 
-        // hexBinary value: aabbggrr
-        StringBuilder str = new StringBuilder("#");
-        str.append(alphaHex);
-        str.append(blueHex);
-        str.append(greenHex);
-        str.append(redHex );
+        // hexBinary value: aarrggbb
+        StringBuilder sb = new StringBuilder("#");
+        sb.append(alphaHex);
+        sb.append(redHex);
+        sb.append(greenHex);
+        sb.append(blueHex);
 
-        return str.toString();
+        return sb.toString();
     }
 
     private static String To00Hex(int value) {

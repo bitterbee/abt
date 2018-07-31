@@ -2,6 +2,8 @@ package com.netease.lib.abtest.ui.attr;
 
 import android.text.TextUtils;
 
+import com.netease.libs.abtestbase.model.UIProp;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,15 +11,12 @@ import java.util.Map;
  * Created by zyl06 on 2018/7/29.
  */
 
-public class SkinAttrFactory {
-    private static final String RES_TYPE_NAME_TEXT_COLOR = "color";
-    private static final String RES_TYPE_NAME_TEXT_STRING = "string";
-    private static final String RES_TYPE_NAME_DRAWABLE = "drawable";
+public class UIAttrFactory {
 
     private static final Map<String, AttrSetter> ATTR_MAP = new HashMap<String, AttrSetter>() {
         {
-            put("text_color", new TextColorAttr());
-            put("text_string", new TextStringAttr());
+            put(UIProp.PROP_TEXT_COLOR, new TextColorAttr());
+            put(UIProp.PROP_TEXT_STRING, new TextStringAttr());
         }
     };
 

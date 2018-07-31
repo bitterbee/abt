@@ -2,6 +2,8 @@ package com.netease.demo.abtest;
 
 import android.app.Application;
 
+import com.netease.lib.abtest.ABTestConfig;
+import com.netease.libs.abtestbase.ABTestFileUtil;
 import com.netease.tools.abtestuicreator.ABTestMonitor;
 
 /**
@@ -15,5 +17,6 @@ public class DemoApplication extends Application {
         super.onCreate();
 
         ABTestMonitor.getInstance().init(this);
+        ABTestConfig.getInstance().init(this, null, ABTestFileUtil.readUiCases(this));
     }
 }

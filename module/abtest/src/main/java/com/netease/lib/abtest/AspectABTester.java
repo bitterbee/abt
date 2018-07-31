@@ -1,6 +1,6 @@
 package com.netease.lib.abtest;
 
-import com.netease.lib.abtest.util.ABLog;
+import com.netease.libs.abtestbase.ABLog;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;

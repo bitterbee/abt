@@ -1,4 +1,4 @@
-package com.netease.lib.abtest.model;
+package com.netease.libs.abtestbase.model;
 
 import java.util.LinkedList;
 import java.util.List;

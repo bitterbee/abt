@@ -1,7 +1,6 @@
-package com.netease.lib.abtest.util;
+package com.netease.libs.abtestbase;
 
 import android.util.Log;
-import com.netease.lib.abtest.BuildConfig;
 
 /**
  * Created by zyl06 on 2018/7/26.

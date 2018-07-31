@@ -5,10 +5,10 @@ import android.text.TextUtils;
 
 import com.netease.lib.abtest.anno.ABTestInitMethodAnnotation;
 import com.netease.lib.abtest.anno.ABTesterAnnotation;
-import com.netease.lib.abtest.model.ABTestItem;
 import com.netease.lib.abtest.model.ABTestCase;
-import com.netease.lib.abtest.util.ABLog;
+import com.netease.lib.abtest.model.ABTestItem;
 import com.netease.lib.abtest.util.ObjWeakRef;
+import com.netease.libs.abtestbase.ABLog;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

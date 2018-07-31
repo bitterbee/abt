@@ -10,6 +10,7 @@ import android.text.Editable;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.netease.libs.abtestbase.model.UIProp;
 import com.netease.tools.abtestuicreator.R;
 import com.netease.tools.abtestuicreator.util.ColorUtil;
 
@@ -40,7 +41,7 @@ public class BgColorEditAttrView extends EditAttrView<Integer> {
     }
 
     private void init() {
-        mName.setText(R.string.abtest_bg_color_key);
+        mName.setText(UIProp.PROP_BG_COLOR);
     }
 
     @Override

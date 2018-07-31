@@ -1,5 +1,8 @@
 package com.netease.lib.abtest.model;
 
+import com.netease.libs.abtestbase.model.ABTestUICase;
+import com.netease.libs.abtestbase.model.BaseModel;
+
 import java.util.LinkedList;
 import java.util.List;
 

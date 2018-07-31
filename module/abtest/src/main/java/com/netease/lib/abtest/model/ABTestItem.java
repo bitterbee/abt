@@ -1,5 +1,7 @@
 package com.netease.lib.abtest.model;
 
+import com.netease.libs.abtestbase.model.BaseModel;
+
 /**
  * Created by zyl06 on 27/07/2017.
  */

@@ -2,7 +2,7 @@ package com.netease.lib.abtest.ui.attr;
 
 import android.view.View;
 
-import com.netease.lib.abtest.model.UIProp;
+import com.netease.libs.abtestbase.model.UIProp;
 
 /**
  * Created by zyl06 on 2018/7/29.

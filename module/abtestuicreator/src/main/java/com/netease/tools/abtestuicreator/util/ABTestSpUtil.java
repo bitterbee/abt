@@ -2,13 +2,12 @@ package com.netease.tools.abtestuicreator.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.os.Environment;
+import android.text.TextUtils;
 
 import com.netease.lib.abtest.util.CollectionUtil;
 import com.netease.libs.abtestbase.JsonUtil;
+import com.netease.libs.abtestbase.model.ABTestUICase;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,14 +19,15 @@ import java.util.Map;
 public class ABTestSpUtil {
 
     public static final String SP_NAME = "ABTestUICreator";
-    public static synchronized void put(Context context, String path, Map<String, ?> jsonObj) {
-        if (CollectionUtil.isEmpty(jsonObj)) {
+    public static synchronized void put(Context context, String path, ABTestUICase uiCase) {
+        if (uiCase == null || TextUtils.isEmpty(uiCase.getViewPath()) ||
+                CollectionUtil.isEmpty(uiCase.getUiProps())) {
             return;
         }
 
         SharedPreferences sp = context.getSharedPreferences(SP_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
-        editor.putString(path, JsonUtil.toJSONString(jsonObj));
+        editor.putString(path, JsonUtil.toJSONString(uiCase));
         editor.apply();
     }
 
@@ -38,35 +38,18 @@ public class ABTestSpUtil {
         editor.apply();
     }
 
-    public static synchronized List<Map<String, ?>> getAll(Context context) {
-        List<Map<String, ?>> result = new ArrayList<>();
+    public static synchronized List<ABTestUICase> getAll(Context context) {
+        List<ABTestUICase> result = new ArrayList<>();
 
         SharedPreferences sp = context.getSharedPreferences(SP_NAME, Context.MODE_PRIVATE);
         for (Map.Entry<String, ?> entry : sp.getAll().entrySet()) {
             String json = (String) entry.getValue();
-            Map map = JsonUtil.parseMap(json);
-            if (map != null) {
-                result.add(map);
+            ABTestUICase uiCase = JsonUtil.parse(json, ABTestUICase.class);
+            if (uiCase != null) {
+                result.add(uiCase);
             }
         }
 
         return result;
-    }
-
-    public static synchronized boolean saveToDisk(Context context) {
-        List<Map<String, ?>> all = getAll(context);
-        File downloadDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
-        if (!downloadDir.exists()) {
-            downloadDir.mkdirs();
-        }
-        File file = new File(downloadDir, "abtest_ui.txt");
-        try {
-            FileUtil.writeToFile(file.getAbsolutePath(), JsonUtil.toJSONString(all));
-            return true;
-        } catch (IOException e) {
-            LogUtil.e(e.toString());
-        }
-
-        return false;
     }
 }

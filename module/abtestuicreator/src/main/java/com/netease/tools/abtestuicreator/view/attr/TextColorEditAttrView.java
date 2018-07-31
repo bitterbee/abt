@@ -10,6 +10,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
 
+import com.netease.libs.abtestbase.model.UIProp;
 import com.netease.tools.abtestuicreator.R;
 import com.netease.tools.abtestuicreator.util.ColorUtil;
 
@@ -41,7 +42,7 @@ public class TextColorEditAttrView extends EditAttrView<Integer> {
     }
 
     private void init() {
-        mName.setText(R.string.abtest_text_color_key);
+        mName.setText(UIProp.PROP_TEXT_COLOR);
     }
 
     @Override

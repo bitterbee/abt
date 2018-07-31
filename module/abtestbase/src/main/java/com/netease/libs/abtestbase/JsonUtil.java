@@ -3,8 +3,12 @@ package com.netease.libs.abtestbase;
 import android.text.TextUtils;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.internal.LinkedTreeMap;
+import com.google.gson.reflect.TypeToken;
+import com.netease.libs.abtestbase.model.ABTestUICase;
 
-import java.util.Map;
+import java.util.List;
 
 /**
  * Created by zyl06 on 2018/7/26.
@@ -17,10 +21,27 @@ public class JsonUtil {
         return GSON.toJson(obj);
     }
 
-    public static Map parseMap(String json) {
-        if (TextUtils.isEmpty(json)) {
-            return null;
+    public static <T> T parse(String json, Class<T> type) {
+        try {
+            if (!TextUtils.isEmpty(json)) {
+                return GSON.fromJson(json, type);
+            }
+        } catch (JsonSyntaxException e) {
+            ABLog.e(e);
         }
-        return GSON.fromJson(json, Map.class);
+
+        return null;
+    }
+
+    public static <T> List<T> parseArray(String json, Class<T> type) {
+        try {
+            if (!TextUtils.isEmpty(json)) {
+                return GSON.fromJson(json, new TypeToken<List<ABTestUICase>>(){}.getType());
+            }
+        } catch (JsonSyntaxException e) {
+            ABLog.e(e);
+        }
+
+        return null;
     }
 }

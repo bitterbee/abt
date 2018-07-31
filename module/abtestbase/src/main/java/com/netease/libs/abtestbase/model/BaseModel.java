@@ -1,4 +1,4 @@
-package com.netease.lib.abtest.model;
+package com.netease.libs.abtestbase.model;
 
 import java.io.Serializable;
 

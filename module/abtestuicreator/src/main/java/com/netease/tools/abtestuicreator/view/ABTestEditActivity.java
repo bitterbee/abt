@@ -10,16 +10,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.netease.libs.abtestbase.ABTestFileUtil;
 import com.netease.libs.abtestbase.ViewPathUtil;
+import com.netease.libs.abtestbase.model.ABTestUICase;
+import com.netease.libs.abtestbase.model.UIProp;
 import com.netease.tools.abtestuicreator.R;
 import com.netease.tools.abtestuicreator.util.ABTestSpUtil;
 import com.netease.tools.abtestuicreator.util.ViewUtil;
 import com.netease.tools.abtestuicreator.view.attr.EditAttrView;
 import com.netease.tools.abtestuicreator.view.attr.ViewAttrMap;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by zyl06 on 2018/7/30.
@@ -89,19 +91,36 @@ public class ABTestEditActivity extends AppCompatActivity implements View.OnClic
     }
 
     private void onConfirmFinish() {
+        ABTestUICase uiCase = new ABTestUICase();
+        uiCase.setUiProps(new ArrayList<UIProp>());
 
-        Map<String, Object> data = new HashMap<>();
         int count = mAttrsContainer.getChildCount();
         for (int i=0; i<count; i++) {
             EditAttrView view = (EditAttrView) mAttrsContainer.getChildAt(i);
-            Object value = view.getNewValue();
-            if (value != null) {
-                data.put(view.getName(), view.getNewValue());
+            if (view.getId() == R.id.attr_path) {
+                uiCase.setViewPath(view.getValue());
+            } else {
+                Object value = view.getNewValue();
+                if (value != null) {
+                    UIProp prop = new UIProp();
+                    prop.name = view.getName();
+
+                    if (value instanceof Integer) {
+                        prop.intValue = (int) value;
+                    } else if (value instanceof Float) {
+                        prop.floatValue = (float) value;
+                    } else {
+                        prop.value = value;
+                    }
+
+                    uiCase.getUiProps().add(prop);
+                }
             }
         }
 
-        ABTestSpUtil.put(this, mViewPath, data);
-        ABTestSpUtil.saveToDisk(this);
+        ABTestSpUtil.put(this, mViewPath, uiCase);
+        List<ABTestUICase> allData = ABTestSpUtil.getAll(this);
+        ABTestFileUtil.writeUiCases(this, allData);
 
         finish();
     }
