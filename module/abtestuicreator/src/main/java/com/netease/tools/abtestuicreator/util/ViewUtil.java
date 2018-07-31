@@ -1,5 +1,7 @@
 package com.netease.tools.abtestuicreator.util;
 
+import android.content.Context;
+import android.content.res.Resources;
 import android.view.View;
 
 import com.netease.tools.abtestuicreator.R;
@@ -19,5 +21,16 @@ public class ViewUtil {
         if (view == null)
             return;
         view.setTag(R.string.abtest_ignore_tag, new Object());
+    }
+
+    public static String getIdName(View view) {
+        Context context = view.getContext();
+        String result = null;
+        try {
+            result = context.getResources().getResourceEntryName(view.getId());
+        } catch (Resources.NotFoundException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 }

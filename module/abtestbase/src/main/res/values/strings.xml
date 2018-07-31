@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ABTestBase</string>
+
+    <string name="track_path_tag">track_path_tag</string>
+</resources>

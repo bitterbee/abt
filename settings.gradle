@@ -1,7 +1,10 @@
 include ':app'
 
 include ':abtest'
-project(':abtest').projectDir = new File('module/abtest')
+project(':abtest').projectDir = file('module/abtest')
 
 include ':abtestuicreator'
-project(':abtestuicreator').projectDir = new File('module/abtestuicreator')
+project(':abtestuicreator').projectDir = file('module/abtestuicreator')
+
+include ':abtestbase'
+project(':abtestbase').projectDir = file('module/abtestbase')

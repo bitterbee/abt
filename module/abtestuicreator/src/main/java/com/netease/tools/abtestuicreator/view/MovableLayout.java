@@ -10,9 +10,12 @@ import android.widget.LinearLayout;
 
 /**
  * Created by zyl06 on 2018/7/30.
+ * from xue
  */
 
-public class MovableLayout extends LinearLayout implements View.OnLongClickListener, View.OnClickListener {
+public class MovableLayout extends LinearLayout
+        implements View.OnLongClickListener, View.OnClickListener {
+
     private IViewDragCallback mDraggedCallback;
     private float mDownX, mDownY;
     private boolean mIsMovable = false;
@@ -29,7 +32,6 @@ public class MovableLayout extends LinearLayout implements View.OnLongClickListe
     public void onClick(View v) {
 
     }
-
 
     @Override
     protected void onFinishInflate() {

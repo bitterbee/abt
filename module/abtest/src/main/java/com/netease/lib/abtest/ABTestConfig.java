@@ -8,8 +8,8 @@ import com.netease.lib.abtest.model.ABTestConfigModel;
 import com.netease.lib.abtest.model.ABTestItem;
 import com.netease.lib.abtest.model.ABTestUICase;
 import com.netease.lib.abtest.ui.ABTestActivityLiftcycleCallbackImpl;
-import com.netease.lib.abtest.util.JsonUtil;
 import com.netease.lib.abtest.util.ObjWeakRef;
+import com.netease.libs.abtestbase.JsonUtil;
 
 import java.util.ArrayList;
 import java.util.HashSet;

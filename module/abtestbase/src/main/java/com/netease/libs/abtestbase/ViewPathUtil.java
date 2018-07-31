@@ -1,12 +1,9 @@
-package com.netease.lib.abtest.ui;
+package com.netease.libs.abtestbase;
 
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
-
-import com.netease.lib.abtest.R;
-import com.netease.lib.abtest.util.JsonUtil;
 
 import java.util.ArrayList;
 import java.util.List;

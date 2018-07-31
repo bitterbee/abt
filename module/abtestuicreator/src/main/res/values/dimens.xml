@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="abtest_text_size_l">14sp</dimen>
+    <dimen name="abtest_text_size_m">12sp</dimen>
+    <dimen name="abtest_text_size_s">11sp</dimen>
+
+    <dimen name="abtest_renderview_h">200dp</dimen>
+    <dimen name="abtest_attr_view_h">40dp</dimen>
+
+
+    <dimen name="edit_item_margin">5dp</dimen>
+
+</resources>

@@ -11,6 +11,7 @@ import com.netease.lib.abtest.model.ABTestUICase;
 import com.netease.lib.abtest.model.UIProp;
 import com.netease.lib.abtest.ui.attr.AttrSetter;
 import com.netease.lib.abtest.ui.attr.SkinAttrFactory;
+import com.netease.libs.abtestbase.ViewPathUtil;
 
 import java.util.HashMap;
 import java.util.List;

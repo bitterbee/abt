@@ -27,8 +27,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.google.code.gson:gson:2.8.5'
     provided 'org.aspectj:aspectjrt:1.8.9'
+    implementation project(':abtestbase')
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

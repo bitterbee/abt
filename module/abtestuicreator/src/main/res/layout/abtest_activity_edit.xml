@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.netease.tools.abtestuicreator.view.RenderView
+            android:id="@+id/view_render"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/abtest_renderview_h"/>
+
+        <LinearLayout
+            android:id="@+id/ll_attr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.netease.tools.abtestuicreator.view.attr.EditAttrView
+                android:id="@+id/attr_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/abtest_attr_view_h"
+                app:editable="false"
+                app:name="@string/abtest_id_key"/>
+
+            <com.netease.tools.abtestuicreator.view.attr.EditAttrView
+                android:id="@+id/attr_path"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/abtest_attr_view_h"
+                app:editable="false"
+                app:name="@string/abtest_path_key"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/abtest_cancel"
+                android:textColor="@color/gray_22"/>
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/abtest_confirm"
+                android:textColor="@color/red"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

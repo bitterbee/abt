@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">ABTestUICreator</string>
+    
+    <string name="abtest_id_key">id</string>
+    <string name="abtest_path_key">path</string>
+
+    <string name="abtest_bg_color_key">背景颜色</string>
+    <string name="abtest_bg_img_key">背景图片</string>
+    <string name="abtest_text_key">文本</string>
+    <string name="abtest_text_color_key">文本颜色</string>
+
+    <string name="abtest_edit_attr_value_hint">请输入值</string>
+
+    <string name="abtest_confirm">确定</string>
+    <string name="abtest_cancel">取消</string>
+
 </resources>
