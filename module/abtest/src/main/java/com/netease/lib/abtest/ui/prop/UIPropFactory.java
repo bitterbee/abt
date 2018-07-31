@@ -15,8 +15,8 @@ public class UIPropFactory {
 
     private static final Map<String, PropSetter> ATTR_MAP = new HashMap<String, PropSetter>() {
         {
-            put(UIProp.PROP_TEXT_COLOR, new TextColorProp());
-            put(UIProp.PROP_TEXT_STRING, new TextStringProp());
+            put(UIProp.PROP_TEXT_COLOR, new TextColorPropSetter());
+            put(UIProp.PROP_TEXT_STRING, new TextStringPropSetter());
         }
     };
 

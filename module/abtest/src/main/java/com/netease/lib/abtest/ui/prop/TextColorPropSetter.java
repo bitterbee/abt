@@ -9,15 +9,15 @@ import com.netease.libs.abtestbase.model.UIProp;
 /**
  * Created by zyl06 on 2018/7/29.
  */
-public class TextStringProp implements PropSetter {
+
+public class TextColorPropSetter implements PropSetter {
 
     @Override
     public void apply(View view, UIProp prop) {
-        if (view instanceof TextView && prop.value instanceof CharSequence) {
+        if (view instanceof TextView) {
             TextView tv = (TextView) view;
-
-            ABLog.i("TextStringProp");
-            tv.setText((CharSequence) prop.value);
+            ABLog.i("TextColorPropSetter");
+            tv.setTextColor(prop.intValue);
         }
     }
 }
