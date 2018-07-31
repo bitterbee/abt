@@ -9,7 +9,7 @@
     <string name="abtest_text_key">文本</string>
     <string name="abtest_text_color_key">文本颜色</string>
 
-    <string name="abtest_edit_attr_value_hint">请输入值</string>
+    <string name="abtest_edit_prop_value_hint">请输入值</string>
 
     <string name="abtest_confirm">确定</string>
     <string name="abtest_cancel">取消</string>

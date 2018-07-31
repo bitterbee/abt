@@ -7,8 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.netease.lib.abtest.R;
-import com.netease.lib.abtest.ui.attr.AttrSetter;
-import com.netease.lib.abtest.ui.attr.UIAttrFactory;
+import com.netease.lib.abtest.ui.prop.PropSetter;
+import com.netease.lib.abtest.ui.prop.UIPropFactory;
 import com.netease.libs.abtestbase.ViewPathUtil;
 import com.netease.libs.abtestbase.model.ABTestUICase;
 import com.netease.libs.abtestbase.model.UIProp;
@@ -23,7 +23,7 @@ import java.util.Map;
 public class ABTestActivityLiftcycleCallbackImpl implements Application.ActivityLifecycleCallbacks {
 
     private Map<String, ABTestUICase> mUICases = new HashMap<>();
-    private UIAttrFactory mSkinAttrFactory = new UIAttrFactory();
+    private UIPropFactory mSkinAttrFactory = new UIPropFactory();
 
     public ABTestActivityLiftcycleCallbackImpl(List<ABTestUICase> uiCases) {
         if (uiCases != null) {
@@ -109,9 +109,9 @@ public class ABTestActivityLiftcycleCallbackImpl implements Application.Activity
             }
 
             for (UIProp prop : uiCase.getUiProps()) {
-                AttrSetter attr = mSkinAttrFactory.getAttr(prop.name);
-                if (attr != null) {
-                    attr.apply(v, prop);
+                PropSetter setter = mSkinAttrFactory.getPropSetter(prop.name);
+                if (setter != null) {
+                    setter.apply(v, prop);
                 }
             }
         } finally {

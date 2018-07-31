@@ -17,8 +17,8 @@ import com.netease.libs.abtestbase.model.UIProp;
 import com.netease.tools.abtestuicreator.R;
 import com.netease.tools.abtestuicreator.util.ABTestSpUtil;
 import com.netease.tools.abtestuicreator.util.ViewUtil;
-import com.netease.tools.abtestuicreator.view.attr.EditAttrView;
-import com.netease.tools.abtestuicreator.view.attr.ViewAttrMap;
+import com.netease.tools.abtestuicreator.view.prop.EditPropView;
+import com.netease.tools.abtestuicreator.view.prop.ViewPropMap;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,10 +58,10 @@ public class ABTestEditActivity extends AppCompatActivity implements View.OnClic
         RenderView renderView = findViewById(R.id.view_render);
         renderView.bindView(sView);
 
-        EditAttrView vId = findViewById(R.id.attr_id);
+        EditPropView vId = findViewById(R.id.attr_id);
         vId.setValue(ViewUtil.getIdName(sView));
 
-        EditAttrView vPath = findViewById(R.id.attr_path);
+        EditPropView vPath = findViewById(R.id.attr_path);
         mViewPath = ViewPathUtil.getViewPath(sView);
         vPath.setValue(mViewPath);
 
@@ -69,9 +69,9 @@ public class ABTestEditActivity extends AppCompatActivity implements View.OnClic
         findViewById(R.id.btn_cancel).setOnClickListener(this);
 
         mAttrsContainer = findViewById(R.id.ll_attr);
-        List<EditAttrView> editViews = ViewAttrMap.getEditAttrViews(this, sView);
+        List<EditPropView> editViews = ViewPropMap.getEditPropViews(this, sView);
         int minHeight = getResources().getDimensionPixelSize(R.dimen.abtest_attr_view_h);
-        for (EditAttrView v : editViews) {
+        for (EditPropView v : editViews) {
             v.bindView(sView);
             mAttrsContainer.addView(v, ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -96,7 +96,7 @@ public class ABTestEditActivity extends AppCompatActivity implements View.OnClic
 
         int count = mAttrsContainer.getChildCount();
         for (int i=0; i<count; i++) {
-            EditAttrView view = (EditAttrView) mAttrsContainer.getChildAt(i);
+            EditPropView view = (EditPropView) mAttrsContainer.getChildAt(i);
             if (view.getId() == R.id.attr_path) {
                 uiCase.setViewPath(view.getValue());
             } else {
@@ -129,7 +129,7 @@ public class ABTestEditActivity extends AppCompatActivity implements View.OnClic
         ABTestSpUtil.remove(this, mViewPath);
         int count = mAttrsContainer.getChildCount();
         for (int i=0; i<count; i++) {
-            EditAttrView view = (EditAttrView) mAttrsContainer.getChildAt(i);
+            EditPropView view = (EditPropView) mAttrsContainer.getChildAt(i);
             view.restoreValue();
         }
         finish();

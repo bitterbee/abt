@@ -1,4 +1,4 @@
-package com.netease.tools.abtestuicreator.view.attr;
+package com.netease.tools.abtestuicreator.view.prop;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -11,31 +11,30 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.netease.libs.abtestbase.model.UIProp;
-import com.netease.tools.abtestuicreator.R;
 import com.netease.tools.abtestuicreator.util.ColorUtil;
 
 /**
  * Created by zyl06 on 2018/7/30.
  */
-public class BgColorEditAttrView extends EditAttrView<Integer> {
+public class BgColorEditPropView extends EditPropView<Integer> {
 
     private Drawable mBgDrawable;
 
-    public BgColorEditAttrView(Context context) {
+    public BgColorEditPropView(Context context) {
         this(context, null);
     }
 
-    public BgColorEditAttrView(Context context, AttributeSet attrs) {
+    public BgColorEditPropView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public BgColorEditAttrView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public BgColorEditPropView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public BgColorEditAttrView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public BgColorEditPropView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init();
     }

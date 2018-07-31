@@ -19,7 +19,7 @@
         style="@style/track_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/abtest_edit_attr_value_hint"
+        android:hint="@string/abtest_edit_prop_value_hint"
         android:singleLine="false"/>
 
 </LinearLayout>

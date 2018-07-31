@@ -1,4 +1,4 @@
-package com.netease.tools.abtestuicreator.view.attr;
+package com.netease.tools.abtestuicreator.view.prop;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -11,32 +11,31 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.netease.libs.abtestbase.model.UIProp;
-import com.netease.tools.abtestuicreator.R;
 import com.netease.tools.abtestuicreator.util.ColorUtil;
 
 /**
  * Created by zyl06 on 2018/7/30.
  */
 
-public class TextColorEditAttrView extends EditAttrView<Integer> {
+public class TextColorEditPropView extends EditPropView<Integer> {
 
     private @ColorInt Integer mOriTextColor;
 
-    public TextColorEditAttrView(Context context) {
+    public TextColorEditPropView(Context context) {
         this(context, null);
     }
 
-    public TextColorEditAttrView(Context context, AttributeSet attrs) {
+    public TextColorEditPropView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public TextColorEditAttrView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public TextColorEditPropView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public TextColorEditAttrView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public TextColorEditPropView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init();
     }

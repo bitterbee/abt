@@ -1,4 +1,4 @@
-package com.netease.tools.abtestuicreator.view.attr;
+package com.netease.tools.abtestuicreator.view.prop;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -23,7 +23,7 @@ import java.lang.ref.WeakReference;
  * Created by zyl06 on 2018/7/30.
  */
 
-public class EditAttrView<T> extends FrameLayout implements TextWatcher {
+public class EditPropView<T> extends FrameLayout implements TextWatcher {
 
     protected TextView mName;
     protected EditText mValue;
@@ -32,21 +32,21 @@ public class EditAttrView<T> extends FrameLayout implements TextWatcher {
 
     protected WeakReference<View> mViewRef;
 
-    public EditAttrView(Context context) {
+    public EditPropView(Context context) {
         this(context, null);
     }
 
-    public EditAttrView(Context context, AttributeSet attrs) {
+    public EditPropView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public EditAttrView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public EditPropView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public EditAttrView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public EditPropView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs, defStyleAttr);
     }
@@ -57,14 +57,14 @@ public class EditAttrView<T> extends FrameLayout implements TextWatcher {
         mName = (TextView) content.findViewById(R.id.tv_track_edit_attr_name);
         mValue = (EditText) content.findViewById(R.id.et_track_edit_attr_value);
 
-        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.EditAttrView);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.EditPropView);
         String name = "null";
         String value;
         boolean isEditable = false;
         try {
-            name = typedArray.getString(R.styleable.EditAttrView_name);
-            value = typedArray.getString(R.styleable.EditAttrView_value);
-            isEditable = typedArray.getBoolean(R.styleable.EditAttrView_editable, true);
+            name = typedArray.getString(R.styleable.EditPropView_name);
+            value = typedArray.getString(R.styleable.EditPropView_value);
+            isEditable = typedArray.getBoolean(R.styleable.EditPropView_editable, true);
         } finally {
             typedArray.recycle();
         }

@@ -1,4 +1,4 @@
-package com.netease.tools.abtestuicreator.view.attr;
+package com.netease.tools.abtestuicreator.view.prop;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -14,25 +14,25 @@ import com.netease.libs.abtestbase.model.UIProp;
  * Created by zyl06 on 2018/7/30.
  */
 
-public class TextStringEditAttrView extends EditAttrView<String> {
+public class TextStringEditPropView extends EditPropView<String> {
 
     private CharSequence mOriText;
 
-    public TextStringEditAttrView(Context context) {
+    public TextStringEditPropView(Context context) {
         this(context, null);
     }
 
-    public TextStringEditAttrView(Context context, AttributeSet attrs) {
+    public TextStringEditPropView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public TextStringEditAttrView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public TextStringEditPropView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public TextStringEditAttrView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public TextStringEditPropView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init();
     }

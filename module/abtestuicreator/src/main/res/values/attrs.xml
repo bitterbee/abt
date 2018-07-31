@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="EditAttrView">
+    <declare-styleable name="EditPropView">
         <attr name="name" format="string" />
         <attr name="value" format="string" />
         <attr name="editable" format="boolean" />

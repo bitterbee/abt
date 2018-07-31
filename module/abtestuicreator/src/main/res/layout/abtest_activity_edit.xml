@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.netease.tools.abtestuicreator.view.attr.EditAttrView
+            <com.netease.tools.abtestuicreator.view.prop.EditPropView
                 android:id="@+id/attr_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
                 app:editable="false"
                 app:name="@string/abtest_id_key"/>
 
-            <com.netease.tools.abtestuicreator.view.attr.EditAttrView
+            <com.netease.tools.abtestuicreator.view.prop.EditPropView
                 android:id="@+id/attr_path"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
