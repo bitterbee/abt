@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Build;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -73,6 +74,11 @@ public class EditPropView<T> extends FrameLayout implements TextWatcher {
         mValue.setText(value);
         mValue.setEnabled(isEditable);
         mValue.addTextChangedListener(this);
+
+        ViewPropAnno anno = getClass().getAnnotation(ViewPropAnno.class);
+        if (anno != null && TextUtils.isEmpty(name)) {
+            mName.setText(anno.name());
+        }
     }
 
     @Override

@@ -1,6 +1,4 @@
-package com.netease.tools.abtestuicreator.util;
-
-import com.netease.tools.abtestuicreator.util.LogUtil;
+package com.netease.libs.abtestbase;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -40,13 +38,13 @@ public class RefInvoker {
         try {
             return m.invoke(target, args);
         } catch (IllegalAccessException e) {
-            LogUtil.e(e.toString());
+            ABLog.e(e);
         } catch (IllegalArgumentException e) {
-            LogUtil.e(e.toString());
+            ABLog.e(e);
         } catch (InvocationTargetException e) {
-            LogUtil.e(e.toString());
+            ABLog.e(e);
         } catch (Exception e) {
-            LogUtil.e(e.toString());
+            ABLog.e(e);
         }
         return null;
     }

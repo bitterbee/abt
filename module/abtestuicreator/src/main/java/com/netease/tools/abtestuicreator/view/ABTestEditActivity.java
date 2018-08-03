@@ -55,20 +55,20 @@ public class ABTestEditActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.abtest_activity_edit);
 
-        RenderView renderView = findViewById(R.id.view_render);
+        RenderView renderView = (RenderView) findViewById(R.id.view_render);
         renderView.bindView(sView);
 
-        EditPropView vId = findViewById(R.id.attr_id);
+        EditPropView vId = (EditPropView) findViewById(R.id.attr_id);
         vId.setValue(ViewUtil.getIdName(sView));
 
-        EditPropView vPath = findViewById(R.id.attr_path);
+        EditPropView vPath = (EditPropView) findViewById(R.id.attr_path);
         mViewPath = ViewPathUtil.getViewPath(sView);
         vPath.setValue(mViewPath);
 
         findViewById(R.id.btn_confirm).setOnClickListener(this);
         findViewById(R.id.btn_cancel).setOnClickListener(this);
 
-        mAttrsContainer = findViewById(R.id.ll_attr);
+        mAttrsContainer = (LinearLayout) findViewById(R.id.ll_attr);
         List<EditPropView> editViews = ViewPropMap.getEditPropViews(this, sView);
         int minHeight = getResources().getDimensionPixelSize(R.dimen.abtest_attr_view_h);
         for (EditPropView v : editViews) {

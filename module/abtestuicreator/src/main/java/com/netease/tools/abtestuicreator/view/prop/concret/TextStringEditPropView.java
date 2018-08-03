@@ -1,4 +1,4 @@
-package com.netease.tools.abtestuicreator.view.prop;
+package com.netease.tools.abtestuicreator.view.prop.concret;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -9,11 +9,13 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.netease.libs.abtestbase.model.UIProp;
+import com.netease.tools.abtestuicreator.view.prop.EditPropView;
+import com.netease.tools.abtestuicreator.view.prop.ViewPropAnno;
 
 /**
  * Created by zyl06 on 2018/7/30.
  */
-
+@ViewPropAnno(viewType = TextView.class, name = UIProp.PROP_TEXT_STRING)
 public class TextStringEditPropView extends EditPropView<String> {
 
     private CharSequence mOriText;
@@ -28,17 +30,11 @@ public class TextStringEditPropView extends EditPropView<String> {
 
     public TextStringEditPropView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public TextStringEditPropView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        init();
-    }
-
-    private void init() {
-        mName.setText(UIProp.PROP_TEXT_STRING);
     }
 
     @Override

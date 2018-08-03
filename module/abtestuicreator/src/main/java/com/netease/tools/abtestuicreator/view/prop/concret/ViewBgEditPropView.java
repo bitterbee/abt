@@ -1,4 +1,4 @@
-package com.netease.tools.abtestuicreator.view.prop;
+package com.netease.tools.abtestuicreator.view.prop.concret;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -10,37 +10,35 @@ import android.text.Editable;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.netease.libs.abtestbase.ABTestResUtil;
 import com.netease.libs.abtestbase.model.UIProp;
 import com.netease.tools.abtestuicreator.util.ColorUtil;
+import com.netease.tools.abtestuicreator.view.prop.EditPropView;
+import com.netease.tools.abtestuicreator.view.prop.ViewPropAnno;
 
 /**
  * Created by zyl06 on 2018/7/30.
  */
-public class BgColorEditPropView extends EditPropView<Integer> {
+@ViewPropAnno(name = UIProp.PROP_BG)
+public class ViewBgEditPropView extends EditPropView {
 
     private Drawable mBgDrawable;
 
-    public BgColorEditPropView(Context context) {
+    public ViewBgEditPropView(Context context) {
         this(context, null);
     }
 
-    public BgColorEditPropView(Context context, AttributeSet attrs) {
+    public ViewBgEditPropView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public BgColorEditPropView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public ViewBgEditPropView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public BgColorEditPropView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public ViewBgEditPropView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        init();
-    }
-
-    private void init() {
-        mName.setText(UIProp.PROP_BG_COLOR);
     }
 
     @Override
@@ -49,8 +47,17 @@ public class BgColorEditPropView extends EditPropView<Integer> {
 
         String str = value.toString();
         try {
-            mNewValue = Color.parseColor(str);
-            v.setBackgroundColor(mNewValue);
+            if (str.startsWith("#")) {
+                mNewValue = Color.parseColor(str);
+                v.setBackgroundColor((int) mNewValue);
+            } else {
+                int resId = ABTestResUtil.getId(v.getContext(), str);
+                if (resId != ABTestResUtil.NO_RES) {
+                    mNewValue = str;
+                    v.setBackgroundResource(resId);
+                }
+            }
+
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }

@@ -25,7 +25,11 @@ public class UIProp extends BaseModel {
      */
     public float floatValue;
 
-    public static String PROP_BG_COLOR = "bgColor";
-    public static String PROP_TEXT_STRING = "text";
-    public static String PROP_TEXT_COLOR = "textColor";
+    public static final String PROP_BG = "bg";
+    public static final String PROP_TEXT_STRING = "text";
+    public static final String PROP_TEXT_COLOR = "textColor";
+    public static final String PROP_TEXT_SIZE = "textSize";
+    public static final String PROP_IMAGE_SRC = "imageSrc";
+    public static final String PROP_ALPHA = "alpha";
+
 }

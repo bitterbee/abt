@@ -1,4 +1,4 @@
-package com.netease.tools.abtestuicreator.view.prop;
+package com.netease.tools.abtestuicreator.view.prop.concret;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -12,11 +12,13 @@ import android.widget.TextView;
 
 import com.netease.libs.abtestbase.model.UIProp;
 import com.netease.tools.abtestuicreator.util.ColorUtil;
+import com.netease.tools.abtestuicreator.view.prop.EditPropView;
+import com.netease.tools.abtestuicreator.view.prop.ViewPropAnno;
 
 /**
  * Created by zyl06 on 2018/7/30.
  */
-
+@ViewPropAnno(viewType = TextView.class, name = UIProp.PROP_TEXT_COLOR)
 public class TextColorEditPropView extends EditPropView<Integer> {
 
     private @ColorInt Integer mOriTextColor;
@@ -31,17 +33,11 @@ public class TextColorEditPropView extends EditPropView<Integer> {
 
     public TextColorEditPropView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public TextColorEditPropView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        init();
-    }
-
-    private void init() {
-        mName.setText(UIProp.PROP_TEXT_COLOR);
     }
 
     @Override

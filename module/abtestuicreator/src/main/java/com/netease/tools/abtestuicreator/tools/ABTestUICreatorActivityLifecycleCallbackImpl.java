@@ -21,7 +21,7 @@ public class ABTestUICreatorActivityLifecycleCallbackImpl implements Application
 
     @Override
     public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
-        ViewGroup content = activity.findViewById(android.R.id.content);
+        ViewGroup content = (ViewGroup) activity.findViewById(android.R.id.content);
 
         replaceTraversal(content);
         content.setOnHierarchyChangeListener(new ViewGroup.OnHierarchyChangeListener() {
