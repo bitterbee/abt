@@ -18,17 +18,10 @@ public class RefInvoker {
     public static Object invokeStaticMethod(String className, String methodName, Class[] paramTypes,
                                             Object[] paramValues) {
 
-        return invokeMethod(null, className, methodName, paramTypes, paramValues);
-    }
-
-    @SuppressWarnings("rawtypes")
-    public static Object invokeMethod(Object target, String className, String methodName, Class[] paramTypes,
-                                      Object[] paramValues) {
-
         try {
             Class clazz = Class.forName(className);
-            return invokeMethod(target, clazz, methodName, paramTypes, paramValues);
-        }catch (ClassNotFoundException e) {
+            return invokeMethod(null, clazz, methodName, paramTypes, paramValues);
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
@@ -49,7 +42,12 @@ public class RefInvoker {
         return null;
     }
 
-    public static Object invokeMethod(Object target, Class clazz, String methodName, Class[] paramTypes,
+    public static Object invokeMethod(Object target, String methodName, Class[] paramTypes,
+                                       Object[] paramValues) {
+        return invokeMethod(target, target.getClass(), methodName, paramTypes, paramValues);
+    }
+
+    private static Object invokeMethod(Object target, Class clazz, String methodName, Class[] paramTypes,
                                       Object[] paramValues) {
         try {
             //LogUtil.e("Method", methodName);
@@ -132,9 +130,8 @@ public class RefInvoker {
 
     @SuppressWarnings("rawtypes")
     public static void setFieldObject(Object target, String className, String fieldName, Object fieldValue) {
-        Class clazz = null;
         try {
-            clazz = Class.forName(className);
+            Class clazz = Class.forName(className);
             setFieldObject(target, clazz, fieldName, fieldValue);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -170,7 +167,12 @@ public class RefInvoker {
     }
 
     public static void setStaticOjbect(String className, String fieldName, Object fieldValue) {
-        setFieldObject(null, className, fieldName, fieldValue);
+        try {
+            Class clazz = Class.forName(className);
+            setFieldObject(null, clazz, fieldName, fieldValue);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public static Method findMethod(Object object, String methodName, Class[] clazzes) {

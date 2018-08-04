@@ -8,11 +8,13 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 
+import com.netease.libs.abtestbase.anno.ABTestIgnore;
+
 /**
  * Created by zyl06 on 2018/7/30.
  * from xue
  */
-
+@ABTestIgnore
 public class MovableLayout extends LinearLayout
         implements View.OnLongClickListener, View.OnClickListener {
 

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/sv_alert_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:padding="24dp"
+        android:scrollbars="none">
+
+        <TextView
+            android:id="@+id/tv_alert_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textColor="@color/text_common"
+            android:textSize="@dimen/text_size_l"
+            android:text="我是一个对话框" />
+    </ScrollView>
+
+    <View xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/one_px"
+          android:background="@color/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+
+        <Button
+            android:id="@+id/btn_alert_negative"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/alert_dialog_btn_height"
+            android:layout_weight="1"
+            android:textColor="@color/text_common"
+            android:textSize="@dimen/text_size_m"
+            android:text="@string/cancel"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="@dimen/one_px"
+            android:layout_height="@dimen/alert_dialog_btn_height"
+            android:background="@color/line" />
+
+        <Button
+            android:id="@+id/btn_alert_positive"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/alert_dialog_btn_height"
+            android:layout_weight="1"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_m"
+            android:text="@string/confirm"/>
+    </LinearLayout>
+
+</LinearLayout>

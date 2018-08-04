@@ -97,7 +97,7 @@ public class SwitchManager {
         mViewRefs.add(new WeakReference<View>(rootView));
     }
 
-    public void updateAllViews(boolean replace) {
+    public synchronized void updateAllViews(boolean replace) {
         List<WeakReference<View>> deadViewRefs = new LinkedList<>();
         for (WeakReference<View> viewRef : mViewRefs) {
             View v = viewRef.get();

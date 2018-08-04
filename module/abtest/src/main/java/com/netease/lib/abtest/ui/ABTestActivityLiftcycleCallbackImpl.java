@@ -2,52 +2,49 @@ package com.netease.lib.abtest.ui;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
 import android.os.Bundle;
+import android.view.ContextThemeWrapper;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.view.Window;
 
-import com.netease.lib.abtest.R;
-import com.netease.lib.abtest.ui.prop.PropSetter;
-import com.netease.lib.abtest.ui.prop.UIPropFactory;
-import com.netease.libs.abtestbase.ViewPathUtil;
-import com.netease.libs.abtestbase.model.ABTestUICase;
-import com.netease.libs.abtestbase.model.UIProp;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.netease.libs.abtestbase.RefInvoker;
+import com.netease.libs.abtestbase.anno.ABTestIgnore;
 
 /**
  * Created by zyl06 on 2018/7/29.
  */
 public class ABTestActivityLiftcycleCallbackImpl implements Application.ActivityLifecycleCallbacks {
 
-    private Map<String, ABTestUICase> mUICases = new HashMap<>();
-    private UIPropFactory mSkinAttrFactory = new UIPropFactory();
+    public ABTestActivityLiftcycleCallbackImpl() {
 
-    public ABTestActivityLiftcycleCallbackImpl(List<ABTestUICase> uiCases) {
-        if (uiCases != null) {
-            for (ABTestUICase uiCase : uiCases) {
-                mUICases.put(uiCase.getViewPath(), uiCase);
-            }
-        }
     }
 
     @Override
     public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
-        ViewGroup content = (ViewGroup) activity.findViewById(android.R.id.content);
-        applyView(content);
-        content.setOnHierarchyChangeListener(new ViewGroup.OnHierarchyChangeListener() {
-            @Override
-            public void onChildViewAdded(View parent, View child) {
-                applyView(child);
-            }
+        ABTestIgnore ignoreAnno = activity.getClass().getAnnotation(ABTestIgnore.class);
+        if (ignoreAnno != null) {
+            return;
+        }
 
-            @Override
-            public void onChildViewRemoved(View parent, View child) {
+//        ViewGroup content = (ViewGroup) activity.findViewById(android.R.id.content);
+//        UIPropSetter.applyView(content);
+//        content.setOnHierarchyChangeListener(new ViewGroup.OnHierarchyChangeListener() {
+//            @Override
+//            public void onChildViewAdded(View parent, View child) {
+//                UIPropSetter.applyView(child);
+//            }
+//
+//            @Override
+//            public void onChildViewRemoved(View parent, View child) {
+//
+//            }
+//        });
 
-            }
-        });
+        View content = activity.findViewById(android.R.id.content);
+        UIPropSetter.applyView(content);
+        replaceActivityLayoutInflater(activity);
     }
 
     @Override
@@ -80,43 +77,18 @@ public class ABTestActivityLiftcycleCallbackImpl implements Application.Activity
 
     }
 
-    private void applyView(View v) {
-        if (v == null || v.getContext() == null) {
-            return;
+    private void replaceActivityLayoutInflater(Activity activity) {
+        LayoutInflater inflater0 = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        if (!(inflater0 instanceof ABTestProxyLayoutInflater)) {
+            LayoutInflater proxyInflater = new ABTestProxyLayoutInflater(inflater0);
+            RefInvoker.setFieldObject(activity, ContextThemeWrapper.class, "mInflater", proxyInflater);
         }
 
-        Object tag = v.getTag(R.string.abtest_ui_apply);
-        if (tag != null) {
-            return;
+        Window window = activity.getWindow();
+        LayoutInflater inflater1 = activity.getWindow().getLayoutInflater();
+        if (!(inflater1 instanceof ABTestProxyLayoutInflater)) {
+            LayoutInflater proxyInflater = new ABTestProxyLayoutInflater(inflater1);
+            RefInvoker.setFieldObject(window, "com.android.internal.policy.PhoneWindow", "mLayoutInflater", proxyInflater);
         }
-
-        try {
-            if (v instanceof ViewGroup) {
-                ViewGroup vg = (ViewGroup) v;
-                int count = vg.getChildCount();
-                for (int i=0; i<count; i++) {
-                    View child = vg.getChildAt(i);
-                    applyView(child);
-                }
-
-                return;
-            }
-
-            String path = ViewPathUtil.getViewPath(v);
-            ABTestUICase uiCase = mUICases.get(path);
-            if (uiCase == null) {
-                return;
-            }
-
-            for (UIProp prop : uiCase.getUiProps()) {
-                PropSetter setter = mSkinAttrFactory.getPropSetter(prop.name);
-                if (setter != null) {
-                    setter.apply(v, prop);
-                }
-            }
-        } finally {
-            v.setTag(R.string.abtest_ui_apply, true);
-        }
-
     }
 }

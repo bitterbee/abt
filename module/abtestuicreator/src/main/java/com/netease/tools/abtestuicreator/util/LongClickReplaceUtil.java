@@ -3,9 +3,9 @@ package com.netease.tools.abtestuicreator.util;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.netease.libs.abtestbase.anno.ABTestIgnore;
 import com.netease.tools.abtestuicreator.R;
 import com.netease.tools.abtestuicreator.tools.ReplaceLongClickListenerImpl;
-import com.netease.tools.abtestuicreator.util.ClickListenerUtil;
 
 /**
  * Created by zyl06 on 2018/7/30.
@@ -14,6 +14,11 @@ import com.netease.tools.abtestuicreator.util.ClickListenerUtil;
 public class LongClickReplaceUtil {
 
     public static void performTraversal(View v, boolean replace) {
+        ABTestIgnore ignore = v.getClass().getAnnotation(ABTestIgnore.class);
+        if (ignore != null) {
+            return;
+        }
+
         Object tag = v.getTag(R.string.abtest_marked_tag);
         if ((tag != null && replace) || (tag == null && !replace)) {
             return;

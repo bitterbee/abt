@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 
 import com.netease.libs.abtestbase.ABTestFileUtil;
 import com.netease.libs.abtestbase.ViewPathUtil;
+import com.netease.libs.abtestbase.anno.ABTestIgnore;
 import com.netease.libs.abtestbase.model.ABTestUICase;
 import com.netease.libs.abtestbase.model.UIProp;
 import com.netease.tools.abtestuicreator.R;
@@ -26,7 +27,7 @@ import java.util.List;
 /**
  * Created by zyl06 on 2018/7/30.
  */
-
+@ABTestIgnore
 public class ABTestEditActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static View sView;

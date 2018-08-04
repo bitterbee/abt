@@ -4,7 +4,7 @@ import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
 import com.netease.lib.abtest.anno.ABTestInitMethodAnnotation;
-import com.netease.lib.abtest.anno.ABTesterAnnotation;
+import com.netease.lib.abtest.anno.ABTesterAnno;
 import com.netease.lib.abtest.model.ABTestCase;
 import com.netease.lib.abtest.model.ABTestItem;
 import com.netease.lib.abtest.util.ObjWeakRef;
@@ -24,7 +24,7 @@ public abstract class BaseABTester {
     private Method mInitABMethod;
 
     public BaseABTester() {
-        ABTesterAnnotation anno = getClass().getAnnotation(ABTesterAnnotation.class);
+        ABTesterAnno anno = getClass().getAnnotation(ABTesterAnno.class);
         if (anno != null) {
             mGroupId = anno.groupId();
             mTestGroup = ABTestConfig.getInstance().getTestCase(mGroupId);

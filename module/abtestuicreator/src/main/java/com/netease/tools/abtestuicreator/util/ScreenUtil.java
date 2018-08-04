@@ -31,4 +31,6 @@ public class ScreenUtil {
         }
         return sStatusBarHeight;
     }
+
+
 }

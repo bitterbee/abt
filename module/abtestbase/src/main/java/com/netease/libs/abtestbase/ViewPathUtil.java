@@ -75,7 +75,7 @@ public class ViewPathUtil {
         }
 
         if (!paths.isEmpty()) {
-            result = JsonUtil.toJSONString(paths);
+            result = CryptoUtil.getSHA256(JsonUtil.toJSONString(paths));
             v.setTag(R.string.track_path_tag, result);
         }
 

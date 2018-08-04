@@ -2,12 +2,16 @@ package com.netease.tools.abtestuicreator.tools;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
 import android.os.Bundle;
+import android.view.ContextThemeWrapper;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 
+import com.netease.libs.abtestbase.RefInvoker;
 import com.netease.tools.abtestuicreator.R;
-import com.netease.tools.abtestuicreator.util.LongClickReplaceUtil;
 import com.netease.tools.abtestuicreator.view.MovableLayout;
 import com.netease.tools.abtestuicreator.view.SwitchManager;
 
@@ -21,21 +25,7 @@ public class ABTestUICreatorActivityLifecycleCallbackImpl implements Application
 
     @Override
     public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
-        ViewGroup content = (ViewGroup) activity.findViewById(android.R.id.content);
-
-        replaceTraversal(content);
-        content.setOnHierarchyChangeListener(new ViewGroup.OnHierarchyChangeListener() {
-            @Override
-            public void onChildViewAdded(View parent, View child) {
-                replaceTraversal(child);
-            }
-
-            @Override
-            public void onChildViewRemoved(View parent, View child) {
-
-            }
-        });
-
+        replaceActivityLayoutInflater(activity);
         mSwitchBtnId = R.id.id_switch_btn;
     }
 
@@ -79,10 +69,18 @@ public class ABTestUICreatorActivityLifecycleCallbackImpl implements Application
 
     }
 
-    private void replaceTraversal(View v) {
-        if (SwitchManager.getInstance().isOpen()) {
-            LongClickReplaceUtil.performTraversal(v, true);
+    private void replaceActivityLayoutInflater(Activity activity) {
+        LayoutInflater inflater0 = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        if (!(inflater0 instanceof ToolLayoutInflater)) {
+            LayoutInflater proxyInflater = new ToolLayoutInflater(inflater0);
+            RefInvoker.setFieldObject(activity, ContextThemeWrapper.class, "mInflater", proxyInflater);
         }
-        SwitchManager.getInstance().register(v);
+
+        Window window = activity.getWindow();
+        LayoutInflater inflater1 = activity.getWindow().getLayoutInflater();
+        if (!(inflater1 instanceof ToolLayoutInflater)) {
+            LayoutInflater proxyInflater = new ToolLayoutInflater(inflater1);
+            RefInvoker.setFieldObject(window, "com.android.internal.policy.PhoneWindow", "mLayoutInflater", proxyInflater);
+        }
     }
 }

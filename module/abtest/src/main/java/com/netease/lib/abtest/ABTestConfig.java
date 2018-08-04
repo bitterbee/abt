@@ -7,8 +7,8 @@ import com.netease.lib.abtest.model.ABTestCase;
 import com.netease.lib.abtest.model.ABTestConfigModel;
 import com.netease.lib.abtest.model.ABTestItem;
 import com.netease.lib.abtest.ui.ABTestActivityLiftcycleCallbackImpl;
+import com.netease.lib.abtest.ui.UIPropSetter;
 import com.netease.lib.abtest.util.ObjWeakRef;
-import com.netease.libs.abtestbase.ABTestFileUtil;
 import com.netease.libs.abtestbase.JsonUtil;
 import com.netease.libs.abtestbase.model.ABTestUICase;
 
@@ -71,7 +71,8 @@ public class ABTestConfig {
             }
         }
 
-        mActivityLiftcycleCallback = new ABTestActivityLiftcycleCallbackImpl(uiCases);
+        UIPropSetter.init(uiCases);
+        mActivityLiftcycleCallback = new ABTestActivityLiftcycleCallbackImpl();
         app.registerActivityLifecycleCallbacks(mActivityLiftcycleCallback);
 
         notifyAllTesters();

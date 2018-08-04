@@ -4,13 +4,13 @@ import android.support.annotation.Nullable;
 
 import com.netease.lib.abtest.BaseABTester;
 import com.netease.lib.abtest.anno.ABTestInitMethodAnnotation;
-import com.netease.lib.abtest.anno.ABTesterAnnotation;
+import com.netease.lib.abtest.anno.ABTesterAnno;
 import com.netease.lib.abtest.model.ABTestCase;
 
 /**
  * Created by zyl06 on 2018/7/26.
  */
-@ABTesterAnnotation(groupId = "SimpleTest_001")
+@ABTesterAnno(groupId = "SimpleTest_001")
 public class OneABTester extends BaseABTester {
 
     private String name;
