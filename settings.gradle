@@ -8,3 +8,9 @@ project(':abtestuicreator').projectDir = file('module/abtestuicreator')
 
 include ':abtestbase'
 project(':abtestbase').projectDir = file('module/abtestbase')
+
+include ':abtest-uiproptable'
+project(':abtest-uiproptable').projectDir = file('module/abtest-uiproptable')
+
+include ':abtest-uiproptable-process'
+project(':abtest-uiproptable-process').projectDir = file('module/abtest-uiproptable-process')

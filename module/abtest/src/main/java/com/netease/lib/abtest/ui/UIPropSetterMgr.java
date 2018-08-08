@@ -4,7 +4,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.netease.lib.abtest.R;
-import com.netease.lib.abtest.ui.prop.PropSetter;
+import com.netease.lib.abtest.ui.prop.IPropSetter;
 import com.netease.lib.abtest.ui.prop.UIPropFactory;
 import com.netease.libs.abtestbase.ViewPathUtil;
 import com.netease.libs.abtestbase.anno.ABTestIgnore;
@@ -19,7 +19,7 @@ import java.util.Map;
  * Created by zyl06 on 2018/8/4.
  */
 
-public class UIPropSetter {
+public class UIPropSetterMgr {
 
     private static Map<String, ABTestUICase> sUICases = new HashMap<>();
     private static UIPropFactory sUIPropFactory = new UIPropFactory();
@@ -77,7 +77,7 @@ public class UIPropSetter {
             }
 
             for (UIProp prop : uiCase.getUiProps()) {
-                PropSetter setter = sUIPropFactory.getPropSetter(prop.name);
+                IPropSetter setter = sUIPropFactory.getPropSetter(prop.name);
                 if (setter != null) {
                     setter.apply(v, prop);
                 }

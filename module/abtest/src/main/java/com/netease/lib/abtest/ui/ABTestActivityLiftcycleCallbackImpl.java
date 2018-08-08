@@ -29,11 +29,11 @@ public class ABTestActivityLiftcycleCallbackImpl implements Application.Activity
         }
 
 //        ViewGroup content = (ViewGroup) activity.findViewById(android.R.id.content);
-//        UIPropSetter.applyView(content);
+//        UIPropSetterMgr.applyView(content);
 //        content.setOnHierarchyChangeListener(new ViewGroup.OnHierarchyChangeListener() {
 //            @Override
 //            public void onChildViewAdded(View parent, View child) {
-//                UIPropSetter.applyView(child);
+//                UIPropSetterMgr.applyView(child);
 //            }
 //
 //            @Override
@@ -43,7 +43,7 @@ public class ABTestActivityLiftcycleCallbackImpl implements Application.Activity
 //        });
 
         View content = activity.findViewById(android.R.id.content);
-        UIPropSetter.applyView(content);
+        UIPropSetterMgr.applyView(content);
         replaceActivityLayoutInflater(activity);
     }
 

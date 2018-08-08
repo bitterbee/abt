@@ -11,7 +11,7 @@ import com.netease.libs.abtestbase.model.UIProp;
  * Created by zyl06 on 2018/8/3.
  */
 
-public class TextSizePropSetter implements PropSetter {
+public class TextSizePropSetter implements IPropSetter {
 
     @Override
     public void apply(View view, UIProp prop) {
@@ -21,5 +21,10 @@ public class TextSizePropSetter implements PropSetter {
                 ((TextView) view).setTextSize(model.unit, model.size);
             }
         }
+    }
+
+    @Override
+    public String name() {
+        return UIProp.PROP_TEXT_SIZE;
     }
 }

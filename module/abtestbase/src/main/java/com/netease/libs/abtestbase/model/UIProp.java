@@ -11,17 +11,17 @@ public class UIProp extends BaseModel {
     public String name;
 
     /**
-     * the attr value
+     * the prop value
      */
     public Object value;
 
     /**
-     * the attr int value
+     * the prop int value
      */
     public int intValue;
 
     /**
-     * the attr float value
+     * the prop float value
      */
     public float floatValue;
 
@@ -31,5 +31,4 @@ public class UIProp extends BaseModel {
     public static final String PROP_TEXT_SIZE = "textSize";
     public static final String PROP_IMAGE_SRC = "imageSrc";
     public static final String PROP_ALPHA = "alpha";
-
 }

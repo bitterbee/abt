@@ -7,16 +7,15 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
+import com.netease.abtest.uiprop.UIPropCreatorAnno;
 import com.netease.libs.abtestbase.ABTestResUtil;
 import com.netease.libs.abtestbase.model.ABTextSizeModel;
 import com.netease.libs.abtestbase.model.UIProp;
 import com.netease.tools.abtestuicreator.view.prop.EditPropView;
-import com.netease.tools.abtestuicreator.view.prop.ViewPropAnno;
-
 /**
  * Created by zyl06 on 2018/8/3.
  */
-@ViewPropAnno(viewType = TextView.class, name = UIProp.PROP_TEXT_SIZE)
+@UIPropCreatorAnno(viewType = TextView.class, name = UIProp.PROP_TEXT_SIZE)
 public class TextSizeEditPropView extends EditPropView<String> {
 
     private float mOldTextSize;

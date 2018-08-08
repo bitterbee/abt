@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/abtest.iml" filepath="$PROJECT_DIR$/abtest.iml" />
       <module fileurl="file://$PROJECT_DIR$/module/abtest/abtest-abtest.iml" filepath="$PROJECT_DIR$/module/abtest/abtest-abtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module/abtest-uiproptable/abtest-uiproptable.iml" filepath="$PROJECT_DIR$/module/abtest-uiproptable/abtest-uiproptable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module/abtest-uiproptable-process/abtest-uiproptable-process.iml" filepath="$PROJECT_DIR$/module/abtest-uiproptable-process/abtest-uiproptable-process.iml" />
       <module fileurl="file://$PROJECT_DIR$/module/abtestbase/abtestbase.iml" filepath="$PROJECT_DIR$/module/abtestbase/abtestbase.iml" />
       <module fileurl="file://$PROJECT_DIR$/module/abtestuicreator/abtestuicreator.iml" filepath="$PROJECT_DIR$/module/abtestuicreator/abtestuicreator.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />

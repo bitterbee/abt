@@ -9,15 +9,15 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.netease.abtest.uiprop.UIPropCreatorAnno;
 import com.netease.libs.abtestbase.ABTestResUtil;
 import com.netease.libs.abtestbase.model.UIProp;
 import com.netease.tools.abtestuicreator.view.prop.EditPropView;
-import com.netease.tools.abtestuicreator.view.prop.ViewPropAnno;
 
 /**
  * Created by zyl06 on 2018/8/3.
  */
-@ViewPropAnno(viewType = ImageView.class, name = UIProp.PROP_IMAGE_SRC)
+@UIPropCreatorAnno(viewType = ImageView.class, name = UIProp.PROP_IMAGE_SRC)
 public class ImageSrcPropView extends EditPropView<String> {
 
     private Drawable mDrawable;

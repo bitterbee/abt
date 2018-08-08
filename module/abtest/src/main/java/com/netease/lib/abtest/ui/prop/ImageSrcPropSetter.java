@@ -10,7 +10,7 @@ import com.netease.libs.abtestbase.model.UIProp;
  * Created by zyl06 on 2018/8/3.
  */
 
-public class ImageSrcPropSetter implements PropSetter {
+public class ImageSrcPropSetter implements IPropSetter {
 
     @Override
     public void apply(View view, UIProp prop) {
@@ -21,5 +21,10 @@ public class ImageSrcPropSetter implements PropSetter {
                 ((ImageView) view).setImageResource(id);
             }
         }
+    }
+
+    @Override
+    public String name() {
+        return UIProp.PROP_IMAGE_SRC;
     }
 }

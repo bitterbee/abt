@@ -1,5 +1,6 @@
 package com.netease.demo.abtest;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
 import android.view.Gravity;
@@ -15,7 +16,7 @@ import android.widget.PopupWindow;
 /**
  * Created by zyl06 on 2018/8/4.
  */
-
+@SuppressLint("all")
 public class PopupWindowView {
     protected Context mContext;
     private PopupWindow mPopupWindow;
@@ -50,9 +51,11 @@ public class PopupWindowView {
             @Override
             public void onClick(View v) {
                 if (mIsOutsideTouchable) {
-                    if (mTouchListener != null)
+                    if (mTouchListener != null) {
                         mTouchListener.outsideTouchListener();
-                    else dismiss();
+                    } else {
+                        dismiss();
+                    }
                 }
             }
         });

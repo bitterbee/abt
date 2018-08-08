@@ -10,16 +10,16 @@ import android.text.Editable;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.netease.abtest.uiprop.UIPropCreatorAnno;
 import com.netease.libs.abtestbase.ABTestResUtil;
 import com.netease.libs.abtestbase.model.UIProp;
 import com.netease.tools.abtestuicreator.util.ColorUtil;
 import com.netease.tools.abtestuicreator.view.prop.EditPropView;
-import com.netease.tools.abtestuicreator.view.prop.ViewPropAnno;
 
 /**
  * Created by zyl06 on 2018/7/30.
  */
-@ViewPropAnno(name = UIProp.PROP_BG)
+@UIPropCreatorAnno(viewType = View.class, name = UIProp.PROP_BG)
 public class ViewBgEditPropView extends EditPropView {
 
     private Drawable mBgDrawable;

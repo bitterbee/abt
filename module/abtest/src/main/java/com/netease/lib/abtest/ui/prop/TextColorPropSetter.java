@@ -10,7 +10,7 @@ import com.netease.libs.abtestbase.model.UIProp;
  * Created by zyl06 on 2018/7/29.
  */
 
-public class TextColorPropSetter implements PropSetter {
+public class TextColorPropSetter implements IPropSetter {
 
     @Override
     public void apply(View view, UIProp prop) {
@@ -19,5 +19,10 @@ public class TextColorPropSetter implements PropSetter {
             ABLog.i("TextColorPropSetter");
             tv.setTextColor(prop.intValue);
         }
+    }
+
+    @Override
+    public String name() {
+        return UIProp.PROP_TEXT_COLOR;
     }
 }

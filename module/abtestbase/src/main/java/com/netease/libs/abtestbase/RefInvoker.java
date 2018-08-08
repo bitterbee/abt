@@ -1,5 +1,6 @@
 package com.netease.libs.abtestbase;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -13,6 +14,25 @@ import java.util.Map;
 public class RefInvoker {
 
     private static final String TAG = "RefInvoker";
+
+    public static <T> T newInstance(String className, Class[] paramTypes, Object[] paramValues) {
+        try {
+            Class clazz = Class.forName(className);
+            Constructor constructor = clazz.getConstructor(paramTypes);
+            return (T) constructor.newInstance(paramValues);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     @SuppressWarnings("rawtypes")
     public static Object invokeStaticMethod(String className, String methodName, Class[] paramTypes,

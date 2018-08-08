@@ -7,10 +7,8 @@ import java.security.NoSuchAlgorithmException;
 /**
  * Created by zyl06 on 2018/8/4.
  */
-
 class CryptoUtil {
     /**
-     *  利用java原生的摘要实现SHA256加密
      * @param str 加密后的报文
      * @return
      */

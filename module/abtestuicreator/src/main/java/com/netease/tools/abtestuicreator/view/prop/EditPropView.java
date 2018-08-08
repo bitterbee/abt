@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import com.netease.abtest.uiprop.UIPropCreatorAnno;
 import com.netease.tools.abtestuicreator.R;
 import com.netease.tools.abtestuicreator.notify.EventTypes;
 import com.netease.tools.abtestuicreator.notify.NotifyMgr;
@@ -75,7 +76,7 @@ public class EditPropView<T> extends FrameLayout implements TextWatcher {
         mValue.setEnabled(isEditable);
         mValue.addTextChangedListener(this);
 
-        ViewPropAnno anno = getClass().getAnnotation(ViewPropAnno.class);
+        UIPropCreatorAnno anno = getClass().getAnnotation(UIPropCreatorAnno.class);
         if (anno != null && TextUtils.isEmpty(name)) {
             mName.setText(anno.name());
         }

@@ -2,6 +2,8 @@ package com.netease.lib.abtest.ui.prop;
 
 import android.text.TextUtils;
 
+import com.netease.abtest.uiprop.UIPropSetterAnno;
+import com.netease.libs.abtestbase.RefInvoker;
 import com.netease.libs.abtestbase.model.UIProp;
 
 import java.util.HashMap;
@@ -12,22 +14,39 @@ import java.util.Map;
  */
 public class UIPropFactory {
 
-    private static final Map<String, PropSetter> ATTR_MAP = new HashMap<String, PropSetter>() {
-        {
-            put(UIProp.PROP_BG, new BgPropSetter()); //
-            put(UIProp.PROP_TEXT_COLOR, new TextColorPropSetter());
-            put(UIProp.PROP_TEXT_STRING, new TextStringPropSetter());
+    private static final Map<String, IPropSetter> UIPROP_SETTERS = new HashMap<>();
 
-            put(UIProp.PROP_IMAGE_SRC, new ImageSrcPropSetter()); //
-            put(UIProp.PROP_TEXT_SIZE, new TextSizePropSetter()); //
-            put(UIProp.PROP_ALPHA, new AlphaPropSetter()); //
-        }
-    };
-
-    public PropSetter getPropSetter(String name) {
+    public IPropSetter getPropSetter(String name) {
         if (TextUtils.isEmpty(name)) {
             return null;
         }
-        return ATTR_MAP.get(name);
+
+        if (UIPROP_SETTERS.isEmpty()) {
+            // View
+            UIPROP_SETTERS.put(UIProp.PROP_BG, new BgPropSetter());
+            UIPROP_SETTERS.put(UIProp.PROP_ALPHA, new AlphaPropSetter());
+
+            // TextView
+            UIPROP_SETTERS.put(UIProp.PROP_TEXT_COLOR, new TextColorPropSetter());
+            UIPROP_SETTERS.put(UIProp.PROP_TEXT_STRING, new TextStringPropSetter());
+            UIPROP_SETTERS.put(UIProp.PROP_TEXT_SIZE, new TextSizePropSetter());
+
+            // ImageView
+            UIPROP_SETTERS.put(UIProp.PROP_IMAGE_SRC, new ImageSrcPropSetter());
+
+//            Object customTable = RefInvoker.newInstance("com.netease.libs.abtest.ABTestUIPropTable", )
+            Map<Object, UIPropSetterAnno> customSetters = (Map<Object, UIPropSetterAnno>) RefInvoker.invokeStaticMethod("com.netease.libs.abtest.ABTestUIPropTable",
+                    "getUIPropSetters", null, null);
+            if (customSetters != null) {
+                for (Map.Entry<Object, UIPropSetterAnno> entry : customSetters.entrySet()) {
+                    if (entry.getKey() instanceof IPropSetter) {
+                        IPropSetter setter = (IPropSetter) entry.getKey();
+                        UIPROP_SETTERS.put(setter.name(), setter);
+                    }
+                }
+            }
+        }
+
+        return UIPROP_SETTERS.get(name);
     }
 }

@@ -23,6 +23,6 @@ class ABTestProxyLayoutInflater extends ProxyLayoutInflater {
 
     @Override
     protected void onInflate(View created) {
-        UIPropSetter.applyView(created);
+        UIPropSetterMgr.applyView(created);
     }
 }

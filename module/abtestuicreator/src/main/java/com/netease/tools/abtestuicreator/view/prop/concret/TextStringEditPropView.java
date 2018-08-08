@@ -8,14 +8,14 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
 
+import com.netease.abtest.uiprop.UIPropCreatorAnno;
 import com.netease.libs.abtestbase.model.UIProp;
 import com.netease.tools.abtestuicreator.view.prop.EditPropView;
-import com.netease.tools.abtestuicreator.view.prop.ViewPropAnno;
 
 /**
  * Created by zyl06 on 2018/7/30.
  */
-@ViewPropAnno(viewType = TextView.class, name = UIProp.PROP_TEXT_STRING)
+@UIPropCreatorAnno(viewType = TextView.class, name = UIProp.PROP_TEXT_STRING)
 public class TextStringEditPropView extends EditPropView<String> {
 
     private CharSequence mOriText;

@@ -1,6 +1,9 @@
 apply plugin: 'com.android.application'
 apply plugin: 'android-aspectjx'
 
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -23,6 +26,17 @@ configurations.all {
     resolutionStrategy.force "com.android.support:support-annotations:26.0.0"
 }
 
+//jackOptions {
+//    enabled = true
+//}
+//javaCompileOptions {
+//    annotationProcessorOptions {
+//        arguments = []
+//        includeCompileClasspath true
+//        classNames = ["com.netease.abtest.uiattrprocess.UIPropTableProcess"]
+//    }
+//}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.0.0'
@@ -34,4 +48,6 @@ dependencies {
     implementation project(':abtest')
     implementation project(':abtestuicreator')
     implementation project(':abtestbase')
+    implementation project(':abtest-uiproptable')
+    annotationProcessor project(':abtest-uiproptable-process')
 }
