@@ -19,6 +19,7 @@ public class RefInvoker {
         try {
             Class clazz = Class.forName(className);
             Constructor constructor = clazz.getConstructor(paramTypes);
+            constructor.setAccessible(true);
             return (T) constructor.newInstance(paramValues);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

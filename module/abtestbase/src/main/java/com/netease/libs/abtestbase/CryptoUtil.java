@@ -1,5 +1,7 @@
 package com.netease.libs.abtestbase;
 
+import android.util.Base64;
+
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -7,7 +9,18 @@ import java.security.NoSuchAlgorithmException;
 /**
  * Created by zyl06 on 2018/8/4.
  */
-class CryptoUtil {
+public class CryptoUtil {
+
+    // Base64加密
+    public static String base64Encode(byte[] data) {
+        return Base64.encodeToString(data, Base64.DEFAULT);
+    }
+
+    // Base64解密
+    public static byte[] base64Decode(String s) {
+        return Base64.decode(s, Base64.DEFAULT);
+    }
+
     /**
      * @param str 加密后的报文
      * @return

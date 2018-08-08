@@ -12,8 +12,8 @@ import com.netease.tools.abtestuicreator.view.prop.concret.TextStringEditPropVie
 import com.netease.tools.abtestuicreator.view.prop.concret.ViewAlphaPropView;
 import com.netease.tools.abtestuicreator.view.prop.concret.ViewBgEditPropView;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -21,10 +21,10 @@ import java.util.Map;
  */
 public class ViewPropMap {
 
-    public static List<EditPropView> getEditPropViews(Context context, View v) {
-        List<EditPropView> result = new ArrayList<>();
+    public static Collection<EditPropView> getEditPropViews(Context context, View v) {
+        Map<String, EditPropView> result = new LinkedHashMap<>();
         if (v == null) {
-            return result;
+            return result.values();
         }
 
         addEditPropView(result, context, v, ViewBgEditPropView.class);
@@ -44,15 +44,15 @@ public class ViewPropMap {
             }
         }
 
-        return result;
+        return result.values();
     }
 
-    private static void addEditPropView(List<EditPropView> propViews, Context context, View v, Class<? extends EditPropView> editViewClass) {
+    private static void addEditPropView(Map<String, EditPropView> propViews, Context context, View v, Class<? extends EditPropView> editViewClass) {
         UIPropCreatorAnno anno = editViewClass.getAnnotation(UIPropCreatorAnno.class);
         if (anno != null && anno.viewType().isAssignableFrom(v.getClass())) {
             try {
                 EditPropView propView = editViewClass.getConstructor(Context.class).newInstance(context);
-                propViews.add(propView);
+                propViews.put(anno.name(), propView);
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -22,6 +22,7 @@ import com.netease.tools.abtestuicreator.view.prop.EditPropView;
 import com.netease.tools.abtestuicreator.view.prop.ViewPropMap;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -70,14 +71,13 @@ public class ABTestEditActivity extends AppCompatActivity implements View.OnClic
         findViewById(R.id.btn_cancel).setOnClickListener(this);
 
         mAttrsContainer = (LinearLayout) findViewById(R.id.ll_attr);
-        List<EditPropView> editViews = ViewPropMap.getEditPropViews(this, sView);
+        Collection<EditPropView> editViews = ViewPropMap.getEditPropViews(this, sView);
         int minHeight = getResources().getDimensionPixelSize(R.dimen.abtest_attr_view_h);
         for (EditPropView v : editViews) {
             v.bindView(sView);
             mAttrsContainer.addView(v, ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT);
             mAttrsContainer.setMinimumHeight(minHeight);
-
         }
     }
 

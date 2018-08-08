@@ -38,4 +38,12 @@
         android:onClick="onShowPopupWindow"
         android:text="Show PopupWindow"/>
 
+    <FrameLayout
+        android:id="@+id/replace_stub"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/gray_33">
+
+    </FrameLayout>
+
 </LinearLayout>

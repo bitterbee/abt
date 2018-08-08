@@ -55,7 +55,7 @@ public class EditPropView<T> extends FrameLayout implements TextWatcher {
 
     private void init(Context context, AttributeSet attrs, int defStyleAttr) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View content = inflater.inflate(R.layout.abtest_view_edit_attr, this);
+        View content = inflater.inflate(R.layout.abtest_view_edit_prop, this);
         mName = (TextView) content.findViewById(R.id.tv_track_edit_attr_name);
         mValue = (EditText) content.findViewById(R.id.et_track_edit_attr_value);
 
