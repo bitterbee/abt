@@ -14,13 +14,16 @@ import com.netease.libs.abtestbase.model.UIProp;
 public class TextSizePropSetter implements IPropSetter {
 
     @Override
-    public void apply(View view, UIProp prop) {
+    public boolean apply(View view, UIProp prop) {
         if (view instanceof TextView && prop.value instanceof String) {
             ABTextSizeModel model = ABTestResUtil.parseTextSize((String) prop.value);
             if (model != null) {
                 ((TextView) view).setTextSize(model.unit, model.size);
+                return true;
             }
         }
+
+        return false;
     }
 
     @Override

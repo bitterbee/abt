@@ -13,6 +13,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,7 +23,10 @@ import java.util.List;
 public class ABTestFileUtil {
 
     private static String getABTestUIFilePath(Context context) {
-        File dir = context.getExternalCacheDir();
+        File dir = context.getCacheDir();
+        if (dir == null) {
+            return null;
+        }
         if (!dir.exists()) {
             dir.mkdirs();
         }
@@ -32,6 +36,9 @@ public class ABTestFileUtil {
 
     public static List<ABTestUICase> readUiCases(Context context) {
         String path = getABTestUIFilePath(context);
+        if (TextUtils.isEmpty(path)) {
+            return new ArrayList<>();
+        }
         String json = read(new File(path));
         return JsonUtil.parseArray(json, ABTestUICase.class);
     }

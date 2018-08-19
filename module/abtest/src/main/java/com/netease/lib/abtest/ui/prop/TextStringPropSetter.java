@@ -12,13 +12,16 @@ import com.netease.libs.abtestbase.model.UIProp;
 public class TextStringPropSetter implements IPropSetter {
 
     @Override
-    public void apply(View view, UIProp prop) {
+    public boolean apply(View view, UIProp prop) {
         if (view instanceof TextView && prop.value instanceof CharSequence) {
             TextView tv = (TextView) view;
 
             ABLog.i("TextStringPropSetter");
             tv.setText((CharSequence) prop.value);
+            return true;
         }
+
+        return false;
     }
 
     @Override

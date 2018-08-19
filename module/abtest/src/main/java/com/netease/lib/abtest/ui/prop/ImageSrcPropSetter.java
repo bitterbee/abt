@@ -13,14 +13,17 @@ import com.netease.libs.abtestbase.model.UIProp;
 public class ImageSrcPropSetter implements IPropSetter {
 
     @Override
-    public void apply(View view, UIProp prop) {
+    public boolean apply(View view, UIProp prop) {
         if (view instanceof ImageView && prop.value instanceof String) {
             String name = (String) prop.value;
             int id = ABTestResUtil.getId(view.getContext(), name);
             if (id != ABTestResUtil.NO_RES) {
                 ((ImageView) view).setImageResource(id);
+                return true;
             }
         }
+
+        return false;
     }
 
     @Override

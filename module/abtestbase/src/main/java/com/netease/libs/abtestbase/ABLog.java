@@ -11,8 +11,12 @@ public class ABLog {
     private static final String TAG = "ABTest";
 
     public static void e(Throwable e) {
+        e(e.toString());
+    }
+
+    public static void e(String info) {
         if (BuildConfig.DEBUG) {
-            Log.e(TAG, e.toString());
+            Log.e(TAG, info);
         }
     }
 

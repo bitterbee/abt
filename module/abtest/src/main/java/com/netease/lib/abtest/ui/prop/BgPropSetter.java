@@ -13,16 +13,20 @@ import com.netease.libs.abtestbase.model.UIProp;
 public class BgPropSetter implements IPropSetter {
 
     @Override
-    public void apply(View view, UIProp prop) {
+    public boolean apply(View view, UIProp prop) {
         ABLog.i("BgPropSetter");
         if (prop.intValue != 0) {
             view.setBackgroundColor(prop.intValue);
+            return true;
         } else if (prop.value instanceof String) {
             int id = ABTestResUtil.getId(view.getContext(), (String) prop.value);
             if (id != ABTestResUtil.NO_RES) {
                 view.setBackgroundResource(id);
+                return true;
             }
         }
+
+        return false;
     }
 
     @Override

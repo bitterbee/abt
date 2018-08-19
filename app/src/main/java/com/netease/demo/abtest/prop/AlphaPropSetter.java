@@ -14,10 +14,13 @@ import com.netease.abtest.uiprop.UIPropSetterAnno;
 public class AlphaPropSetter implements IPropSetter {
 
     @Override
-    public void apply(View view, UIProp prop) {
+    public boolean apply(View view, UIProp prop) {
         if (prop.value == null && prop.floatValue >= 0 && prop.floatValue <= 1) {
             view.setAlpha(prop.floatValue);
+            return true;
         }
+
+        return false;
     }
 
     @Override

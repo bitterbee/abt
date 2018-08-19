@@ -9,17 +9,16 @@ import com.netease.libs.abtestbase.model.UIProp;
  */
 
 public interface IPropSetter {
-
     /**
      * Use to apply view with new TypedValue
      * @param view
      * @param prop
+     * @return success or not
      */
-    void apply(View view, UIProp prop);
+    boolean apply(View view, UIProp prop);
 
     /**
-     *
-     * @return prop name
+     *     * @return prop name
      */
     String name();
 }

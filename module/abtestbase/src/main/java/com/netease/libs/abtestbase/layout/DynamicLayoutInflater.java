@@ -1,4 +1,4 @@
-package com.netease.lib.abtest.ui.layout;
+package com.netease.libs.abtestbase.layout;
 
 import android.content.Context;
 import android.content.res.XmlResourceParser;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 
 import com.netease.libs.abtestbase.ABLog;
 import com.netease.libs.abtestbase.CryptoUtil;
+import com.netease.libs.abtestbase.R;
+import com.netease.libs.abtestbase.RefInvoker;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
@@ -16,7 +18,6 @@ import java.lang.reflect.Method;
 /**
  * Created by zyl06 on 2018/8/8.
  */
-
 public class DynamicLayoutInflater {
 
     private LayoutInflater mLayoutInflater;
@@ -24,8 +25,11 @@ public class DynamicLayoutInflater {
     private Method mParserMethod;
     private boolean mIsValid = false;
 
+    private Class mIdClass;
+
     public DynamicLayoutInflater(Context context) {
         mLayoutInflater = LayoutInflater.from(context);
+        String idName = context.getPackageName() + ".R$id";
 
         try {
             Class<?> cls = Class.forName("android.content.res.XmlBlock");
@@ -35,8 +39,12 @@ public class DynamicLayoutInflater {
             mParserMethod = cls.getDeclaredMethod("newParser");
             mParserMethod.setAccessible(true);
 
+            mIdClass = Class.forName(idName);
+
             mIsValid = true;
         } catch(RuntimeException e) {
+            ABLog.e(e);
+        } catch (ClassNotFoundException e) {
             ABLog.e(e);
         } catch(Exception e) {
             ABLog.e(e);
@@ -48,6 +56,10 @@ public class DynamicLayoutInflater {
     }
 
     public View inflate(String content, @Nullable ViewGroup root, boolean attachToRoot) {
+
+        if (!isValid()) {
+            return null;
+        }
 
         XmlResourceParser xmlParser = null;
         try {
@@ -62,6 +74,39 @@ public class DynamicLayoutInflater {
             return null;
         }
 
-        return mLayoutInflater.inflate(xmlParser, root, attachToRoot);
+        View res = null;
+        try {
+            res = mLayoutInflater.inflate(xmlParser, root, attachToRoot);
+            res.setTag(R.string.replace_xml_dylayout_tag, content);
+
+            applyViewIds(res);
+        } catch (Exception e) {
+            ABLog.e(e);
+        }
+
+        return res;
+    }
+
+    private void applyViewIds(View v) {
+        Object objTag = v.getTag();
+        if (objTag instanceof String) {
+            String tag = (String) objTag;
+            if (tag.startsWith("R.id.")) {
+                String strId = tag.substring(5, tag.length());
+
+                Object id = RefInvoker.getFieldObject(null, mIdClass, strId, true);
+                if (id instanceof Integer) {
+                    v.setId((int) id);
+                }
+            }
+        }
+
+        if (v instanceof ViewGroup) {
+            ViewGroup vg = (ViewGroup) v;
+            int count = vg.getChildCount();
+            for (int i = 0; i < count; i++) {
+                applyViewIds(vg.getChildAt(i));
+            }
+        }
     }
 }

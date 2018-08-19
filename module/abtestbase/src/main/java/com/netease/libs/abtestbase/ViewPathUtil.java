@@ -19,7 +19,7 @@ public class ViewPathUtil {
             return null;
         }
 
-        String result = (String) v.getTag(R.string.track_path_tag);
+        String result = (String) v.getTag(R.string.view_path_tag);
         if (!TextUtils.isEmpty(result)) {
             return result;
         }
@@ -76,7 +76,7 @@ public class ViewPathUtil {
 
         if (!paths.isEmpty()) {
             result = CryptoUtil.getSHA256(JsonUtil.toJSONString(paths));
-            v.setTag(R.string.track_path_tag, result);
+            v.setTag(R.string.view_path_tag, result);
         }
 
         return result;

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/netease/demo/abtest/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/test_pick_image.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/gradle.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/layout_gen/res/layout/test_layout.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/module/abtestbase/build/generated/source/r/debug/com/netease/libs/abtestbase/R.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/module/abtestbase/src/main/java/com/netease/libs/abtestbase/layout/DynamicLayoutInflater.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/htandroid/dynamic/flutter/flutter-study/demo/3. Flutter布局/flutter_layout_demo/android/app/src/main/java/com/loki/flutterlayoutdemo/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/htandroid/dynamic/flutter/flutter_app/lib/main.dart">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/util/ScreenUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/util/location/LocationUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/config/downloader/BaseConfigDownloader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/config/downloader/CrmPopupWindowConfigDownloader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/config/downloader/H5ResPreloadConfigDownloader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/config/downloader/HomeListOrderDownloader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/config/downloader/LocationDownloader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/config/downloader/RedEnvelopeConfigDownloader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/home/mainframe/HomePresenter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/home/newrecommend/RecommendParser.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/home/newrecommend/viewholder/HomeCrowdFundHolder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/home/newrecommend/viewholder/HomeManuHolder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/home/newrecommend/viewholder/HomePlatformPolicyHolder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/mainpage/activity/MainPageActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/userpage/personal/activity/UserPageFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/res/drawable/bg_home_top_goods_banner.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/res/drawable/bg_splash.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/res/drawable/layerlist_profile_member_bg.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/res/drawable/shape_profile_member_bg_gradient.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/res/drawable/shape_profile_supermember_bg.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/res/drawable/shape_profile_supermember_bg_gradient.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/res/layout/calendar_top_month_paging.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/res/layout/item_new_home_common_title.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/res/layout/item_new_home_manu.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/res/layout/item_new_home_platform_policy.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/res/layout/item_userpage_userinfo.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/res/layout/test_layout.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/res/layout/view_new_home_goods.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/res/values/color.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/res/values/dimens.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/res/values/styles.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/gradle.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/mctools/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/mctools/src/main/groovy/com/smallsoho/mcplugin/image/ImagePlugin.groovy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/mctools/src/main/groovy/com/smallsoho/mcplugin/image/models/Config.groovy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/mctools/src/main/groovy/com/smallsoho/mcplugin/image/utils/ImageUtil.groovy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/dummy.dart">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

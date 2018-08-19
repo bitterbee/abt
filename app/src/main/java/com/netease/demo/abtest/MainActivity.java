@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.netease.lib.abtest.ui.layout.DynamicLayoutInflater;
 import com.netease.libs.abtestbase.CryptoUtil;
+import com.netease.libs.abtestbase.layout.DynamicLayoutInflater;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
@@ -40,9 +40,11 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        View dyView = null;
         try {
             AssetManager am = getAssets();
-            InputStream is = am.open("test_custom_layout.bin");
+            InputStream is = am.open("test_layout.xml");
+//            InputStream is = am.open("test_custom_layout_2.bin");
 
             ByteArrayOutputStream os = new ByteArrayOutputStream();
             byte[] slice = new byte[1024];
@@ -52,10 +54,24 @@ public class MainActivity extends AppCompatActivity {
             }
 
             String content = CryptoUtil.base64Encode(os.toByteArray());
-            dynamicLayoutInflater.inflate(content, (ViewGroup) findViewById(R.id.replace_stub), true);
+            dyView = dynamicLayoutInflater.inflate(content, (ViewGroup) findViewById(R.id.replace_stub), true);
+
+            TextView tv = (TextView) dyView.findViewWithTag("tag_data");
+            if (tv != null) {
+                tv.setText("modify text view");
+            }
+
+            tv = dyView.findViewById(R.id.tv_alert_content);
+            if (tv != null) {
+                tv.setText("alert_content");
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+//        if (dyView == null) {
+//            throw new InflateException("test");
+//        }
     }
 
     public void onShowDialog(View v) {
