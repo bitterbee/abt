@@ -32,5 +32,5 @@ public class UIProp extends BaseModel {
     public static final String PROP_IMAGE_SRC = "imageSrc";
     public static final String PROP_ALPHA = "alpha";
     public static final String PROP_REPLACE_XML_DYLAYOUT = "replace_xml_dylayout";
-
+    public static final String PROP_CSSLAYOUT = "csslayout_relayout";
 }

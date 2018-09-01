@@ -34,6 +34,10 @@ public class UIPropFactory {
             // ImageView
             UIPROP_SETTERS.put(UIProp.PROP_IMAGE_SRC, new ImageSrcPropSetter());
 
+            // Layout
+            UIPROP_SETTERS.put(UIProp.PROP_REPLACE_XML_DYLAYOUT, new ViewReplaceSetter());
+            UIPROP_SETTERS.put(UIProp.PROP_CSSLAYOUT, new ViewCSSLayoutSetter());
+
 //            Object customTable = RefInvoker.newInstance("com.netease.libs.abtest.ABTestUIPropTable", )
             Map<Object, UIPropSetterAnno> customSetters = (Map<Object, UIPropSetterAnno>) RefInvoker.invokeStaticMethod("com.netease.libs.abtest.ABTestUIPropTable",
                     "getUIPropSetters", null, null);

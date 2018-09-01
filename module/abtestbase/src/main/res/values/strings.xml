@@ -1,6 +1,3 @@
 <resources>
     <string name="app_name">ABTestBase</string>
-
-    <string name="view_path_tag">track_path_tag</string>
-    <string name="replace_xml_dylayout_tag">replace_xml_dylayout_tag</string>
 </resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="view_path_tag">track_path_tag</string>
+    <string name="replace_xml_dylayout_tag">replace_xml_dylayout_tag</string>
+    <string name="css_node_tag">css_node_tag</string>
+    <string name="css_node_json_tag">css_node_tag</string>
+</resources>

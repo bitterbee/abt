@@ -35,7 +35,7 @@ public class ClickListenerUtil {
 
     //Used for APIs lower than ICS (API 14)
     private static View.OnClickListener getOnClickListenerV(View view) {
-        Object result = RefInvoker.getFieldObject(view, "mOnClickListener");
+        Object result = RefInvoker.getFieldObject(view, View.class,  "mOnClickListener");
         if (result instanceof View.OnClickListener) {
             return (View.OnClickListener) result;
         }
@@ -44,7 +44,7 @@ public class ClickListenerUtil {
 
     //Used for new ListenerInfo class structure used beginning with API 14 (ICS)
     private static View.OnClickListener getOnClickListenerV14(View view) {
-        Object listenerInfo = RefInvoker.getFieldObject(view, "mListenerInfo");
+        Object listenerInfo = RefInvoker.getFieldObject(view, View.class, "mListenerInfo");
         if (listenerInfo != null) {
             Object result = RefInvoker.getFieldObject(listenerInfo, "mOnClickListener");
             if (result instanceof View.OnClickListener) {
@@ -58,7 +58,7 @@ public class ClickListenerUtil {
 
     //Used for APIs lower than ICS (API 14)
     private static View.OnLongClickListener getOnLongClickListenerV(View view) {
-        Object result = RefInvoker.getFieldObject(view, "mOnLongClickListener");
+        Object result = RefInvoker.getFieldObject(view, View.class,  "mOnLongClickListener");
         if (result instanceof View.OnLongClickListener) {
             return (View.OnLongClickListener) result;
         }
@@ -67,7 +67,7 @@ public class ClickListenerUtil {
     }
 
     private static View.OnLongClickListener getOnLongClickListenerV14(View view) {
-        Object listenerInfo = RefInvoker.getFieldObject(view, "mListenerInfo");
+        Object listenerInfo = RefInvoker.getFieldObject(view, View.class,  "mListenerInfo");
         if (listenerInfo != null) {
             Object result = RefInvoker.getFieldObject(listenerInfo, "mOnLongClickListener");
             if (result instanceof View.OnLongClickListener) {

@@ -26,6 +26,10 @@ public class ViewUtil {
     }
 
     public static String getIdName(View view) {
+        if (view.getId() == View.NO_ID) {
+            return "NO_ID";
+        }
+
         Context context = view.getContext();
         String result = null;
         try {

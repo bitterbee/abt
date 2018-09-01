@@ -1,6 +1,7 @@
 package com.netease.demo.abtest;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -27,8 +28,17 @@ public class MainActivity extends AppCompatActivity {
         OneABTester test1 = new OneABTester();
         TextView tvName = (TextView) findViewById(R.id.tv_name);
         tvName.setText(test1.getName());
+        tvName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, SecondActivity.class);
+                MainActivity.this.startActivity(i);
+            }
+        });
 
-        testCustomLayout();
+
+
+//        testCustomLayout();
     }
 
     private void testCustomLayout() {

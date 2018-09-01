@@ -11,6 +11,8 @@ import com.netease.tools.abtestuicreator.view.prop.concret.TextSizeEditPropView;
 import com.netease.tools.abtestuicreator.view.prop.concret.TextStringEditPropView;
 import com.netease.tools.abtestuicreator.view.prop.concret.ViewAlphaPropView;
 import com.netease.tools.abtestuicreator.view.prop.concret.ViewBgEditPropView;
+import com.netease.tools.abtestuicreator.view.prop.concret.ViewGroupCssLayoutPropView;
+import com.netease.tools.abtestuicreator.view.prop.concret.ViewReplacePropView;
 
 import java.util.Collection;
 import java.util.LinkedHashMap;
@@ -33,6 +35,8 @@ public class ViewPropMap {
         addEditPropView(result, context, v, TextStringEditPropView.class);
         addEditPropView(result, context, v, TextSizeEditPropView.class);
         addEditPropView(result, context, v, ImageSrcPropView.class);
+        addEditPropView(result, context, v, ViewReplacePropView.class);
+        addEditPropView(result, context, v, ViewGroupCssLayoutPropView.class);
 
         Map<Class, UIPropCreatorAnno> customCreators = (Map<Class, UIPropCreatorAnno>) RefInvoker.invokeStaticMethod("com.netease.libs.abtest.ABTestUIPropTable",
                 "getUIPropCreators", null, null);
