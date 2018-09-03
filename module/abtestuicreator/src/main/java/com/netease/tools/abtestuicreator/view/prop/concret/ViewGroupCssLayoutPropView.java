@@ -49,8 +49,10 @@ public class ViewGroupCssLayoutPropView extends EditPropView<String> {
             boolean success = TextUtils.isEmpty(json) ?
                     StubCSSLayoutUtil.resetCssLayout((ViewGroup) v) :
                     StubCSSLayoutUtil.applyCssLayout((ViewGroup) v, json);
+
             if (success) {
                 v.setTag(com.netease.libs.abtestbase.R.string.css_node_json_tag, json);
+                v.requestLayout();
             }
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
@@ -65,6 +67,8 @@ public class ViewGroupCssLayoutPropView extends EditPropView<String> {
         } else {
             StubCSSLayoutUtil.resetCssLayout((ViewGroup) v);
         }
+
+        v.setTag(com.netease.libs.abtestbase.R.string.css_node_json_tag, mOldJson);
     }
 
     @Override

@@ -45,7 +45,7 @@ public class StubCSSLayout extends FrameLayout {
     }
 
     public void bindContainer(ViewGroup bindView, CSSNode node) {
-        CSSNodeUtil.bind(this, node);
+        CSSLayoutUtil.bindNode(this, node);
 
         ViewGroup.LayoutParams bindViewLP = bindView.getLayoutParams();
         if (bindViewLP != null) {
@@ -73,14 +73,14 @@ public class StubCSSLayout extends FrameLayout {
     }
 
     private CSSNode getCSSNode() {
-        return CSSNodeUtil.getNode(this);
+        return CSSLayoutUtil.getNode(this);
     }
 
     private void measureChildNode(int widthMeasureSpec, int heightMeasureSpec) {
         int childNodeViewsCount = getChildCount();
         for (int i = 0; i < childNodeViewsCount; i++) {
             View view = getChildAt(i);
-            CSSNode node = CSSNodeUtil.getNode(view);
+            CSSNode node = CSSLayoutUtil.getNode(view);
 
             if (node.getSizeToFit()) {
                 int margins = (int) (node.getMargin().get(Spacing.LEFT) + node.getMargin().get(Spacing.RIGHT));
@@ -101,7 +101,7 @@ public class StubCSSLayout extends FrameLayout {
         int childCount = getChildCount();
         for (int i = 0; i < childCount; i++) {
             View view = getChildAt(i);
-            CSSNode node = CSSNodeUtil.getNode(view);
+            CSSNode node = CSSLayoutUtil.getNode(view);
 
             if (view != null && node != null) {
                 int x = (int) node.getLayoutX();

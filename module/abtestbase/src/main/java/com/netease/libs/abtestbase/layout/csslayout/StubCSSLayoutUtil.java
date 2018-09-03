@@ -28,7 +28,7 @@ public class StubCSSLayoutUtil {
     }
 
     public static boolean applyCssLayout(ViewGroup vg, CSSNodeModel nodeModel) {
-        CSSNode node = CSSNodeUtil.getNode(vg);
+        CSSNode node = CSSLayoutUtil.getNode(vg);
         if (node != null) {
             return nodeModel != null ? doUpdateCssLayout(vg, nodeModel) : resetCssLayout(vg);
         } else {
@@ -54,12 +54,12 @@ public class StubCSSLayoutUtil {
 
     private static void recurseUpdateCssLayout(View view, CSSNodeModel cssModel, StubCSSLayout parentCSSLayout) {
         CSSNode node = CSSNodeFactory.newNode(cssModel);
-        CSSNodeUtil.bind(view, node);
+        CSSLayoutUtil.bindNode(view, node);
 
         ViewGroup vg = (view instanceof ViewGroup) ? (ViewGroup) view : null;
         if (vg == null || vg.getChildCount() == 0) {
             if (parentCSSLayout != null) {
-                CSSNodeUtil.getNode(parentCSSLayout).addChild(node);
+                CSSLayoutUtil.getNode(parentCSSLayout).addChild(node);
             }
             return;
         }
@@ -68,7 +68,7 @@ public class StubCSSLayoutUtil {
         List<View> children = ViewUtil.getChildren(cssLayout);
 
         // vg add cssLayout
-        CSSNodeUtil.bind(cssLayout, node);
+        CSSLayoutUtil.bindNode(cssLayout, node);
         int count = children.size();
         for (int i=0; i<count; i++) {
             View child = children.get(i);
@@ -131,20 +131,20 @@ public class StubCSSLayoutUtil {
                 cssLayout.getPaddingRight(),
                 cssLayout.getPaddingBottom());
         vg.removeView(cssLayout);
-        CSSNode cssNode = CSSNodeUtil.getNode(vg);
-        CSSNodeUtil.unbindNode(cssLayout);
-        CSSNodeUtil.unbindNode(vg);
-        CSSNodeUtil.free(cssNode);
+        CSSNode cssNode = CSSLayoutUtil.getNode(vg);
+        CSSLayoutUtil.unbindNode(cssLayout);
+        CSSLayoutUtil.unbindNode(vg);
+        CSSLayoutUtil.freeNode(cssNode);
 
         List<View> children = ViewUtil.getChildren(cssLayout);
         cssLayout.removeAllViews();
 
         for (View child : children) {
-            CSSNodeUtil.unbindNode(child);
-            LayoutStore.restoreViewLayout(child);
+            CSSLayoutUtil.unbindNode(child);
+            CSSLayoutUtil.restoreViewLayout(child);
 
-            CSSNode childCssNode = CSSNodeUtil.getNode(vg);
-            CSSNodeUtil.free(childCssNode);
+            CSSNode childCssNode = CSSLayoutUtil.getNode(vg);
+            CSSLayoutUtil.freeNode(childCssNode);
 
             vg.addView(child);
 
@@ -187,25 +187,21 @@ public class StubCSSLayoutUtil {
     private static StubCSSLayout recurseBuildCssNodeTree(View view, CSSNodeModel cssModel,
                                                          StubCSSLayout parentCSSLayout) {
         CSSNode node = CSSNodeFactory.newNode(cssModel);
-        LayoutStore.storeViewLayout(view);
+        CSSLayoutUtil.storeViewLayout(view);
 
         ViewGroup vg = (view instanceof ViewGroup) ? (ViewGroup) view : null;
         if (vg == null || vg.getChildCount() == 0) {
-            CSSNodeUtil.bind(view, node);
+            CSSLayoutUtil.bindNode(view, node);
 
             if (parentCSSLayout != null) {
                 parentCSSLayout.addView(view);
-                CSSNodeUtil.getNode(parentCSSLayout).addChild(node);
+                CSSLayoutUtil.getNode(parentCSSLayout).addChild(node);
             }
             return null;
         }
 
-        List<View> children = new LinkedList<View>();
-        int count = vg.getChildCount();
-        for (int i=0; i<count; i++) {
-            View child = vg.getChildAt(i);
-            children.add(child);
-        }
+        List<View> children = ViewUtil.getChildren(vg);
+        int count = children.size();
 
         StubCSSLayout cssLayout = new StubCSSLayout(vg.getContext());
         // vg add cssLayout
