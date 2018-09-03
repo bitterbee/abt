@@ -41,18 +41,18 @@ public class StubCSSLayoutUtil {
             return false;
         }
 
-        return generateCssNodeTree(vg, nodeModel, null) != null;
+        return recurseBuildCssNodeTree(vg, nodeModel, null) != null;
     }
 
     private static boolean doUpdateCssLayout(ViewGroup vg, CSSNodeModel nodeModel) {
         if (!canUpdateCssLayout(vg, nodeModel)) {
             return false;
         }
-        reverseUpdateCssLayout(vg, nodeModel, null);
+        recurseUpdateCssLayout(vg, nodeModel, null);
         return true;
     }
 
-    private static void reverseUpdateCssLayout(View view, CSSNodeModel cssModel, StubCSSLayout parentCSSLayout) {
+    private static void recurseUpdateCssLayout(View view, CSSNodeModel cssModel, StubCSSLayout parentCSSLayout) {
         CSSNode node = CSSNodeFactory.newNode(cssModel);
         CSSNodeUtil.bind(view, node);
 
@@ -73,7 +73,7 @@ public class StubCSSLayoutUtil {
         for (int i=0; i<count; i++) {
             View child = children.get(i);
             CSSNodeModel childModel = cssModel.children.get(i);
-            reverseUpdateCssLayout(child, childModel, cssLayout);
+            recurseUpdateCssLayout(child, childModel, cssLayout);
         }
 
         return;
@@ -125,14 +125,27 @@ public class StubCSSLayoutUtil {
     }
 
     private static void doResetCssLayout(ViewGroup vg, StubCSSLayout cssLayout) {
+        // 恢复 padding
+        vg.setPadding(cssLayout.getPaddingLeft(),
+                cssLayout.getPaddingTop(),
+                cssLayout.getPaddingRight(),
+                cssLayout.getPaddingBottom());
         vg.removeView(cssLayout);
+        CSSNode cssNode = CSSNodeUtil.getNode(vg);
+        CSSNodeUtil.unbindNode(cssLayout);
         CSSNodeUtil.unbindNode(vg);
+        CSSNodeUtil.free(cssNode);
 
         List<View> children = ViewUtil.getChildren(cssLayout);
         cssLayout.removeAllViews();
 
         for (View child : children) {
             CSSNodeUtil.unbindNode(child);
+            LayoutStore.restoreViewLayout(child);
+
+            CSSNode childCssNode = CSSNodeUtil.getNode(vg);
+            CSSNodeUtil.free(childCssNode);
+
             vg.addView(child);
 
             ViewGroup vgChild = (child instanceof ViewGroup) ? (ViewGroup) child : null;
@@ -171,8 +184,10 @@ public class StubCSSLayoutUtil {
         return true;
     }
 
-    private static StubCSSLayout generateCssNodeTree(View view, CSSNodeModel cssModel, StubCSSLayout parentCSSLayout) {
+    private static StubCSSLayout recurseBuildCssNodeTree(View view, CSSNodeModel cssModel,
+                                                         StubCSSLayout parentCSSLayout) {
         CSSNode node = CSSNodeFactory.newNode(cssModel);
+        LayoutStore.storeViewLayout(view);
 
         ViewGroup vg = (view instanceof ViewGroup) ? (ViewGroup) view : null;
         if (vg == null || vg.getChildCount() == 0) {
@@ -205,7 +220,7 @@ public class StubCSSLayoutUtil {
             vg.removeView(child);
 
             CSSNodeModel childModel = cssModel.children.get(i);
-            generateCssNodeTree(child, childModel, cssLayout);
+            recurseBuildCssNodeTree(child, childModel, cssLayout);
         }
 
         return cssLayout;

@@ -4,4 +4,7 @@
     <string name="replace_xml_dylayout_tag">replace_xml_dylayout_tag</string>
     <string name="css_node_tag">css_node_tag</string>
     <string name="css_node_json_tag">css_node_tag</string>
+    <string name="csslayout_bindview_prop_tag">csslayout_bindview_prop_tag</string>
+    <string name="csslayout_nodeview_prop_tag">csslayout_nodeview_prop_tag</string>
+
 </resources>

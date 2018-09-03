@@ -203,6 +203,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/module/abtestbase/src/main/java/com/netease/libs/abtestbase/layout/csslayout/LayoutStore.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/module/abtestbase/src/main/java/com/netease/libs/abtestbase/layout/csslayout/StubCSSLayouUtil.java">
           <value>
             <set />
@@ -294,6 +299,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/module/abtestuicreator/src/main/java/com/netease/tools/abtestuicreator/view/prop/concret/ViewGroupCssLayoutPropView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/module/abtestuicreator/src/main/java/com/netease/tools/abtestuicreator/view/prop/concret/ViewReplacePropView.java">
           <value>
             <set />
           </value>
@@ -438,7 +448,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/view/scratchcard/ScratchCard.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/yanxuan/util/dialog/YXDialogUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/yanxuan/util/media/YxFrescoUtil.java">
           <value>
             <set />
           </value>
@@ -533,6 +553,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/http/UrlGenerator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/http/wzp/WzpCommonRequestListenerWrap.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/http/wzp/WzpExtraHeaders.java">
           <value>
             <set />
@@ -568,6 +598,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/base/activity/BaseActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/base/webview/WebViewViewHolder.java">
           <value>
             <set />
@@ -578,7 +613,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/commoditylist/GoodsViewSetupHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/goods/view/share/GoodDetailShareWrapper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/goods/view/specpanel/GoodDetailSpecPopWindow.java">
           <value>
             <set />
           </value>
@@ -598,6 +643,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/home/newrecommend/viewholder/HomeBannerHolder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/home/newrecommend/viewholder/HomeCrowdFundHolder.java">
           <value>
             <set />
@@ -613,7 +663,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/home/recommend/presenter/TagPresenter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/home/recommend/viewholder/AutoScrollBannerViewHolder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/home/recommend/viewholder/SingleCommodityViewHolder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/mainpage/activity/MainPageActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/orderform/activity/OrderDetailActivity.java">
           <value>
             <set />
           </value>
@@ -693,6 +763,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/pay/viewholder/OrderCommoditiesCommodityViewHolder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/pay/viewholder/OrderCommoditiesDepositPurchaseViewHolder.java">
           <value>
             <set />
@@ -714,6 +789,16 @@
           </value>
         </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/pay/viewholder/item/OrderCommoditiesDepositPurchaseViewHolderItem.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/pay/viewholder/listener/DeliveryMessageTextChangedListener.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/pay/viewholder/view/DeliveryChooseHourRangeItem.java">
           <value>
             <set />
           </value>
@@ -763,7 +848,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/push/thirdpart/flyme/FlymePushMsgReceiver.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/push/thirdpart/miui/MiuiPushMessageReceiver.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/statistics/TrackUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/statistics/yxs/StatisticsInterceptImpl.java">
           <value>
             <set />
           </value>

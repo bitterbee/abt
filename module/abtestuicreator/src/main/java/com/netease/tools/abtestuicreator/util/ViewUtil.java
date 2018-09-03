@@ -3,9 +3,7 @@ package com.netease.tools.abtestuicreator.util;
 import android.content.Context;
 import android.content.res.Resources;
 import android.view.View;
-import android.view.ViewGroup;
 
-import com.netease.libs.abtestbase.ABLog;
 import com.netease.tools.abtestuicreator.R;
 
 /**
@@ -20,9 +18,9 @@ public class ViewUtil {
      * @param view
      */
     public static void markIgnore(View view) {
-        if (view == null)
-            return;
-        view.setTag(R.string.abtest_ignore_tag, new Object());
+        if (view != null) {
+            view.setTag(R.string.abtest_ignore_tag, new Object());
+        }
     }
 
     public static String getIdName(View view) {
@@ -30,38 +28,12 @@ public class ViewUtil {
             return "NO_ID";
         }
 
-        Context context = view.getContext();
-        String result = null;
         try {
-            result = context.getResources().getResourceEntryName(view.getId());
+            Context context = view.getContext();
+            return context.getResources().getResourceEntryName(view.getId());
         } catch (Resources.NotFoundException e) {
             e.printStackTrace();
+            return "WRONG_ID";
         }
-        return result;
-    }
-
-    public static void replace(View beReplace, View toReplace) {
-        if (beReplace == null || toReplace == null) {
-            ABLog.e("replace view but beReplace or toReplace null");
-            return;
-        }
-
-        ViewGroup beVg = (ViewGroup) beReplace.getParent();
-        ViewGroup toVg = (ViewGroup) toReplace.getParent();
-        if (beVg == null || toVg != null) {
-            ABLog.e("replace view but beReplace or toReplace parent invalid");
-            return;
-        }
-
-        int index = -1;
-        int childCount = beVg.getChildCount();
-        for (int i=0; i<childCount; i++) {
-            if (beVg.getChildAt(i) == beReplace) {
-                index = i;
-            }
-        }
-
-        beVg.addView(toReplace, index);
-        beVg.removeView(beReplace);
     }
 }

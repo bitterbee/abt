@@ -1,7 +1,6 @@
 package com.netease.libs.abtestbase.layout.csslayout;
 
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.facebook.csslayout.CSSNode;
 import com.netease.libs.abtestbase.R;

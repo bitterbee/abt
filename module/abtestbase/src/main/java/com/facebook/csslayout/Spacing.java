@@ -14,25 +14,25 @@ import java.util.Arrays;
 
 /**
  * Class representing CSS spacing (padding, margin, and borders). This is mostly necessary to
- * properly implement interactions and updates for properties like margin, marginLeft, and
+ * properly implement interactions and updates for properties like margin, leftMargin, and
  * marginHorizontal.
  */
 public class Spacing {
 
   /**
-   * Spacing type that represents the left direction. E.g. {@code marginLeft}.
+   * Spacing type that represents the left direction. E.g. {@code leftMargin}.
    */
   public static final int LEFT = 0;
   /**
-   * Spacing type that represents the top direction. E.g. {@code marginTop}.
+   * Spacing type that represents the top direction. E.g. {@code topMargin}.
    */
   public static final int TOP = 1;
   /**
-   * Spacing type that represents the right direction. E.g. {@code marginRight}.
+   * Spacing type that represents the right direction. E.g. {@code rightMargin}.
    */
   public static final int RIGHT = 2;
   /**
-   * Spacing type that represents the bottom direction. E.g. {@code marginBottom}.
+   * Spacing type that represents the bottom direction. E.g. {@code bottomMargin}.
    */
   public static final int BOTTOM = 3;
   /**

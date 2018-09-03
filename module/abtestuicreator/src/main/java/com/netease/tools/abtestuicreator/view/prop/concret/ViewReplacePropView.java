@@ -9,9 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.netease.abtest.uiprop.UIPropCreatorAnno;
+import com.netease.libs.abtestbase.ViewUtil;
 import com.netease.libs.abtestbase.layout.DynamicLayoutInflater;
 import com.netease.libs.abtestbase.model.UIProp;
-import com.netease.tools.abtestuicreator.util.ViewUtil;
 import com.netease.tools.abtestuicreator.view.prop.EditPropView;
 
 import java.lang.ref.WeakReference;
@@ -49,7 +49,7 @@ public class ViewReplacePropView extends EditPropView<String> {
         String str = value.toString();
         try {
             mLayoutInflater = new DynamicLayoutInflater(v.getContext());
-            if (mLayoutInflater.isValid()) {
+            if (!mLayoutInflater.isValid()) {
                 return;
             }
 
