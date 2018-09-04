@@ -1,0 +1,14 @@
+
+t
+squid:S135"YReduce the total number of break and continue statements in this loop to use at most one.(áÄ êşÿÿÿÿ
+€"squid:ClassVariableVisibilityCheckY"RMake prefix a static final constant or non-public and provide accessors if needed.(ïø…©
+‰"squid:ClassVariableVisibilityCheckZ"VMake view_class a static final constant or non-public and provide accessors if needed.(ˆØë‘ùÿÿÿÿ
+~"squid:ClassVariableVisibilityCheck["QMake index a static final constant or non-public and provide accessors if needed.(¤Öñ4
+…"squid:ClassVariableVisibilityCheck\"RMake viewId a static final constant or non-public and provide accessors if needed.(Ëƒ¸Ëûÿÿÿÿ
+‘"squid:ClassVariableVisibilityCheck]"^Make contentDescription a static final constant or non-public and provide accessors if needed.(éìúßıÿÿÿÿ
+‚"squid:ClassVariableVisibilityCheck^"OMake tag a static final constant or non-public and provide accessors if needed.(ğè„¨úÿÿÿÿ
+Ssquid:S2589"7Remove this expression which always evaluates to "true"(áÄ êşÿÿÿÿ
+Gsquid:S1481 "+Remove this unused "prefix" local variable.(òÌìŸüÿÿÿÿ
+isquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(È‰¤
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(î§Ûàÿÿÿÿÿ
+rsquid:S00116Z"URename this field "view_class" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆØë‘ùÿÿÿÿ

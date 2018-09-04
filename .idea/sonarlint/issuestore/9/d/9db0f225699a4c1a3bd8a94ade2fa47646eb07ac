@@ -1,5 +1,7 @@
 
-gsquid:CommentedOutCodeLineP"<This block of commented-out lines of code should be removed.(ðÝÍÚúÿÿÿÿ
 esquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(²Ú±Ž
-?squid:S1148M"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
 gsquid:CommentedOutCodeLine7"<This block of commented-out lines of code should be removed.(Ûþ¾úÿÿÿÿ
+gsquid:CommentedOutCodeLineP"<This block of commented-out lines of code should be removed.(ðÝÍÚúÿÿÿÿ
+?squid:S1148M"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+fsquid:UnusedPrivateMethod*"5Remove this unused private "testCustomLayout" method.(œ¶žùøÿÿÿÿ8‰¡üúÙ,
+isquid:CommentedOutCodeLine'"<This block of commented-out lines of code should be removed.(ŒÝÛ¼8‰¡üúÙ,

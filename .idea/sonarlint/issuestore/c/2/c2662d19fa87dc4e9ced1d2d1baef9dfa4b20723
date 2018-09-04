@@ -1,6 +1,6 @@
 
-„"squid:ClassVariableVisibilityCheck"VMake floatValue a static final constant or non-public and provide accessors if needed.(˜š‰ã
-‚"squid:ClassVariableVisibilityCheck"TMake intValue a static final constant or non-public and provide accessors if needed.(Õß«Þ
-~"squid:ClassVariableVisibilityCheck"PMake name a static final constant or non-public and provide accessors if needed.( þÍ¾
 „"squid:ClassVariableVisibilityCheck"QMake value a static final constant or non-public and provide accessors if needed.(’åéäøÿÿÿÿ
+~"squid:ClassVariableVisibilityCheck"PMake name a static final constant or non-public and provide accessors if needed.( þÍ¾
+‚"squid:ClassVariableVisibilityCheck"TMake intValue a static final constant or non-public and provide accessors if needed.(Õß«Þ
 Csquid:S1948"'Make "value" transient or serializable.(’åéäøÿÿÿÿ
+„"squid:ClassVariableVisibilityCheck"VMake floatValue a static final constant or non-public and provide accessors if needed.(˜š‰ã

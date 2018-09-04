@@ -13,6 +13,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <value>
             <set />
@@ -283,12 +288,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/module/abtestuicreator/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/module/abtestuicreator/src/main/java/com/netease/tools/abtestuicreator/util/ClickListenerUtil.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/module/abtestuicreator/src/main/java/com/netease/tools/abtestuicreator/util/ViewUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/module/abtestuicreator/src/main/java/com/netease/tools/abtestuicreator/view/ABTestEditActivity.java">
           <value>
             <set />
           </value>
@@ -413,6 +428,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/util/JournalFileMgr.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/util/JournalFilesMgr.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/util/ScreenUtil.java">
           <value>
             <set />
@@ -459,6 +484,16 @@
           </value>
         </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/yanxuan/util/dialog/YXDialogUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/yanxuan/util/log/FeedbackUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/yanxuan/util/log/NetFeedbackImpl.java">
           <value>
             <set />
           </value>
@@ -818,6 +853,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/splash/RequestPreSender.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/splash/SplashActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/splash/processor/MediaProcessor.java">
           <value>
             <set />
@@ -1033,12 +1078,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/module/ldnetdiagno/src/main/java/com/netease/libs/netanalysis/ApmUploadTimer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/module/ldnetdiagno/src/main/java/com/netease/libs/netanalysis/NetAnalysicApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/module/ldnetdiagno/src/main/java/com/netease/libs/netanalysis/NetFeedback.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/module/ldnetdiagno/src/main/java/com/netease/libs/netanalysis/model/YXAnrItem.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/module/ldnetdiagno/src/main/java/com/netease/libs/netanalysis/model/YXLaunchLoadItem.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/module/yxcommonbase/src/main/java/com/netease/libs/yxcommonbase/file/JournalFilesMgr.java">
           <value>
             <set />
           </value>

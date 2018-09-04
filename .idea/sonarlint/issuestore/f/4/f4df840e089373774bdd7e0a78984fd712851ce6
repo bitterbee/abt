@@ -1,0 +1,4 @@
+
+‚"squid:ClassVariableVisibilityCheck"TMake position a static final constant or non-public and provide accessors if needed.(Žµ¬¢
+ˆ"squid:ClassVariableVisibilityCheck"UMake direction a static final constant or non-public and provide accessors if needed.(¸ã¿£ÿÿÿÿÿ
+‰"squid:ClassVariableVisibilityCheck"VMake dimensions a static final constant or non-public and provide accessors if needed.(ðÃêúøÿÿÿÿ

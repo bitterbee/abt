@@ -1,7 +1,7 @@
 
-vsquid:S2293°"YReplace the type specification in this constructor call with the diamond operator ("<>").(›„Š³úÿÿÿÿ
-usquid:S2293j"YReplace the type specification in this constructor call with the diamond operator ("<>").(›„Š³úÿÿÿÿ
+usquid:S2293l"YReplace the type specification in this constructor call with the diamond operator ("<>").(›„Š³úÿÿÿÿ
+[squid:S1155Í">Use isEmpty() to check whether the collection is empty or not.(àá—ÿþÿÿÿÿ
 @squid:S2786")Remove this redundant "static" qualifier.(›†¯‹
-_squid:S00112Û"FDefine and throw a dedicated exception instead of using a generic one.(“¡É´
+_squid:S00112Ý"FDefine and throw a dedicated exception instead of using a generic one.(“¡É´
 ˆ"squid:ClassVariableVisibilityCheck>"UMake lineIndex a static final constant or non-public and provide accessors if needed.( •ó¬þÿÿÿÿ
-[squid:S1155Ë">Use isEmpty() to check whether the collection is empty or not.(àá—ÿþÿÿÿÿ
+vsquid:S2293²"YReplace the type specification in this constructor call with the diamond operator ("<>").(›„Š³úÿÿÿÿ

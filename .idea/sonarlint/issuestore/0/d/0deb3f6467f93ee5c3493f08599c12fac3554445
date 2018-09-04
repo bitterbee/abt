@@ -1,38 +1,39 @@
 
+ˆ"squid:ClassVariableVisibilityCheck"ZMake justifyContent a static final constant or non-public and provide accessors if needed.(®·½
 €"squid:ClassVariableVisibilityCheck;"RMake margin a static final constant or non-public and provide accessors if needed.(õ†ş¤
-usquid:S1171H"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
-usquid:S1171f"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
-‹"squid:ClassVariableVisibilityCheckr"QMake index a static final constant or non-public and provide accessors if needed.(×´úÕúÿÿÿÿ8¯Ë”…Ø,
-@squid:S1948G"$Make "padding" private or transient.(ÉÅó½üÿÿÿÿ
-†"squid:ClassVariableVisibilityCheckG"SMake padding a static final constant or non-public and provide accessors if needed.(ÉÅó½üÿÿÿÿ
+‡"squid:ClassVariableVisibilityCheckl"TMake minWidth a static final constant or non-public and provide accessors if needed.(è§Âªûÿÿÿÿ
+‹"squid:ClassVariableVisibilityCheck/"XMake positionType a static final constant or non-public and provide accessors if needed.(Õåíøÿÿÿÿ
+‰"squid:ClassVariableVisibilityCheckr"UMake sizetofit a static final constant or non-public and provide accessors if needed.(·ƒ¥H8‰Şª¥Ø,
+„"squid:ClassVariableVisibilityCheck%"VMake alignItems a static final constant or non-public and provide accessors if needed.(ü‚ª¸
+usquid:S1171<"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+Hsquid:S1948v"%Make "children" private or transient.(Øº³Ïşÿÿÿÿ8©É“…Ø,
+…"squid:ClassVariableVisibilityCheckS"RMake border a static final constant or non-public and provide accessors if needed.(è ²œøÿÿÿÿ
+?squid:S1948S"#Make "border" private or transient.(è ²œøÿÿÿÿ
+‡"squid:ClassVariableVisibilityCheck"YMake flexDirection a static final constant or non-public and provide accessors if needed.( åŞ‰
 ƒ"squid:ClassVariableVisibilityCheckp"UMake maxHeight a static final constant or non-public and provide accessors if needed.(¨Í†Ô
-usquid:S1171T"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
-Hsquid:S3599S",Use another way to initialize this instance.(è ²œøÿÿÿÿ
+usquid:S1171H"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+Hsquid:S3599\",Use another way to initialize this instance.(•Ê’êùÿÿÿÿ
+Csquid:S3599;",Use another way to initialize this instance.(õ†ş¤
+Csquid:S3599e",Use another way to initialize this instance.(éÃ†Ù
+‡"squid:ClassVariableVisibilityCheck\"TMake position a static final constant or non-public and provide accessors if needed.(•Ê’êùÿÿÿÿ
+@squid:S1948G"$Make "padding" private or transient.(ÉÅó½üÿÿÿÿ
+‹"squid:ClassVariableVisibilityCheck "XMake alignContent a static final constant or non-public and provide accessors if needed.(ßÖŞ€ùÿÿÿÿ
+ƒ"squid:ClassVariableVisibilityCheck6"PMake flex a static final constant or non-public and provide accessors if needed.(‘“¤úÿÿÿÿ
+‚"squid:ClassVariableVisibilityCheck"UMake direction a static final constant or non-public and provide accessors if needed.(í¿·z
+†"squid:ClassVariableVisibilityCheckG"SMake padding a static final constant or non-public and provide accessors if needed.(ÉÅó½üÿÿÿÿ
+ˆ"squid:ClassVariableVisibilityCheckm"UMake minHeight a static final constant or non-public and provide accessors if needed.(Î€­ıÿÿÿÿ
 "squid:ClassVariableVisibilityChecko"TMake maxWidth a static final constant or non-public and provide accessors if needed.(ŸœÊ
 
-‡"squid:ClassVariableVisibilityCheck4"TMake flexWrap a static final constant or non-public and provide accessors if needed.(†„Ú‹ûÿÿÿÿ
-Hsquid:S3599G",Use another way to initialize this instance.(ÉÅó½üÿÿÿÿ
-‡"squid:ClassVariableVisibilityCheck"YMake flexDirection a static final constant or non-public and provide accessors if needed.( åŞ‰
-‹"squid:ClassVariableVisibilityCheck/"XMake positionType a static final constant or non-public and provide accessors if needed.(Õåíøÿÿÿÿ
->squid:S1948e"'Make "dimensions" private or transient.(éÃ†Ù
-‡"squid:ClassVariableVisibilityCheck\"TMake position a static final constant or non-public and provide accessors if needed.(•Ê’êùÿÿÿÿ
-…"squid:ClassVariableVisibilityCheckS"RMake border a static final constant or non-public and provide accessors if needed.(è ²œøÿÿÿÿ
-ˆ"squid:ClassVariableVisibilityCheck"ZMake justifyContent a static final constant or non-public and provide accessors if needed.(®·½
-ˆ"squid:ClassVariableVisibilityCheck*"UMake alignSelf a static final constant or non-public and provide accessors if needed.(—¹ø±ÿÿÿÿÿ
-‚"squid:ClassVariableVisibilityCheck"UMake direction a static final constant or non-public and provide accessors if needed.(í¿·z
-"squid:ClassVariableVisibilityCheckt"TMake children a static final constant or non-public and provide accessors if needed.(Øº³Ïşÿÿÿÿ8©É“…Ø,
-Hsquid:S3599\",Use another way to initialize this instance.(•Ê’êùÿÿÿÿ
-:squid:S1948;"#Make "margin" private or transient.(õ†ş¤
-usquid:S1171]"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
-Csquid:S3599;",Use another way to initialize this instance.(õ†ş¤
-?squid:S1948S"#Make "border" private or transient.(è ²œøÿÿÿÿ
-Hsquid:S1948t"%Make "children" private or transient.(Øº³Ïşÿÿÿÿ8©É“…Ø,
-ˆ"squid:ClassVariableVisibilityCheckm"UMake minHeight a static final constant or non-public and provide accessors if needed.(Î€­ıÿÿÿÿ
-Csquid:S3599e",Use another way to initialize this instance.(éÃ†Ù
+usquid:S1171T"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
 Asquid:S1948\"%Make "position" private or transient.(•Ê’êùÿÿÿÿ
-‡"squid:ClassVariableVisibilityCheckl"TMake minWidth a static final constant or non-public and provide accessors if needed.(è§Âªûÿÿÿÿ
-„"squid:ClassVariableVisibilityCheck%"VMake alignItems a static final constant or non-public and provide accessors if needed.(ü‚ª¸
-‹"squid:ClassVariableVisibilityCheck "XMake alignContent a static final constant or non-public and provide accessors if needed.(ßÖŞ€ùÿÿÿÿ
+>squid:S1948e"'Make "dimensions" private or transient.(éÃ†Ù
+ˆ"squid:ClassVariableVisibilityCheck*"UMake alignSelf a static final constant or non-public and provide accessors if needed.(—¹ø±ÿÿÿÿÿ
+"squid:ClassVariableVisibilityCheckv"TMake children a static final constant or non-public and provide accessors if needed.(Øº³Ïşÿÿÿÿ8©É“…Ø,
+:squid:S1948;"#Make "margin" private or transient.(õ†ş¤
+Hsquid:S3599G",Use another way to initialize this instance.(ÉÅó½üÿÿÿÿ
+‹"squid:ClassVariableVisibilityCheckt"QMake index a static final constant or non-public and provide accessors if needed.(×´úÕúÿÿÿÿ8¯Ë”…Ø,
+‡"squid:ClassVariableVisibilityCheck4"TMake flexWrap a static final constant or non-public and provide accessors if needed.(†„Ú‹ûÿÿÿÿ
+usquid:S1171]"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
 „"squid:ClassVariableVisibilityChecke"VMake dimensions a static final constant or non-public and provide accessors if needed.(éÃ†Ù
-usquid:S1171<"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
-ƒ"squid:ClassVariableVisibilityCheck6"PMake flex a static final constant or non-public and provide accessors if needed.(‘“¤úÿÿÿÿ
+Hsquid:S3599S",Use another way to initialize this instance.(è ²œøÿÿÿÿ
+usquid:S1171f"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ

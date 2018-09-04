@@ -1,51 +1,51 @@
 
+@squid:S1148º"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
 Csquid:S1068"'Remove this unused "TAG" private field.(æ„Û›øÿÿÿÿ
 vsquid:S2293ò"YReplace the type specification in this constructor call with the diamond operator ("<>").(ú§ˆïûÿÿÿÿ
-gsquid:CommentedOutCodeLineJ"<This block of commented-out lines of code should be removed.(£’†Íûÿÿÿÿ
-jsquid:S3776Ð"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(œ‹’ž
-Qsquid:S1118":Add a private constructor to hide the implicit public one.(Ó»Ú’
-`squid:S2147"DCombine this catch with the one at line 24, which has the same body.(¼¯•¶ùÿÿÿÿ
-[squid:S2147"DCombine this catch with the one at line 24, which has the same body.(¯žáè
-[squid:S2147"DCombine this catch with the one at line 24, which has the same body.(Å¡ß
-[squid:S2147 "DCombine this catch with the one at line 24, which has the same body.(åþáÿ
+?squid:S1148!"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+@squid:S1148ž"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
 `squid:S21478"DCombine this catch with the one at line 54, which has the same body.(¥¨›ýÿÿÿÿ
+?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+gsquid:CommentedOutCodeLineJ"<This block of commented-out lines of code should be removed.(£’†Íûÿÿÿÿ
+[squid:S2147"DCombine this catch with the one at line 24, which has the same body.(¯žáè
+@squid:S1148¸"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+asquid:S2147~"ECombine this catch with the one at line 114, which has the same body.(¥¨›ýÿÿÿÿ
+?squid:S1148W"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S1148{"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+`squid:S2147V"DCombine this catch with the one at line 80, which has the same body.(¼¯•¶ùÿÿÿÿ
+?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+Qsquid:S1118":Add a private constructor to hide the implicit public one.(Ó»Ú’
+?squid:S1148."#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S1148["#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+@squid:S1148Ë"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+`squid:S2147R"DCombine this catch with the one at line 80, which has the same body.(¥¨›ýÿÿÿÿ
+;squid:S1148µ"#Use a logger to log this exception.(“ÜÉ¶
+]squid:S2147€"ECombine this catch with the one at line 114, which has the same body.(Å¡ß
+[squid:S2147 "DCombine this catch with the one at line 24, which has the same body.(åþáÿ
+?squid:S1148Y"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+@squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S1148Q"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S1148s"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+[squid:S2147X"DCombine this catch with the one at line 80, which has the same body.(åþáÿ
+[squid:S2147"DCombine this catch with the one at line 24, which has the same body.(Å¡ß
+@squid:S1148ª"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+]squid:S2147¹"ECombine this catch with the one at line 169, which has the same body.(Å¡ß
+@squid:S1148Ã"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+bsquid:S2147·"ECombine this catch with the one at line 169, which has the same body.(¥¨›ýÿÿÿÿ
+@squid:S1148ƒ"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+[squid:S2147Z"DCombine this catch with the one at line 80, which has the same body.(”ý¾
+@squid:S1148Õ"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S1148U"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+@squid:S1148´"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+jsquid:S3776Ð"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(œ‹’ž
+?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+[squid:S2147T"DCombine this catch with the one at line 80, which has the same body.(Å¡ß
+]squid:S2147‚"ECombine this catch with the one at line 114, which has the same body.(”ý¾
 [squid:S2147:"DCombine this catch with the one at line 54, which has the same body.(åþáÿ
 [squid:S2147<"DCombine this catch with the one at line 54, which has the same body.(”ý¾
-`squid:S2147R"DCombine this catch with the one at line 80, which has the same body.(¥¨›ýÿÿÿÿ
-[squid:S2147T"DCombine this catch with the one at line 80, which has the same body.(Å¡ß
-`squid:S2147V"DCombine this catch with the one at line 80, which has the same body.(¼¯•¶ùÿÿÿÿ
-[squid:S2147X"DCombine this catch with the one at line 80, which has the same body.(åþáÿ
-[squid:S2147Z"DCombine this catch with the one at line 80, which has the same body.(”ý¾
-asquid:S2147~"ECombine this catch with the one at line 114, which has the same body.(¥¨›ýÿÿÿÿ
-]squid:S2147€"ECombine this catch with the one at line 114, which has the same body.(Å¡ß
-]squid:S2147‚"ECombine this catch with the one at line 114, which has the same body.(”ý¾
-bsquid:S2147·"ECombine this catch with the one at line 169, which has the same body.(¥¨›ýÿÿÿÿ
-]squid:S2147¹"ECombine this catch with the one at line 169, which has the same body.(Å¡ß
-?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148!"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148."#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148Q"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148S"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148U"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148W"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148Y"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148["#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148s"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148{"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-:squid:S1148|"#Use a logger to log this exception.(“ÜÉ¶
-?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
 @squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-@squid:S1148ƒ"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-@squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-@squid:S1148ž"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-@squid:S1148ª"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-@squid:S1148´"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-;squid:S1148µ"#Use a logger to log this exception.(“ÜÉ¶
-@squid:S1148¸"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-@squid:S1148º"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-@squid:S1148Ã"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-@squid:S1148Ë"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-@squid:S1148Õ"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+`squid:S2147"DCombine this catch with the one at line 24, which has the same body.(¼¯•¶ùÿÿÿÿ
+:squid:S1148|"#Use a logger to log this exception.(“ÜÉ¶
+?squid:S1148S"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ

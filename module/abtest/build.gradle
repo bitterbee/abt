@@ -5,11 +5,11 @@ sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion COMPILE_SDK_VERSION.toInteger()
 
     defaultConfig {
-        minSdkVersion 18
-        targetSdkVersion 26
+        minSdkVersion MIN_SDK_VERSION.toInteger()
+        targetSdkVersion TARGET_SDK_VERSION.toInteger()
         versionCode 1
         versionName "1.0"
 
@@ -29,7 +29,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support:appcompat-v7:26.0.0'
+    implementation "com.android.support:appcompat-v7:${APPCOMPAT_V7_VERSION}"
     compileOnly 'org.aspectj:aspectjrt:1.8.9'
     implementation project(':abtestbase')
     implementation project(':abtest-uiproptable')

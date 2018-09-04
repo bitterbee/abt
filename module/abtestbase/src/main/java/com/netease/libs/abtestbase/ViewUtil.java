@@ -1,5 +1,8 @@
 package com.netease.libs.abtestbase;
 
+import android.app.Activity;
+import android.content.Context;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -64,5 +67,27 @@ public class ViewUtil {
 
         beVg.addView(toReplace, index);
         beVg.removeView(beReplace);
+
+        forceLayout(toReplace);
+    }
+
+    public static void forceLayout(View v) {
+        if (v == null) {
+            return;
+        }
+
+        Context context = v.getContext();
+        Activity activity = context instanceof Activity ? (Activity) context : null;
+        if (activity == null || activity.isFinishing()) {
+            return;
+        }
+        v.requestLayout();
+
+        View decorView = activity.getWindow().getDecorView();
+        decorView.invalidate();
+
+        DisplayMetrics dm = context.getApplicationContext().getResources().getDisplayMetrics();
+        decorView.measure(dm.widthPixels, dm.heightPixels);
+        decorView.layout(0, 0, dm.widthPixels, dm.heightPixels);
     }
 }

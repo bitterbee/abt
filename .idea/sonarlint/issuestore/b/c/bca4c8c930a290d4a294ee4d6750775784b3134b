@@ -1,0 +1,9 @@
+
+bsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(åùù
+bsquid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(æ°Ôè
+bsquid:CommentedOutCodeLine&"<This block of commented-out lines of code should be removed.(ß½Â™
+gsquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(½ª´ûÿÿÿÿ
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(ÕÁ´úÿÿÿÿ
+usquid:S1171A"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+Csquid:S3599@",Use another way to initialize this instance.(…åÛ÷
+?squid:S1148_"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ

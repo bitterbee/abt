@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.netease.abtest.uiprop.UIPropCreatorAnno;
+import com.netease.libs.abtestbase.ViewUtil;
 import com.netease.libs.abtestbase.layout.csslayout.StubCSSLayoutUtil;
 import com.netease.libs.abtestbase.model.UIProp;
 import com.netease.tools.abtestuicreator.view.prop.EditPropView;
@@ -52,7 +53,7 @@ public class ViewGroupCssLayoutPropView extends EditPropView<String> {
 
             if (success) {
                 v.setTag(com.netease.libs.abtestbase.R.string.css_node_json_tag, json);
-                v.requestLayout();
+                ViewUtil.forceLayout(v);
             }
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
