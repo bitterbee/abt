@@ -66,7 +66,9 @@ public class ViewReplacePropView extends EditPropView<String> {
                 return;
             }
 
-            mLayoutInflater = new DynamicLayoutInflater(v.getContext());
+            if (mLayoutInflater == null) {
+                mLayoutInflater = new DynamicLayoutInflater(v.getContext());
+            }
             if (!mLayoutInflater.isValid()) {
                 return;
             }
