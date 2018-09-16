@@ -24,7 +24,6 @@ import java.util.Set;
 public class ABTestConfig {
 
     private ABTestConfigModel mABTestConfigModel = new ABTestConfigModel();
-    private ABTestActivityLiftcycleCallbackImpl mActivityLiftcycleCallback;
 
     /*package*/ Set<ObjWeakRef<BaseABTester>> mABTesterRefs = new HashSet<>();
 
@@ -72,8 +71,7 @@ public class ABTestConfig {
         }
 
         UIPropSetterMgr.init(uiCases);
-        mActivityLiftcycleCallback = new ABTestActivityLiftcycleCallbackImpl();
-        app.registerActivityLifecycleCallbacks(mActivityLiftcycleCallback);
+        app.registerActivityLifecycleCallbacks(new ABTestActivityLiftcycleCallbackImpl());
 
         notifyAllTesters();
     }
@@ -81,8 +79,8 @@ public class ABTestConfig {
     private synchronized void notifyAllTesters() {
         for (ObjWeakRef<BaseABTester> testRef : mABTesterRefs) {
             BaseABTester tester = testRef.get();
-            if (tester != null && tester.getGroupId() != null) {
-                ABTestItem group = getTestCase(tester.getGroupId());
+            if (tester != null && tester.getItemId() != null) {
+                ABTestItem group = getTestCase(tester.getItemId());
                 if (group != null) {
                     tester.updateConfig(group);
                 }
@@ -90,12 +88,12 @@ public class ABTestConfig {
         }
     }
 
-    public ABTestItem getTestCase(String groupId) {
+    public ABTestItem getTestCase(String itemId) {
         if (mABTestConfigModel.abtestConfig == null) {
             return null;
         }
         for (ABTestItem group : mABTestConfigModel.abtestConfig) {
-            if (groupId != null && groupId.equalsIgnoreCase(group.getItemId())) {
+            if (itemId != null && itemId.equalsIgnoreCase(group.getItemId())) {
                 return group;
             }
         }
@@ -116,7 +114,7 @@ public class ABTestConfig {
         for (ABTestItem groupVO : mABTestConfigModel.abtestConfig) {
             ABTestCase testVO = groupVO.getTestCase();
             if (!TextUtils.isEmpty(groupVO.getItemId()) && testVO != null) {
-                ids.add(groupVO.getItemId() + "-" + testVO.getTestId());
+                ids.add(groupVO.getItemId() + "-" + testVO.getCaseId());
             }
         }
         return JsonUtil.toJSONString(ids);

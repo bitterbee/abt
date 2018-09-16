@@ -8,16 +8,16 @@ import com.netease.libs.abtestbase.model.BaseModel;
 public class ABTestCase extends BaseModel {
 
     /** 测试ID */
-    private String testId;
+    private String caseId;
     /** 扩展字段 */
     private String accessory;
 
-    public String getTestId() {
-        return testId;
+    public String getCaseId() {
+        return caseId;
     }
 
-    public void setTestId(String testId) {
-        this.testId = testId;
+    public void setCaseId(String caseId) {
+        this.caseId = caseId;
     }
 
     public String getAccessory() {

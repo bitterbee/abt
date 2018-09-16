@@ -10,7 +10,7 @@ import com.netease.lib.abtest.model.ABTestCase;
 /**
  * Created by zyl06 on 2018/7/26.
  */
-@ABTesterAnno(groupId = "SimpleTest_001")
+@ABTesterAnno(itemId = "SimpleTest_001")
 public class OneABTester extends BaseABTester {
 
     private String name;
@@ -23,7 +23,7 @@ public class OneABTester extends BaseABTester {
 
     }
 
-    @ABTestInitMethodAnnotation(testId = "000", defaultInit = true)
+    @ABTestInitMethodAnnotation(caseId = "000", defaultInit = true)
     public void initA(@Nullable String accessory, @Nullable ABTestCase testVO) {
         name = "hanmeimei";
     }
@@ -33,7 +33,7 @@ public class OneABTester extends BaseABTester {
      * @param accessory
      * @param testVO
      */
-    @ABTestInitMethodAnnotation(testId = "001")
+    @ABTestInitMethodAnnotation(caseId = "001")
     public void initB(@Nullable String accessory, @Nullable ABTestCase testVO) {
         name = "lilei";
     }

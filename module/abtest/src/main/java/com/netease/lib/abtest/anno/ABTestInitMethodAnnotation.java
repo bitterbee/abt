@@ -11,6 +11,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ABTestInitMethodAnnotation {
-    String testId();
+    String caseId();
     boolean defaultInit() default false;
 }

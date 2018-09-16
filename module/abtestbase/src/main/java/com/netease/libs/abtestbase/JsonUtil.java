@@ -7,6 +7,9 @@ import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import com.netease.libs.abtestbase.model.ABTestUICase;
 
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.lang.reflect.TypeVariable;
 import java.util.List;
 
 /**
@@ -35,7 +38,7 @@ public class JsonUtil {
     public static <T> List<T> parseArray(String json, Class<T> type) {
         try {
             if (!TextUtils.isEmpty(json)) {
-                return GSON.fromJson(json, new TypeToken<List<ABTestUICase>>(){}.getType());
+                return GSON.fromJson(json, TypeToken.getParameterized(List.class, type).getType());
             }
         } catch (JsonSyntaxException e) {
             ABLog.e(e);

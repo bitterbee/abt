@@ -17,6 +17,5 @@ public class DemoApplication extends Application {
         super.onCreate();
 
         ABTestMonitor.getInstance().init(this);
-        ABTestConfig.getInstance().init(this, null, ABTestFileUtil.readUiCases(this));
     }
 }

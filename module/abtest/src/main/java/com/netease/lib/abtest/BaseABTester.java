@@ -17,17 +17,19 @@ import java.lang.reflect.Method;
  * Created by zyl06 on 27/07/2017.
  */
 public abstract class BaseABTester {
-    protected ABTestItem mTestGroup;
-    protected String mGroupId;
+    protected ABTestItem mTestCase;
+    protected String mItemId;
 
     private ABTestCase mValidTestVO;
     private Method mInitABMethod;
 
+    private boolean mIsInited = false;
+
     public BaseABTester() {
         ABTesterAnno anno = getClass().getAnnotation(ABTesterAnno.class);
         if (anno != null) {
-            mGroupId = anno.groupId();
-            mTestGroup = ABTestConfig.getInstance().getTestCase(mGroupId);
+            mItemId = anno.itemId();
+            mTestCase = ABTestConfig.getInstance().getTestCase(mItemId);
             chooseInitMethod(getTestCase());
 
             ABTestConfig.getInstance().mABTesterRefs.add(new ObjWeakRef<>(this));
@@ -41,7 +43,7 @@ public abstract class BaseABTester {
         for (Method method : methods) {
             ABTestInitMethodAnnotation anno = method.getAnnotation(ABTestInitMethodAnnotation.class);
             if (anno != null) {
-                if (testCase != null && TextUtils.equals(anno.testId(), testCase.getTestId())) {
+                if (testCase != null && TextUtils.equals(anno.caseId(), testCase.getCaseId())) {
                     mInitABMethod = method;
                     mValidTestVO = testCase;
                     return;
@@ -63,9 +65,13 @@ public abstract class BaseABTester {
     }
 
     protected void initAB() {
-        ABTestCase testVO = getValidTest();
-        if (mInitABMethod != null) {
-            invokeMethod(mInitABMethod, testVO);
+        if (!mIsInited) {
+            mIsInited = true;
+
+            ABTestCase testVO = getValidTest();
+            if (mInitABMethod != null) {
+                invokeMethod(mInitABMethod, testVO);
+            }
         }
     }
 
@@ -78,15 +84,15 @@ public abstract class BaseABTester {
     }
 
     protected ABTestCase getTestCase() {
-        return mTestGroup != null ? mTestGroup.getTestCase() : null;
+        return mTestCase != null ? mTestCase.getTestCase() : null;
     }
 
-    public String getGroupId() {
-        return mGroupId;
+    public String getItemId() {
+        return mItemId;
     }
 
     /*package*/ void updateConfig(ABTestItem groupVO) {
-        mTestGroup = groupVO;
+        mTestCase = groupVO;
         mInitABMethod = null;
         mValidTestVO = null;
         chooseInitMethod(getTestCase());
@@ -99,7 +105,7 @@ public abstract class BaseABTester {
 
     private void invokeMethod(Method method, @Nullable ABTestCase testVO) {
         try {
-            String groupAccessory = mTestGroup == null ? null : mTestGroup.getAccessory();
+            String groupAccessory = mTestCase == null ? null : mTestCase.getAccessory();
             method.invoke(this, groupAccessory, testVO);
         } catch (IllegalAccessException e) {
             ABLog.e(e);

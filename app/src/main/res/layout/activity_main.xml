@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:background="@color/gray_f7"
-        android:text="Hello World!"/>
+        android:text="Hello World!"
+        android:textSize="20dp"/>
 
     <TextView
         android:id="@+id/text2"
