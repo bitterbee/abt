@@ -4,6 +4,7 @@
     <string name="abtest_tag_view_local_path">abtest_tag_view_local_path</string>
 
     <string name="abtest_tag_recycleview_holder_type">abtest_tag_recycleview_holder_type</string>
+    <string name="abtest_tag_environment">abtest_tag_environment</string>
 
     <string name="abtest_tag_view_xmllayout">abtest_tag_view_xmllayout</string>
     <string name="abtest_tag_view_root_xmllayout">abtest_tag_view_root_xmllayout</string>

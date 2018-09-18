@@ -14,7 +14,6 @@ import com.netease.demo.abtest.R;
 /**
  * Created by zyl06 on 2018/9/16.
  */
-
 public class HomeFragment extends Fragment {
 
     private static final String TAG = "RecyclerViewFragment";

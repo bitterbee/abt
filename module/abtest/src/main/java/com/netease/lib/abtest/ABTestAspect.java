@@ -3,7 +3,6 @@ package com.netease.lib.abtest;
 import android.util.Log;
 import android.view.View;
 
-import com.netease.libs.abtestbase.ABLog;
 import com.netease.libs.abtestbase.RefInvoker;
 
 import org.aspectj.lang.JoinPoint;
@@ -21,13 +20,8 @@ public class ABTestAspect {
     private static final String TAG = "ABTest_apsectj";
 
     @After("execution(com.netease.lib.abtest.BaseABTester+.new(..)) && !within(com.netease.lib.abtest.BaseABTester)")
-    public void afterMethodExecution(JoinPoint joinPoint) {
-        String target = joinPoint.getTarget() != null ? joinPoint.getTarget().toString() : "null";
-        String signature = joinPoint.getSignature() != null ? joinPoint.getSignature().getName() : "null";
-        String filename = joinPoint.getSourceLocation().getFileName();
-
-        ABLog.i("after->" + target + "#" + signature + "#" + filename);
-
+    public void afterBaseABTesterNew(JoinPoint joinPoint) {
+        log(joinPoint);
         ((BaseABTester) joinPoint.getTarget()).initAB();
     }
 
@@ -54,6 +48,46 @@ public class ABTestAspect {
 
         return result;
     }
+
+    ////////////////////////////////
+    // fragment begin =====================
+    @Around("execution(public android.view.View android.support.v4.app.Fragment+.onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)) && !within(android.support.v4.app.Fragment)")
+    public Object aroundFragmentOnCreateView(ProceedingJoinPoint joinPoint) {
+        log(joinPoint);
+
+        Object result = null;
+        try {
+            result = joinPoint.proceed();
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+
+        try {
+            if (result instanceof View) {
+                ((View) result).setTag(R.string.abtest_tag_environment, joinPoint.getTarget().getClass().getName());
+            }
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+
+        return result;
+    }
+
+    // 如果是重复标记，没关系
+    @After("execution(public void android.support.v4.app.Fragment+.onViewCreated(android.view.View, android.os.Bundle)) && !within(android.support.v4.app.Fragment)")
+    public void aroundFragmentOnViewCreated(JoinPoint joinPoint) {
+        log(joinPoint);
+        View v = (View) joinPoint.getArgs()[0];
+        if (v != null) {
+            v.setTag(R.string.abtest_tag_environment, joinPoint.getTarget().toString());
+        }
+    }
+
+
+    // TODO: 2018/9/18 android.app.Fragment
+    
+    // fragment end =====================
+    ////////////////////////////////
 
     private void log(JoinPoint joinPoint) {
         String target = joinPoint.getTarget() != null ? joinPoint.getTarget().toString() : "null";

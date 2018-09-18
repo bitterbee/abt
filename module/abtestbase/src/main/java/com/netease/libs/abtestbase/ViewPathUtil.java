@@ -14,7 +14,6 @@ import java.util.List;
 /**
  * Created by zyl06 on 2018/7/29.
  */
-
 public class ViewPathUtil {
 
     private static boolean hasLocalPath(View v) {
@@ -55,6 +54,7 @@ public class ViewPathUtil {
 
         PathElement element = new PathElement();
         element.className = v.getClass().getName();
+        element.environment = (String) v.getTag(R.string.abtest_tag_environment);
         if (v.getId() == android.R.id.content || v.getParent() == null) {
             element.index = 0;
 
@@ -153,75 +153,11 @@ public class ViewPathUtil {
         }
     }
 
-
-
-    //    public static String getViewPath(View v) {
-//        if (v == null || v.getContext() == null) {
-//            return null;
-//        }
-//
-//        String result = (String) v.getTag(R.string.view_path_tag);
-//        if (!TextUtils.isEmpty(result)) {
-//            return result;
-//        }
-//
-//        List<PathElement> paths = new ArrayList<>();
-//
-//        View tmp = v;
-//        while (tmp != null) {
-//            int index = 0;
-//            String viewClassName = tmp.getClass().getName();
-//            if (tmp.getId() == android.R.id.content) {
-//                index = 0;
-//                PathElement element = new PathElement();
-//                element.view_class = viewClassName;
-//                element.index = index;
-//                paths.add(0, element);
-//                break;
-//            }
-//
-//            ViewParent parent = tmp.getParent();
-//            ViewGroup parentView = null;
-//            if (parent instanceof ViewGroup) {
-//                parentView = (ViewGroup) parent;
-//            }
-//            if (parentView == null) {
-//                break;
-//            }
-//
-//            int count = parentView.getChildCount();
-//            int sameViewCount = 0;
-//            for (int i = 0; i < count; i++) {
-//                View child = parentView.getChildAt(i);
-//                if (child == tmp) {
-//                    index = sameViewCount;
-//                    break;
-//                }
-//                if (child.getClass() == tmp.getClass()) {
-//                    sameViewCount ++;
-//                }
-//            }
-//
-//            PathElement element = new PathElement();
-//            element.view_class = viewClassName;
-//            element.index = index;
-//            paths.add(0, element);
-//
-//            tmp = parentView;
-//        }
-//
-//        if (!paths.isEmpty()) {
-//            result = CryptoUtil.getSHA256(JsonUtil.toJSONString(paths));
-//            v.setTag(R.string.view_path_tag, result);
-//        }
-//
-//        return result;
-//    }
-
     private static class PathElement {
         public String resName;
         public String className;
         public Integer index;
-        public Integer type; // RecycleView, ListView. View Type
+        public Integer type; // RecycleView, ListView. ViewHolder Type
+        public String environment; // Fragment 等
     }
 }

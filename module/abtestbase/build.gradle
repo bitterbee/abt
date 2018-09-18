@@ -31,5 +31,4 @@ dependencies {
     androidTestImplementation "com.android.support.test.espresso:espresso-core:${TEST_ESPRESSO_CORE_VERSION}"
 
     implementation "com.google.code.gson:gson:${GSON_VERSION}"
-    implementation "com.android.support:recyclerview-v7:${RECYCLER_VIEW_VERSION}"
 }
