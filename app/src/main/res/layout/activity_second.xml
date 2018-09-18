@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/real_main_view"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
 
-    <WebView
+    <FrameLayout
+        android:id="@+id/realtabcontent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/webview">
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
-    </WebView>
+    <View
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"/>
 
-</FrameLayout>
+    <!-- 主布局界面 -->
+    <android.support.v4.app.FragmentTabHost
+        xmlns:skin="http://schemas.android.com/yanxuan/skin"
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        skin:enable="true"
+        skin:skinlimit="background">
+
+        <FrameLayout
+            android:id="@+id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"/>
+
+    </android.support.v4.app.FragmentTabHost>
+</LinearLayout>

@@ -77,7 +77,7 @@ public class DynamicLayoutInflater {
         View res = null;
         try {
             res = mLayoutInflater.inflate(xmlParser, root, attachToRoot);
-            res.setTag(R.string.replace_xml_dylayout_tag, content);
+            res.setTag(R.string.abtest_tag_replace_xml_dylayout, content);
 
             applyViewIds(res);
         } catch (Exception e) {

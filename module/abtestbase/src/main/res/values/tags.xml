@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="view_path_tag">track_path_tag</string>
-    <string name="replace_xml_dylayout_tag">replace_xml_dylayout_tag</string>
-    <string name="css_node_tag">css_node_tag</string>
-    <string name="css_node_json_tag">css_node_tag</string>
-    <string name="csslayout_bindview_prop_tag">csslayout_bindview_prop_tag</string>
-    <string name="csslayout_nodeview_prop_tag">csslayout_nodeview_prop_tag</string>
+    <string name="abtest_tag_view_path">abtest_tag_view_path</string>
+    <string name="abtest_tag_view_local_path">abtest_tag_view_local_path</string>
+
+    <string name="abtest_tag_recycleview_holder_type">abtest_tag_recycleview_holder_type</string>
+
+    <string name="abtest_tag_view_xmllayout">abtest_tag_view_xmllayout</string>
+    <string name="abtest_tag_view_root_xmllayout">abtest_tag_view_root_xmllayout</string>
+
+    <string name="abtest_tag_replace_xml_dylayout">abtest_tag_replace_xml_dylayout</string>
+    <string name="abtest_tag_css_node">abtest_tag_css_node</string>
+    <string name="abtest_tag_css_node_json">abtest_tag_css_node_json</string>
+    <string name="abtest_tag_csslayout_bindview_prop">abtest_tag_csslayout_bindview_prop</string>
+    <string name="abtest_tag_csslayout_nodeview_prop">abtest_tag_csslayout_nodeview_prop</string>
 
 </resources>

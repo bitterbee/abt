@@ -19,7 +19,7 @@ public class ViewUtil {
      */
     public static void markIgnore(View v) {
         if (v != null) {
-            v.setTag(R.string.abtest_ignore_tag, new Object());
+            v.setTag(R.string.abtest_tag_ignore, new Object());
         }
     }
 

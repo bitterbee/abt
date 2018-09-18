@@ -43,7 +43,7 @@ public class ABTestActivityLiftcycleCallbackImpl implements Application.Activity
 //        });
 
         View content = activity.findViewById(android.R.id.content);
-        UIPropSetterMgr.applyView(content);
+        UIPropSetterMgr.getInstance().applyView(content);
         replaceActivityLayoutInflater(activity);
     }
 

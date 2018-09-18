@@ -105,7 +105,7 @@ public class ViewReplacePropView extends EditPropView<String> {
     @Override
     protected void onBindView(View v) {
         mOldView = v;
-        String xml = (String) v.getTag(com.netease.libs.abtestbase.R.string.replace_xml_dylayout_tag);
+        String xml = (String) v.getTag(com.netease.libs.abtestbase.R.string.abtest_tag_replace_xml_dylayout);
         if (xml != null) {
             mValue.setText(xml);
         }

@@ -19,7 +19,7 @@ import java.util.Map;
  * Created by zyl06 on 2018/8/4.
  */
 
-public class UIPropSetterMgr {
+public class UIPropSetterMgr implements View.OnAttachStateChangeListener {
 
     private static Map<String, ABTestUICase> sUICases = new HashMap<>();
     private static UIPropFactory sUIPropFactory = new UIPropFactory();
@@ -32,7 +32,23 @@ public class UIPropSetterMgr {
         }
     }
 
-    public static void applyView(View v) {
+    private static UIPropSetterMgr sInstance = null;
+
+    public static UIPropSetterMgr getInstance() {
+        if (sInstance == null) {
+            synchronized (UIPropSetterMgr.class) {
+                if (sInstance == null) {
+                    sInstance = new UIPropSetterMgr();
+                }
+            }
+        }
+        return sInstance;
+    }
+
+    private UIPropSetterMgr() {
+    }
+
+    public void applyView(View v) {
         if (v == null || v.getContext() == null) {
             return;
         }
@@ -42,7 +58,7 @@ public class UIPropSetterMgr {
             return;
         }
 
-        Object tag = v.getTag(R.string.abtest_ui_apply);
+        Object tag = v.getTag(R.string.abtest_tag_ui_apply);
         if (tag != null) {
             return;
         }
@@ -56,7 +72,7 @@ public class UIPropSetterMgr {
                     applyView(child);
                 }
 
-                if (v.getTag(R.string.abtest_ui_layout_listener) == null) {
+                if (v.getTag(R.string.abtest_tag_ui_layout_listener) == null) {
                     vg.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
                         @Override
                         public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
@@ -64,10 +80,14 @@ public class UIPropSetterMgr {
                             applyView(v);
                         }
                     });
-                    v.setTag(R.string.abtest_ui_layout_listener, true);
+                    v.setTag(R.string.abtest_tag_ui_layout_listener, true);
                 }
 
                 return;
+            }
+            if (v.getWindowToken() == null && v.getTag(R.string.abtest_tag_ui_attach_window_listener) == null) {
+                v.setTag(R.string.abtest_tag_ui_attach_window_listener, true);
+                v.addOnAttachStateChangeListener(this);
             }
 
             String path = ViewPathUtil.getViewPath(v);
@@ -87,11 +107,24 @@ public class UIPropSetterMgr {
         }
     }
 
-    private static void clearApplyTag(View v) {
-        v.setTag(R.string.abtest_ui_apply, null);
+    @Override
+    public void onViewAttachedToWindow(View v) {
+        clearApplyTag(v);
+        applyView(v);
     }
 
-    private static void markApplyTag(View v) {
-        v.setTag(R.string.abtest_ui_apply, true);
+    @Override
+    public void onViewDetachedFromWindow(View v) {
+        clearApplyTag(v);
+        v.setTag(R.string.abtest_tag_ui_attach_window_listener, null);
+        v.removeOnAttachStateChangeListener(this);
+    }
+
+    private void clearApplyTag(View v) {
+        v.setTag(R.string.abtest_tag_ui_apply, null);
+    }
+
+    private void markApplyTag(View v) {
+        v.setTag(R.string.abtest_tag_ui_apply, true);
     }
 }

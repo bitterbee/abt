@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="2dp"
+    tools:layout_width="80dp">
+
+    <ImageView
+        android:id="@+id/img_tab_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="center"
+        android:layout_marginTop="1dp"
+        tools:src="@mipmap/person_nor_ic"/>
+
+    <TextView
+        android:id="@+id/txt_tab_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:gravity="center"
+        android:text="@string/tab_home"
+        android:textColor="@color/selector_tab_text_color"
+        android:textSize="12dp"/>
+
+</LinearLayout>

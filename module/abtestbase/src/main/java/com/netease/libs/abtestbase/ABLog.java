@@ -25,4 +25,8 @@ public class ABLog {
             Log.i(TAG, info);
         }
     }
+
+    public static void d(String tag, String info) {
+        Log.d(tag, info);
+    }
 }

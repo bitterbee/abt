@@ -39,29 +39,29 @@ public class CSSLayoutUtil {
 
     public static void bindNode(View view, CSSNode cssNode) {
         if (view != null && cssNode != null) {
-            view.setTag(R.string.css_node_tag, cssNode);
+            view.setTag(R.string.abtest_tag_css_node, cssNode);
         }
     }
 
     public static CSSNode getNode(View view) {
-        return view != null ? (CSSNode) view.getTag(R.string.css_node_tag) : null;
+        return view != null ? (CSSNode) view.getTag(R.string.abtest_tag_css_node) : null;
     }
 
     public static void unbindNode(View view) {
         if (view != null) {
-            view.setTag(R.string.css_node_tag, null);
+            view.setTag(R.string.abtest_tag_css_node, null);
         }
     }
 
     public static void storeViewLayout(View v) {
-        v.setTag(R.string.csslayout_nodeview_prop_tag, v.getLayoutParams());
+        v.setTag(R.string.abtest_tag_csslayout_nodeview_prop, v.getLayoutParams());
     }
 
     public static void restoreViewLayout(View v) {
-        ViewGroup.LayoutParams lp = (ViewGroup.LayoutParams) v.getTag(R.string.csslayout_nodeview_prop_tag);
+        ViewGroup.LayoutParams lp = (ViewGroup.LayoutParams) v.getTag(R.string.abtest_tag_csslayout_nodeview_prop);
         if (lp != null) {
             v.setLayoutParams(lp);
-            v.setTag(R.string.csslayout_nodeview_prop_tag, null);
+            v.setTag(R.string.abtest_tag_csslayout_nodeview_prop, null);
         }
     }
 }

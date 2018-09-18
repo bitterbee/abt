@@ -38,6 +38,11 @@ public class OneABTester extends BaseABTester {
         name = "lilei";
     }
 
+    @ABTestInitMethodAnnotation(caseId = "002")
+    public void initC(@Nullable String accessory, @Nullable ABTestCase testVO) {
+        name = "lili";
+    }
+
     public String getName() {
         return name;
     }

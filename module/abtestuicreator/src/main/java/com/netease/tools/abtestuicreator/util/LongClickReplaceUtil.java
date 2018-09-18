@@ -19,7 +19,7 @@ public class LongClickReplaceUtil {
             return;
         }
 
-        Object tag = v.getTag(R.string.abtest_marked_tag);
+        Object tag = v.getTag(R.string.abtest_tag_marked);
         if ((tag != null && replace) || (tag == null && !replace)) {
             return;
         }
@@ -38,7 +38,7 @@ public class LongClickReplaceUtil {
             if (!(listener instanceof ReplaceLongClickListenerImpl)) {
                 ReplaceLongClickListenerImpl repLongClickListener = new ReplaceLongClickListenerImpl(listener);
                 v.setOnLongClickListener(repLongClickListener);
-                v.setTag(R.string.abtest_marked_tag, true);
+                v.setTag(R.string.abtest_tag_marked, true);
             }
         } else {
             if (listener instanceof ReplaceLongClickListenerImpl) {
@@ -46,7 +46,7 @@ public class LongClickReplaceUtil {
                 View.OnLongClickListener oriListener = replaceListener.getOriLongClickListener();
                 v.setOnLongClickListener(oriListener);
 
-                v.setTag(R.string.abtest_marked_tag, null);
+                v.setTag(R.string.abtest_tag_marked, null);
             }
         }
     }

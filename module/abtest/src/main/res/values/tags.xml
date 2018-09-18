@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="abtest_ui_apply">abtest_ui_apply</string>
-    <string name="abtest_ui_layout_listener">abtest_ui_layout_listener</string>s
+    <string name="abtest_tag_ui_apply">abtest_tag_ui_apply</string>
+    <string name="abtest_tag_ui_layout_listener">abtest_ui_layout_listener</string>s
+    <string name="abtest_tag_ui_attach_window_listener">abtest_ui_attach_window_listener</string>s
 
 </resources>

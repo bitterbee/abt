@@ -52,7 +52,7 @@ public class ViewGroupCssLayoutPropView extends EditPropView<String> {
                     StubCSSLayoutUtil.applyCssLayout((ViewGroup) v, json);
 
             if (success) {
-                v.setTag(com.netease.libs.abtestbase.R.string.css_node_json_tag, json);
+                v.setTag(com.netease.libs.abtestbase.R.string.abtest_tag_css_node_json, json);
                 ViewUtil.forceLayout(v);
             }
         } catch (IllegalArgumentException e) {
@@ -69,12 +69,12 @@ public class ViewGroupCssLayoutPropView extends EditPropView<String> {
             StubCSSLayoutUtil.resetCssLayout((ViewGroup) v);
         }
 
-        v.setTag(com.netease.libs.abtestbase.R.string.css_node_json_tag, mOldJson);
+        v.setTag(com.netease.libs.abtestbase.R.string.abtest_tag_css_node_json, mOldJson);
     }
 
     @Override
     protected void onBindView(View v) {
-        mOldJson = (String) v.getTag(com.netease.libs.abtestbase.R.string.css_node_json_tag);
+        mOldJson = (String) v.getTag(com.netease.libs.abtestbase.R.string.abtest_tag_css_node_json);
         if (mOldJson != null) {
             mValue.setText(mOldJson);
         }

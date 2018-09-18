@@ -61,7 +61,12 @@ public abstract class ProxyLayoutInflater extends LayoutInflater {
     public View inflate(int resource, ViewGroup root) {
         View result = mInflater.inflate(resource, root);
 
-        View created = (root != null && root.getChildCount() > 0) ? root.getChildAt(root.getChildCount() - 1) : result;
+        View created = (root != null && root.getChildCount() > 0) ?
+                root.getChildAt(root.getChildCount() - 1) :
+                result;
+
+        ViewPathUtil.setXmlLayoutLocalPathTag(getContext(), created, resource);
+
         onInflate(created);
 
         return result;
@@ -78,7 +83,11 @@ public abstract class ProxyLayoutInflater extends LayoutInflater {
             return inflate(resource, root);*/
         View result = mInflater.inflate(resource, root, attachToRoot);
 
-        View created = (root != null && root.getChildCount() > 0) ? root.getChildAt(root.getChildCount() - 1) : result;
+        View created = (attachToRoot && root != null && root.getChildCount() > 0) ?
+                root.getChildAt(root.getChildCount() - 1) :
+                result;
+        ViewPathUtil.setXmlLayoutLocalPathTag(getContext(), created, resource);
+
         onInflate(created);
 
         return result;
