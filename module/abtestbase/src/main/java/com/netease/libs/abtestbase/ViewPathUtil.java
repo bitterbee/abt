@@ -2,14 +2,15 @@ package com.netease.libs.abtestbase;
 
 import android.content.Context;
 import android.support.v7.widget.ContentFrameLayout;
-import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.netease.lib.abtest.util.CollectionUtil;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by zyl06 on 2018/7/29.
@@ -63,9 +64,12 @@ public class ViewPathUtil {
         }
 
         ViewGroup vg = (ViewGroup) v.getParent();
-        if (TextUtils.equals(vg.getClass().getName(), "android.support.v7.widget.RecyclerView") &&
+        if (isInstanceOf(vg, "android.support.v7.widget.RecyclerView") &&
                 v.getTag(R.string.abtest_tag_recycleview_holder_type) != null) {
             element.type = (int) v.getTag(R.string.abtest_tag_recycleview_holder_type);
+        } else if (isInstanceOf(vg, "android.widget.ListView") &&
+                v.getTag(R.string.abtest_tag_listview_type) != null) {
+            element.type = (int) v.getTag(R.string.abtest_tag_listview_type);
         } else {
             int count = vg.getChildCount();
             int index = 0;
@@ -84,6 +88,25 @@ public class ViewPathUtil {
         result = getViewPathList(vg);
         result.add(element);
         return result;
+    }
+
+
+    private static final Map<String, Class> CLASSES = new HashMap<>();
+    private static boolean isInstanceOf(Object obj, String className) {
+        if (obj == null || className == null) {
+            return false;
+        }
+        if (!CLASSES.containsKey(className)) {
+            try {
+                Class clazz = Class.forName(className);
+                CLASSES.put(className, clazz);
+            } catch (ClassNotFoundException e) {
+                ABLog.e(e);
+            }
+        }
+
+        Class clazz = CLASSES.get(className);
+        return clazz != null && clazz.isAssignableFrom(obj.getClass());
     }
 
     private static View getLocalRoot(View v) {
