@@ -1,5 +1,6 @@
 package com.netease.lib.abtest.ui;
 
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -64,6 +65,11 @@ public class UIPropSetterMgr implements View.OnAttachStateChangeListener {
         }
 
         try {
+            if (v.getWindowToken() == null && v.getTag(R.string.abtest_tag_ui_attach_window_listener) == null) {
+                v.setTag(R.string.abtest_tag_ui_attach_window_listener, true);
+                v.addOnAttachStateChangeListener(this);
+                return;
+            }
             if (v instanceof ViewGroup) {
                 ViewGroup vg = (ViewGroup) v;
                 int count = vg.getChildCount();
@@ -85,10 +91,6 @@ public class UIPropSetterMgr implements View.OnAttachStateChangeListener {
 
                 return;
             }
-            if (v.getWindowToken() == null && v.getTag(R.string.abtest_tag_ui_attach_window_listener) == null) {
-                v.setTag(R.string.abtest_tag_ui_attach_window_listener, true);
-                v.addOnAttachStateChangeListener(this);
-            }
 
             String path = ViewPathUtil.getViewPath(v);
             ABTestUICase uiCase = sUICases.get(path);
@@ -109,6 +111,16 @@ public class UIPropSetterMgr implements View.OnAttachStateChangeListener {
 
     @Override
     public void onViewAttachedToWindow(View v) {
+        if (v.getParent() instanceof ViewPager) {
+            Integer position =  (Integer) ((ViewPager) v.getParent()).getTag(R.string.abtest_tag_pager_position_tmp);
+            ViewGroup.LayoutParams lp = v.getLayoutParams();
+            if (position != null && lp instanceof ViewPager.LayoutParams) {
+                if (!((ViewPager.LayoutParams) lp).isDecor) {
+                    v.setTag(R.string.abtest_tag_pager_position, position);
+                }
+            }
+        }
+
         clearApplyTag(v);
         applyView(v);
     }

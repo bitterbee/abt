@@ -77,7 +77,7 @@ public class SecondActivity extends AppCompatActivity implements TabHost.OnTabCh
     }
 
     private View getTabView(int index) {
-        View view = getLayoutInflater().inflate(R.layout.item_tab_view, null);
+        View view = getLayoutInflater().inflate(R.layout.item_tabhost_view, null);
 
         TextView text = (TextView) view.findViewById(R.id.txt_tab_title);
         text.setText(TAB_TEXTS[index]);

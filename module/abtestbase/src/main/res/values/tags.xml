@@ -5,6 +5,10 @@
 
     <string name="abtest_tag_recycleview_holder_type">abtest_tag_recycleview_holder_type</string>
     <string name="abtest_tag_listview_type">abtest_tag_listview_type</string>
+    <string name="abtest_tag_pager_position">abtest_tag_pager_position</string>
+    <string name="abtest_tag_pager_position_tmp">abtest_tag_pager_position_tmp</string>
+
+
     <string name="abtest_tag_environment">abtest_tag_environment</string>
 
     <string name="abtest_tag_view_xmllayout">abtest_tag_view_xmllayout</string>

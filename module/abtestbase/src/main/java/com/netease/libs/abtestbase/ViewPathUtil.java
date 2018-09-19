@@ -1,6 +1,7 @@
 package com.netease.libs.abtestbase;
 
 import android.content.Context;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.ContentFrameLayout;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,12 +65,30 @@ public class ViewPathUtil {
         }
 
         ViewGroup vg = (ViewGroup) v.getParent();
-        if (isInstanceOf(vg, "android.support.v7.widget.RecyclerView") &&
-                v.getTag(R.string.abtest_tag_recycleview_holder_type) != null) {
+
+        boolean isRecyclerView = isInstanceOf(vg, "android.support.v7.widget.RecyclerView");
+        if (!isRecyclerView && v.getTag(R.string.abtest_tag_recycleview_holder_type) != null) {
+            v.setTag(R.string.abtest_tag_recycleview_holder_type, null); // 父控件非 RecyclerView 就取消标记
+            ABLog.e("clear abtest_tag_recycleview_holder_type");
+        }
+
+        boolean isListView = isInstanceOf(vg, "android.widget.ListView");
+        if (!isListView && v.getTag(R.string.abtest_tag_listview_type) != null) {
+            v.setTag(R.string.abtest_tag_listview_type, null); // 父控件非 ListView 就取消标记
+            ABLog.e("clear abtest_tag_listview_type");
+        }
+
+        boolean isViewPager = vg instanceof ViewPager;
+        if (!isViewPager && v.getTag(R.string.abtest_tag_pager_position) != null) {
+            v.setTag(R.string.abtest_tag_pager_position, null);
+        }
+
+        if (v.getTag(R.string.abtest_tag_recycleview_holder_type) != null) {
             element.type = (int) v.getTag(R.string.abtest_tag_recycleview_holder_type);
-        } else if (isInstanceOf(vg, "android.widget.ListView") &&
-                v.getTag(R.string.abtest_tag_listview_type) != null) {
+        } else if (v.getTag(R.string.abtest_tag_listview_type) != null) {
             element.type = (int) v.getTag(R.string.abtest_tag_listview_type);
+        } else if (v.getTag(R.string.abtest_tag_pager_position) != null) {
+            element.pageIndex = (int) v.getTag(R.string.abtest_tag_pager_position);
         } else {
             int count = vg.getChildCount();
             int index = 0;
@@ -179,8 +198,9 @@ public class ViewPathUtil {
     private static class PathElement {
         public String resName;
         public String className;
-        public Integer index;
+        public Integer index; // 普通view 在 parent的相同类型view的index
         public Integer type; // RecycleView, ListView. ViewHolder Type
+        public Integer pageIndex; // view 在 viewpager 的复用位置
         public String environment; // Fragment 等
     }
 }
