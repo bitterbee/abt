@@ -1,14 +1,17 @@
 
-t
-squid:S135"YReduce the total number of break and continue statements in this loop to use at most one.(áÄ êşÿÿÿÿ
-€"squid:ClassVariableVisibilityCheckY"RMake prefix a static final constant or non-public and provide accessors if needed.(ïø…©
-‰"squid:ClassVariableVisibilityCheckZ"VMake view_class a static final constant or non-public and provide accessors if needed.(ˆØë‘ùÿÿÿÿ
-~"squid:ClassVariableVisibilityCheck["QMake index a static final constant or non-public and provide accessors if needed.(¤Öñ4
-…"squid:ClassVariableVisibilityCheck\"RMake viewId a static final constant or non-public and provide accessors if needed.(Ëƒ¸Ëûÿÿÿÿ
-‘"squid:ClassVariableVisibilityCheck]"^Make contentDescription a static final constant or non-public and provide accessors if needed.(éìúßıÿÿÿÿ
-‚"squid:ClassVariableVisibilityCheck^"OMake tag a static final constant or non-public and provide accessors if needed.(ğè„¨úÿÿÿÿ
-Ssquid:S2589"7Remove this expression which always evaluates to "true"(áÄ êşÿÿÿÿ
-Gsquid:S1481 "+Remove this unused "prefix" local variable.(òÌìŸüÿÿÿÿ
-isquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(È‰¤
-Vsquid:S1118":Add a private constructor to hide the implicit public one.(î§Ûàÿÿÿÿÿ
-rsquid:S00116Z"URename this field "view_class" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆØë‘ùÿÿÿÿ
+osquid:CommentedOutCodeLine£"<This block of commented-out lines of code should be removed.(ƒĞ†Âüÿÿÿÿ8ŞÓÓŠŞ,
+Gsquid:S1148‘"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ŞÓÓŠŞ,
+osquid:CommentedOutCodeLineÎ"<This block of commented-out lines of code should be removed.(ìîóıÿÿÿÿ8ŞÓÓŠŞ,
+"squid:ClassVariableVisibilityCheck×"SMake resName a static final constant or non-public and provide accessors if needed.(ˆœÚüÿÿÿÿ8š¡¥ˆŞ,
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(î§Ûàÿÿÿÿÿ
+jsquid:CommentedOutCodeLine°"<This block of commented-out lines of code should be removed.(ĞÙ¯8ŞÓÓŠŞ,
+‹"squid:ClassVariableVisibilityCheckØ"UMake className a static final constant or non-public and provide accessors if needed.(¾ü±8£Î‡Ş,
+Œ"squid:ClassVariableVisibilityCheckÙ"QMake index a static final constant or non-public and provide accessors if needed.(×´úÕúÿÿÿÿ8ŞÓÓŠŞ,
+usquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(Ê¦Ùñûÿÿÿÿ8Ã©ŸŠŞ,
+osquid:CommentedOutCodeLine¡"<This block of commented-out lines of code should be removed.(ÌÿŠŸùÿÿÿÿ8ŞÓÓŠŞ,
+jsquid:CommentedOutCodeLineÆ"<This block of commented-out lines of code should be removed.(å‘Å8ŞÓÓŠŞ,
+osquid:CommentedOutCodeLineÓ"<This block of commented-out lines of code should be removed.(’•îæıÿÿÿÿ8ŞÓÓŠŞ,
+isquid:CommentedOutCodeLineœ"<This block of commented-out lines of code should be removed.(áìk8ŞÓÓŠŞ,
+osquid:CommentedOutCodeLine—"<This block of commented-out lines of code should be removed.(„•ÀÓùÿÿÿÿ8ŞÓÓŠŞ,
+osquid:CommentedOutCodeLine¹"<This block of commented-out lines of code should be removed.(“µËÈøÿÿÿÿ8ŞÓÓŠŞ,
+isquid:CommentedOutCodeLineË"<This block of commented-out lines of code should be removed.(Õ„¨8ŞÓÓŠŞ,

@@ -1,7 +1,11 @@
 
-esquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(²Ú±Ž
-gsquid:CommentedOutCodeLine7"<This block of commented-out lines of code should be removed.(Ûþ¾úÿÿÿÿ
-gsquid:CommentedOutCodeLineP"<This block of commented-out lines of code should be removed.(ðÝÍÚúÿÿÿÿ
-?squid:S1148M"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-fsquid:UnusedPrivateMethod*"5Remove this unused private "testCustomLayout" method.(œ¶žùøÿÿÿÿ8‰¡üúÙ,
-isquid:CommentedOutCodeLine'"<This block of commented-out lines of code should be removed.(ŒÝÛ¼8‰¡üúÙ,
+nsquid:CommentedOutCodeLineo"<This block of commented-out lines of code should be removed.(ÂÉÇŠúÿÿÿÿ8‰Á˜àÝ,
+Fsquid:S1148Q"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ç„—àÝ,
+fsquid:UnusedPrivateMethodY"5Remove this unused private "testCustomLayout" method.(œ¶žùøÿÿÿÿ8Îê´„Þ,
+osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ðÝÍÚúÿÿÿÿ8‰Á˜àÝ,
+bsquid:S2147J"DCombine this catch with the one at line 72, which has the same body.(”ý¾8 ö”àÝ,
+Fsquid:S11483"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8­š€àÝ,
+nsquid:CommentedOutCodeLineh"<This block of commented-out lines of code should be removed.(Æ–ÿíûÿÿÿÿ8‰Á˜àÝ,
+isquid:CommentedOutCodeLined"<This block of commented-out lines of code should be removed.(ææ…8Îê´„Þ,
+Fsquid:S1148~"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Îê´„Þ,
+esquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(²Ú±Ž
