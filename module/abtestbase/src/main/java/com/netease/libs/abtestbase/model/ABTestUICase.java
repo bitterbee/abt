@@ -8,15 +8,15 @@ import java.util.List;
  */
 
 public class ABTestUICase extends BaseModel {
-    private String viewId;
+    private String viewPath;
     private List<UIProp> uiProps = new LinkedList<>();
 
-    public String getViewId() {
-        return viewId;
+    public String getViewPath() {
+        return viewPath;
     }
 
-    public void setViewId(String viewId) {
-        this.viewId = viewId;
+    public void setViewPath(String viewPath) {
+        this.viewPath = viewPath;
     }
 
     public List<UIProp> getUiProps() {

@@ -10,19 +10,10 @@ import com.netease.libs.abtestbase.model.UIProp;
 public class AlphaPropSetter implements IPropSetter {
     @Override
     public boolean apply(View view, UIProp prop) {
-
-        float value = -1;
-        if (prop.value instanceof Integer) {
-            value = (int) prop.value;
-        } else if (prop.value instanceof Float) {
-            value = (float) prop.value;
-        }
-
-        if (value >= 0 && value <= 1) {
-            view.setAlpha(value);
+        if (prop.value == null && prop.floatValue >= 0 && prop.floatValue <= 1) {
+            view.setAlpha(prop.floatValue);
             return true;
         }
-
         return false;
     }
 

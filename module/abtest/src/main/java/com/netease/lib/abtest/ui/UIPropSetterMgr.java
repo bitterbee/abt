@@ -28,7 +28,7 @@ public class UIPropSetterMgr implements View.OnAttachStateChangeListener {
     public static void init(List<ABTestUICase> uiCases) {
         if (uiCases != null) {
             for (ABTestUICase uiCase : uiCases) {
-                sUICases.put(uiCase.getViewId(), uiCase);
+                sUICases.put(uiCase.getViewPath(), uiCase);
             }
         }
     }

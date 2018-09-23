@@ -15,15 +15,15 @@ public class UIProp extends BaseModel {
      */
     public Object value;
 
-//    /**
-//     * the prop int value
-//     */
-//    public Integer intValue;
-//
-//    /**
-//     * the prop float value
-//     */
-//    public Float floatValue;
+    /**
+     * the prop int value
+     */
+    public int intValue;
+
+    /**
+     * the prop float value
+     */
+    public float floatValue;
 
     public static final String PROP_BG = "bg";
     public static final String PROP_TEXT_STRING = "text";

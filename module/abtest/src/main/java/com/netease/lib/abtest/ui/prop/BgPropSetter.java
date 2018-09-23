@@ -15,8 +15,8 @@ public class BgPropSetter implements IPropSetter {
     @Override
     public boolean apply(View view, UIProp prop) {
         ABLog.i("BgPropSetter");
-        if (prop.value instanceof Integer) {
-            view.setBackgroundColor((int) prop.value);
+        if (prop.intValue != 0) {
+            view.setBackgroundColor(prop.intValue);
             return true;
         } else if (prop.value instanceof String) {
             int id = ABTestResUtil.getId(view.getContext(), (String) prop.value);
