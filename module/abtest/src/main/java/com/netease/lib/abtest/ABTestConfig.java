@@ -9,6 +9,7 @@ import com.netease.lib.abtest.model.ABTestItem;
 import com.netease.lib.abtest.ui.ABTestActivityLiftcycleCallbackImpl;
 import com.netease.lib.abtest.ui.UIPropSetterMgr;
 import com.netease.lib.abtest.util.ObjWeakRef;
+import com.netease.libs.abtestbase.ABTestContext;
 import com.netease.libs.abtestbase.JsonUtil;
 import com.netease.libs.abtestbase.model.ABTestUICase;
 
@@ -47,6 +48,8 @@ public class ABTestConfig {
     public void init(Application app,
                      List<ABTestItem> normalCases,
                      List<ABTestUICase> uiCases) {
+
+        ABTestContext.init(app);
 
         if (normalCases == null) {
             normalCases = new LinkedList<>();

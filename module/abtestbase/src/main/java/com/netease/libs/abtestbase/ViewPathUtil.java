@@ -1,10 +1,25 @@
 package com.netease.libs.abtestbase;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.ContextWrapper;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.ContentFrameLayout;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsoluteLayout;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.GridLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.netease.lib.abtest.util.CollectionUtil;
 
@@ -55,10 +70,19 @@ public class ViewPathUtil {
         }
 
         PathElement element = new PathElement();
-        element.className = v.getClass().getName();
+        element.className = getClassName(v.getClass());
         element.environment = (String) v.getTag(R.string.abtest_tag_environment);
+        element.idName = ABTestContext.getResEntryName(v.getId());
         if (v.getId() == android.R.id.content || v.getParent() == null) {
             element.index = 0;
+            if (v.getContext() instanceof Activity) {
+                element.environment = v.getContext().getClass().getName();
+            } else if (v.getContext() instanceof ContextWrapper) {
+                Context baseContext = ((ContextWrapper) v.getContext()).getBaseContext();
+                if (baseContext instanceof Activity) {
+                    element.environment = baseContext.getClass().getName();
+                }
+            }
 
             result.add(element);
             return result;
@@ -97,7 +121,7 @@ public class ViewPathUtil {
                 if (child == v) {
                     break;
                 }
-                if (child.getClass() == v.getClass()) {
+                if (child.getClass() == v.getClass() && child.getTag(R.string.abtest_tag_view_local_path) == null) {
                     index ++;
                 }
             }
@@ -157,7 +181,7 @@ public class ViewPathUtil {
 
         PathElement localItem = new PathElement();
         localItem.resName = resourceName;
-        localItem.className = v.getClass().getName();
+        localItem.className = getClassName(v.getClass());
         localItem.index = index;
 
         List<PathElement> localPath = new LinkedList<>();
@@ -186,9 +210,35 @@ public class ViewPathUtil {
         }
     }
 
+    private static final Map<Class, String> CLASSNAME_MAP = new HashMap<>();
+    static {
+        CLASSNAME_MAP.put(LinearLayout.class, "LinearLayout");
+        CLASSNAME_MAP.put(FrameLayout.class, "FrameLayout");
+        CLASSNAME_MAP.put(ViewGroup.class, "ViewGroup");
+        CLASSNAME_MAP.put(ContentFrameLayout.class, "ContentFrameLayout");
+        CLASSNAME_MAP.put(RelativeLayout.class, "RelativeLayout");
+        CLASSNAME_MAP.put(GridLayout.class, "GridLayout");
+        CLASSNAME_MAP.put(AbsoluteLayout.class, "AbsoluteLayout");
+        CLASSNAME_MAP.put(TextView.class, "TextView");
+        CLASSNAME_MAP.put(View.class, "View");
+        CLASSNAME_MAP.put(ImageView.class, "ImageView");
+        CLASSNAME_MAP.put(Button.class, "Button");
+        CLASSNAME_MAP.put(ListView.class, "ListView");
+        CLASSNAME_MAP.put(ViewPager.class, "ViewPager");
+        CLASSNAME_MAP.put(EditText.class, "EditText");
+        CLASSNAME_MAP.put(Spinner.class, "Spinner");
+        CLASSNAME_MAP.put(CheckBox.class, "CheckBox");
+        CLASSNAME_MAP.put(DatePicker.class, "DatePicker");
+    }
+
+    private static String getClassName(Class clazz) {
+        String name = CLASSNAME_MAP.get(clazz);
+        return name != null ? name : clazz.getName();
+    }
+
     static void setXmlLayoutLocalPathTag(Context context, View view, int resource) {
         try {
-            String resourceName = context.getResources().getResourceName(resource);
+            String resourceName = ABTestContext.getResEntryName(resource);
             markLocalViewPaths(view, 0, resourceName, null);
         } catch (Exception e) {
             e.printStackTrace();
@@ -198,6 +248,7 @@ public class ViewPathUtil {
     private static class PathElement {
         public String resName;
         public String className;
+        public String idName;
         public Integer index; // 普通view 在 parent的相同类型view的index
         public Integer type; // RecycleView, ListView. ViewHolder Type
         public Integer pageIndex; // view 在 viewpager 的复用位置
