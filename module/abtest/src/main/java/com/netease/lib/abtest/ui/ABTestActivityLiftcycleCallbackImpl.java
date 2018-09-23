@@ -88,7 +88,12 @@ public class ABTestActivityLiftcycleCallbackImpl implements Application.Activity
         LayoutInflater inflater1 = activity.getWindow().getLayoutInflater();
         if (!(inflater1 instanceof ABTestProxyLayoutInflater)) {
             LayoutInflater proxyInflater = new ABTestProxyLayoutInflater(inflater1);
-            RefInvoker.setFieldObject(window, "com.android.internal.policy.PhoneWindow", "mLayoutInflater", proxyInflater);
+
+            if (RefInvoker.isInstanceOf(window, "com.android.internal.policy.PhoneWindow")) {
+                RefInvoker.setFieldObject(window, "com.android.internal.policy.PhoneWindow", "mLayoutInflater", proxyInflater);
+            } else if (RefInvoker.isInstanceOf(window.getClass().getName(), "com.android.internal.policy.impl.PhoneWindow")) {
+                RefInvoker.setFieldObject(window, "com.android.internal.policy.impl.PhoneWindow", "mLayoutInflater", proxyInflater);
+            }
         }
     }
 }

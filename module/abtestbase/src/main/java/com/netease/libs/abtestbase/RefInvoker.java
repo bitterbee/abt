@@ -239,6 +239,24 @@ public class RefInvoker {
         }
     }
 
+    private static final Map<String, Class> CLASSES = new HashMap<>();
+    public static boolean isInstanceOf(Object obj, String className) {
+        if (obj == null || className == null) {
+            return false;
+        }
+        if (!CLASSES.containsKey(className)) {
+            try {
+                Class clazz = Class.forName(className);
+                CLASSES.put(className, clazz);
+            } catch (ClassNotFoundException e) {
+                ABLog.e(e);
+            }
+        }
+
+        Class clazz = CLASSES.get(className);
+        return clazz != null && (clazz == obj.getClass() || clazz.isAssignableFrom(obj.getClass()));
+    }
+
     private static final Map<Class<?>, Class<?>> primitiveWrapperMap = new HashMap<Class<?>, Class<?>>();
 
     static {
