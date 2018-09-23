@@ -2,8 +2,6 @@ package com.netease.demo.abtest;
 
 import android.app.Application;
 
-import com.netease.lib.abtest.ABTestConfig;
-import com.netease.libs.abtestbase.ABTestFileUtil;
 import com.netease.tools.abtestuicreator.ABTestMonitor;
 
 /**

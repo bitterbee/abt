@@ -33,6 +33,10 @@
             android:name=".second.SecondActivity"
             android:screenOrientation="portrait"/>
 
+        <activity
+            android:name=".third.ThirdActivity"
+            android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>

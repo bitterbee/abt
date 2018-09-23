@@ -8,6 +8,9 @@
     <color name="transparent">#00000000</color>
     <color name="black_alpha50">#80000000</color>
 
+    <color name="green">#00CC00</color>
+
+
     <!--gray-->
     <color name="gray_33">#333333</color>
     <color name="gray_7f">#7F7F7F</color>
