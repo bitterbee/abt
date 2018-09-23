@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.ContentFrameLayout;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -223,12 +225,14 @@ public class ViewPathUtil {
         CLASSNAME_MAP.put(View.class, "View");
         CLASSNAME_MAP.put(ImageView.class, "ImageView");
         CLASSNAME_MAP.put(Button.class, "Button");
+        CLASSNAME_MAP.put(ScrollView.class, "ScrollView");
         CLASSNAME_MAP.put(ListView.class, "ListView");
         CLASSNAME_MAP.put(ViewPager.class, "ViewPager");
         CLASSNAME_MAP.put(EditText.class, "EditText");
         CLASSNAME_MAP.put(Spinner.class, "Spinner");
         CLASSNAME_MAP.put(CheckBox.class, "CheckBox");
         CLASSNAME_MAP.put(DatePicker.class, "DatePicker");
+        CLASSNAME_MAP.put(AppCompatTextView.class, "AppCompatTextView");
     }
 
     private static String getClassName(Class clazz) {
