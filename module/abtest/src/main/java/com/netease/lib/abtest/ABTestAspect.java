@@ -34,7 +34,7 @@ public class ABTestAspect {
     }
 
     // ListView begin =====================
-    @Around("execution(public android.view.View android.widget.ListAdapter+.getView(int, android.view.View, android.view.ViewGroup))")
+    @Around("execution(public android.view.View android.widget.Adapter+.getView(int, android.view.View, android.view.ViewGroup))")
     public Object aroundListViewGetViewExecution(ProceedingJoinPoint joinPoint) {
         log(joinPoint);
 
