@@ -20,7 +20,7 @@ public class ABTestSpUtil {
 
     public static final String SP_NAME = "ABTestUICreator";
     public static synchronized void put(Context context, String path, ABTestUICase uiCase) {
-        if (uiCase == null || TextUtils.isEmpty(uiCase.getViewPath()) ||
+        if (uiCase == null || TextUtils.isEmpty(uiCase.getViewId()) ||
                 CollectionUtil.isEmpty(uiCase.getUiProps())) {
             return;
         }

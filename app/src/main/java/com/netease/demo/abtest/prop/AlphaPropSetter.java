@@ -15,8 +15,13 @@ public class AlphaPropSetter implements IPropSetter {
 
     @Override
     public boolean apply(View view, UIProp prop) {
-        if (prop.value == null && prop.floatValue >= 0 && prop.floatValue <= 1) {
-            view.setAlpha(prop.floatValue);
+        if (!(prop.value instanceof Float)) {
+            return false;
+        }
+
+        float value = (float) prop.value;
+        if (value >= 0 && value <= 1) {
+            view.setAlpha(value);
             return true;
         }
 

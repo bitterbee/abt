@@ -14,10 +14,10 @@ public class TextColorPropSetter implements IPropSetter {
 
     @Override
     public boolean apply(View view, UIProp prop) {
-        if (view instanceof TextView) {
+        if (view instanceof TextView && prop.value instanceof Integer) {
             TextView tv = (TextView) view;
             ABLog.i("TextColorPropSetter");
-            tv.setTextColor(prop.intValue);
+            tv.setTextColor((int) prop.value);
             return true;
         }
 
