@@ -33,6 +33,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/netease/demo/abtest/DemoApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/netease/demo/abtest/MainActivity.java">
           <value>
             <set />
@@ -44,6 +49,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/netease/demo/abtest/SecondActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/netease/demo/abtest/prop/AlphaPropSetter.java">
           <value>
             <set />
           </value>
@@ -78,6 +88,21 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/netease/demo/abtest/second/ThirdActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/netease/demo/abtest/second/UserPageFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/netease/demo/abtest/third/ThirdActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/drawable/selector_icon_discovery.xml">
           <value>
             <set />
@@ -108,12 +133,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/activity_third.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/activity_third_insert.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/layout/fragment_shoppingcart.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/fragment_userpage.xml">
           <value>
             <set />
           </value>
@@ -133,12 +173,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/tab_view.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/layout/test_pick_image.xml">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/layout/text_row_item.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/view_third_insert.xml">
           <value>
             <set />
           </value>
@@ -154,6 +204,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/values/styles.xml">
           <value>
             <set />
           </value>
@@ -198,7 +253,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/module/abtest/src/main/java/com/netease/lib/abtest/ABTestApplicationLogic.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/module/abtest/src/main/java/com/netease/lib/abtest/ABTestAspect.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/module/abtest/src/main/java/com/netease/lib/abtest/ABTestConfig.java">
           <value>
             <set />
           </value>
@@ -244,6 +309,21 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/module/abtest/src/main/java/com/netease/lib/abtest/ui/csslayout/CssNodePool.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/module/abtest/src/main/java/com/netease/lib/abtest/ui/prop/AlphaPropSetter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/module/abtest/src/main/java/com/netease/lib/abtest/ui/prop/BgPropSetter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/module/abtest/src/main/java/com/netease/lib/abtest/ui/prop/TextColorPropSetter.java">
           <value>
             <set />
           </value>
@@ -294,6 +374,21 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/module/abtestbase/src/main/java/com/netease/libs/abtestbase/ABLog.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/module/abtestbase/src/main/java/com/netease/libs/abtestbase/ABTestBaseApplicaionLogic.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/module/abtestbase/src/main/java/com/netease/libs/abtestbase/ABTestContext.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/module/abtestbase/src/main/java/com/netease/libs/abtestbase/ABTestFileUtil.java">
           <value>
             <set />
           </value>
@@ -418,6 +513,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/module/abtestbase/src/main/java/com/netease/libs/abtestbase/model/ABTestUICase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/module/abtestbase/src/main/java/com/netease/libs/abtestbase/model/CSSNodeModel.java">
           <value>
             <set />
@@ -464,6 +564,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/module/abtestuicreator/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/module/abtestuicreator/src/main/java/com/netease/tools/abtestuicreator/util/ABTestSpUtil.java">
           <value>
             <set />
           </value>
@@ -543,7 +648,37 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/tmp/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/application/YXApplicationLike.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/tmp/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/yanxuan/util/log/FeedbackUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/tmp/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/yanxuan/util/log/NetFeedbackImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/tmp/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/http/CookieOperator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/tmp/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/http/ModelFastJsonRequestHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/tmp/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/http/UrlGenerator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/tmp/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/home/recommend/presenter/TagPresenter.java">
           <value>
             <set />
           </value>
@@ -553,7 +688,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/tmp/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/splash/processor/OtherProcessor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/tmp/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/statistics/TrackUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/tmp/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/weex/WeexInitializer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/tmp/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/weex/adapter/WXHttpAdapter.java">
           <value>
             <set />
           </value>
@@ -608,7 +758,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/abtest/RecommendTypeABTester.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/application/AppProfile.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/application/GlobalAppLifeCycleListenerImpl.java">
           <value>
             <set />
           </value>
@@ -664,6 +824,11 @@
           </value>
         </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/util/tinker/TinkerDownloader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/view/popupwindowview/BaseWindowBgPopupView.java">
           <value>
             <set />
           </value>
@@ -738,6 +903,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/yanxuan/view/yxwebview/YXWebChromeClient.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/yanxuan/view/yxwebview/YXWebView.java">
           <value>
             <set />
@@ -749,6 +919,21 @@
           </value>
         </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/yanxuan/view/yxwebview/cache/WebResourceIntercept.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/yanxuan/view/yxwebview/customjshander/CustomBaseJsHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/yanxuan/view/yxwebview/customjshander/CustomJsDispatcher.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/common/yanxuan/view/yxwebview/customjshander/JsBridgeBase64ErrorJsHandler.java">
           <value>
             <set />
           </value>
@@ -813,6 +998,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/http/ErrorMessasgeSaveHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/http/HttpCode.java">
           <value>
             <set />
@@ -824,6 +1014,11 @@
           </value>
         </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/http/HttpUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/http/ModelFastJsonRequestHandler.java">
           <value>
             <set />
           </value>
@@ -894,6 +1089,16 @@
           </value>
         </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/commoditylist/GoodsViewSetupHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/goods/statistics/GoodsStatistics.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/goods/view/commidityinfo/ArrivalBarWrapper.java">
           <value>
             <set />
           </value>
@@ -1133,6 +1338,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/qrcode/QrcodeActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/qrcode/view/QRCodeMaskView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/module/shoppingcart/ConstantsSC.java">
           <value>
             <set />
@@ -1199,6 +1414,26 @@
           </value>
         </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/statistics/yxs/StatisticsInterceptImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/weex/adapter/WXHttpAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/weex/module/NERouterModule.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/weex/request/WXHttpTask.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/app/src/main/java/com/netease/yanxuan/weex/request/WXRequest.java">
           <value>
             <set />
           </value>
@@ -1363,7 +1598,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/module/amap/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/module/amap/src/main/java/com/netease/yanxuan/amap/AmapLocationUnit.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/module/deviceid/src/main/jni/Android.mk">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desktop/Desktop/works/yanxuan/program/yanxuan-android/YanXuan/module/hthttp/src/main/java/com/netease/hearttouch/hthttp/BaseHttpStringRequestTask.java">
           <value>
             <set />
           </value>

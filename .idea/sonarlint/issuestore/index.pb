@@ -27,8 +27,6 @@ A
 Kmodule/abtestbase/src/main/java/com/netease/libs/abtestbase/RefInvoker.java,0/d/0d569ee7cc09e4eef84abb23c69f88113ab5689d
 U
 %app/src/main/res/layout/dlg_demo0.xml,c/5/c5602c70ae7682ea42f11cf240b69e13b6073f97
-S
-#app/src/main/assets/test_layout.xml,2/9/29384a87e9e57026d40f6ee23c457eacee772135
 Å
 Qmodule/abtest/src/main/java/com/netease/lib/abtest/ui/prop/ViewReplaceSetter.java,2/9/29f1e3d55ba9ff5721ff116826e67fca822d3c7a
 É
@@ -191,8 +189,6 @@ Dmodule/abtest/src/main/java/com/netease/lib/abtest/ABTestConfig.java,4/d/4d6b0
 Wmodule/abtest/src/main/java/com/netease/lib/abtest/anno/ABTestInitMethodAnnotation.java,3/b/3bae4d2338ff9b7f8ecae1332f56eebbb95d1823
 y
 Imodule/abtest/src/main/java/com/netease/lib/abtest/anno/ABTesterAnno.java,0/b/0b62720c04c4406f30992e8f8ce4fb3331e606fe
-^
-.app/src/main/assets/test_pick_image.xml.id.xml,e/1/e1bf7afe84eb7013ee67ea9a52c6c8ccfd740403
 x
 Hmodule/abtest/src/main/java/com/netease/lib/abtest/model/ABTestCase.java,4/c/4caaa72d9d4e0abaf190aa3a5353613be9ee41c3
 O
@@ -205,8 +201,6 @@ Z
 .module/abtestbase/src/main/AndroidManifest.xml,b/2/b266eef1eac118b484ebd6fad380aebc5d518317
 t
 Dmodule/abtest/src/main/java/com/netease/lib/abtest/BaseABTester.java,0/1/01946e135a3e637fd124b2d56c01045fb4637b93
-v
-Fmodule/abtest/src/main/java/com/netease/lib/abtest/AspectABTester.java,4/e/4ebb0a933b18c5f4490639ac25e8246dd53c49cd
 é
 ^module/abtest/src/main/java/com/netease/lib/abtest/ui/ABTestActivityLiftcycleCallbackImpl.java,e/1/e1a0c2a26a0c40dd0ee5c9ba3ef7f58996a0aea4
 Ñ
@@ -246,8 +240,6 @@ m
 =app/src/main/java/com/netease/demo/abtest/second/TabType.java,3/7/37ee7e6fba7255f132f5b0a6910e27300b79013e
 S
 #app/src/main/res/values/strings.xml,d/2/d2281fbb3027de2722081a53408dd77628bf080e
-Y
-)app/src/main/res/layout/item_tab_view.xml,2/e/2e372f5ad934a0b2a2a440130acde22910e18fa1
 w
 Gapp/src/main/java/com/netease/demo/abtest/second/DiscoveryFragment.java,e/6/e608d2b111f7ab0897dd6d5423f7471d01eccccd
 v
@@ -260,3 +252,5 @@ Y
 )app/src/main/res/layout/fragment_home.xml,3/1/31c5880846ef63ff1963efbe141ddfd56680bb19
 r
 Bapp/src/main/java/com/netease/demo/abtest/second/HomeFragment.java,d/6/d65a909860212587acd227dc865b7f7edae36a4b
+t
+Dmodule/abtest/src/main/java/com/netease/lib/abtest/ABTestAspect.java,5/c/5c92227a02bca23406f5dde79fa8ef507b161c84

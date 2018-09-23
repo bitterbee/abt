@@ -1,2 +1,3 @@
 
-Qsquid:S1118":Add a private constructor to hide the implicit public one.(ñŒ¾
+Msquid:S1066v"/Merge this if statement with the enclosing one.(È¡ì¨8÷ĞÕ¨ß,
+Wsquid:S2168("9Remove this dangerous instance of double-checked locking.(»å£8÷ĞÕ¨ß,

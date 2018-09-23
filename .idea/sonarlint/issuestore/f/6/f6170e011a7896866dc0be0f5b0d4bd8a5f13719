@@ -1,17 +1,10 @@
 
-osquid:CommentedOutCodeLine£"<This block of commented-out lines of code should be removed.(ƒÐ†Âüÿÿÿÿ8ÞÓÓŠÞ,
-Gsquid:S1148‘"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ÞÓÓŠÞ,
-osquid:CommentedOutCodeLineÎ"<This block of commented-out lines of code should be removed.(ìîóýÿÿÿÿ8ÞÓÓŠÞ,
-Ž"squid:ClassVariableVisibilityCheck×"SMake resName a static final constant or non-public and provide accessors if needed.(ˆœÚüÿÿÿÿ8š¡¥ˆÞ,
-Vsquid:S1118":Add a private constructor to hide the implicit public one.(î§Ûàÿÿÿÿÿ
-jsquid:CommentedOutCodeLine°"<This block of commented-out lines of code should be removed.(ÐÙ¯8ÞÓÓŠÞ,
-‹"squid:ClassVariableVisibilityCheckØ"UMake className a static final constant or non-public and provide accessors if needed.(¾ü±8£Î‡Þ,
-Œ"squid:ClassVariableVisibilityCheckÙ"QMake index a static final constant or non-public and provide accessors if needed.(×´úÕúÿÿÿÿ8ÞÓÓŠÞ,
-usquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(Ê¦Ùñûÿÿÿÿ8Ã©ŸŠÞ,
-osquid:CommentedOutCodeLine¡"<This block of commented-out lines of code should be removed.(ÌÿŠŸùÿÿÿÿ8ÞÓÓŠÞ,
-jsquid:CommentedOutCodeLineÆ"<This block of commented-out lines of code should be removed.(å‘Å8ÞÓÓŠÞ,
-osquid:CommentedOutCodeLineÓ"<This block of commented-out lines of code should be removed.(’•îæýÿÿÿÿ8ÞÓÓŠÞ,
-isquid:CommentedOutCodeLineœ"<This block of commented-out lines of code should be removed.(áìk8ÞÓÓŠÞ,
-osquid:CommentedOutCodeLine—"<This block of commented-out lines of code should be removed.(„•ÀÓùÿÿÿÿ8ÞÓÓŠÞ,
-osquid:CommentedOutCodeLine¹"<This block of commented-out lines of code should be removed.(“µËÈøÿÿÿÿ8ÞÓÓŠÞ,
-isquid:CommentedOutCodeLineË"<This block of commented-out lines of code should be removed.(Õ„¨8ÞÓÓŠÞ,
+‹"squid:ClassVariableVisibilityCheckÏ"UMake pageIndex a static final constant or non-public and provide accessors if needed.(Û·®8òÐÕ¨ß,
+Gsquid:S1148Æ"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ÞÓÓŠÞ,
+Ž"squid:ClassVariableVisibilityCheckË"SMake resName a static final constant or non-public and provide accessors if needed.(ˆœÚüÿÿÿÿ8š¡¥ˆÞ,
+‹"squid:ClassVariableVisibilityCheckÌ"UMake className a static final constant or non-public and provide accessors if needed.(¾ü±8£Î‡Þ,
+Œ"squid:ClassVariableVisibilityCheckÍ"QMake index a static final constant or non-public and provide accessors if needed.(Ú¥·¢ûÿÿÿÿ8òÐÕ¨ß,
+…"squid:ClassVariableVisibilityCheckÎ"PMake type a static final constant or non-public and provide accessors if needed.(–ö—S8òÐÕ¨ß,
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(î§Ûàÿÿÿÿÿ
+"squid:ClassVariableVisibilityCheckÐ"WMake environment a static final constant or non-public and provide accessors if needed.(›–Ö¯8òÐÕ¨ß,
+usquid:S3776 "RRefactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.(Ê¦Ùñûÿÿÿÿ8Ã©ŸŠÞ,
