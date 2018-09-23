@@ -45,7 +45,7 @@ public class ShoppingCartFragment extends Fragment {
     private void initDataset() {
         mDataset = new ArrayList<String>(DATASET_COUNT);
         for (int i = 0; i < DATASET_COUNT; i++) {
-            mDataset.add("This is element #" + i);
+            mDataset.add("Element #" + i);
         }
     }
 
