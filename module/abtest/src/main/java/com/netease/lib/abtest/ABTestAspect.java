@@ -169,6 +169,9 @@ public class ABTestAspect {
         }
 
         childrenAfter.removeAll(childrenBefore);
+        if (childrenAfter.size() == 1) {
+            childrenAfter.get(0).setTag(R.string.abtest_tag_pager_position, position);
+        }
 
         if (BuildConfig.DEBUG) {
             Log.d(TAG, "aroundPagerAdapter_instantiateItem new view count " + childrenAfter.size() + "; position=" + joinPoint.getArgs()[1]);
