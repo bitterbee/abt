@@ -8,6 +8,7 @@ import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.ContentFrameLayout;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.AbsoluteLayout;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -90,15 +91,22 @@ public class ViewPathUtil {
             return result;
         }
 
+        ViewParent parent = v.getParent();
+        if (!(parent instanceof ViewGroup)) {
+            element.environment = parent.getClass().getName();
+            result.add(element);
+            return result;
+        }
+
         ViewGroup vg = (ViewGroup) v.getParent();
 
-        boolean isRecyclerView = isInstanceOf(vg, "android.support.v7.widget.RecyclerView");
+        boolean isRecyclerView = RefInvoker.isInstanceOf(vg, "android.support.v7.widget.RecyclerView");
         if (!isRecyclerView && v.getTag(R.string.abtest_tag_recycleview_holder_type) != null) {
             v.setTag(R.string.abtest_tag_recycleview_holder_type, null); // 父控件非 RecyclerView 就取消标记
             ABLog.e("clear abtest_tag_recycleview_holder_type");
         }
 
-        boolean isListView = isInstanceOf(vg, "android.widget.ListView");
+        boolean isListView = RefInvoker.isInstanceOf(vg, "android.widget.ListView");
         if (!isListView && v.getTag(R.string.abtest_tag_listview_type) != null) {
             v.setTag(R.string.abtest_tag_listview_type, null); // 父控件非 ListView 就取消标记
             ABLog.e("clear abtest_tag_listview_type");
@@ -133,25 +141,6 @@ public class ViewPathUtil {
         result = getViewPathList(vg);
         result.add(element);
         return result;
-    }
-
-
-    private static final Map<String, Class> CLASSES = new HashMap<>();
-    private static boolean isInstanceOf(Object obj, String className) {
-        if (obj == null || className == null) {
-            return false;
-        }
-        if (!CLASSES.containsKey(className)) {
-            try {
-                Class clazz = Class.forName(className);
-                CLASSES.put(className, clazz);
-            } catch (ClassNotFoundException e) {
-                ABLog.e(e);
-            }
-        }
-
-        Class clazz = CLASSES.get(className);
-        return clazz != null && clazz.isAssignableFrom(obj.getClass());
     }
 
     private static View getLocalRoot(View v) {
