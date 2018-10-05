@@ -68,6 +68,18 @@ public class RefInvoker {
         return invokeMethod(target, target.getClass(), methodName, paramTypes, paramValues);
     }
 
+    public static Object invokeMethod(Object target, String className, String methodName, Class[] paramTypes,
+                                      Object[] paramValues) {
+        try {
+            //LogUtil.e("Method", methodName);
+            Class clazz = Class.forName(className);
+            return invokeMethod(target, clazz, methodName, paramTypes, paramValues);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     private static Object invokeMethod(Object target, Class clazz, String methodName, Class[] paramTypes,
                                       Object[] paramValues) {
         try {

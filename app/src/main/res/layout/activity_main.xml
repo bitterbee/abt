@@ -80,4 +80,10 @@
         android:layout_height="wrap_content"
         android:onClick="onGotoThirdActivity"
         android:text="Goto ThirdActivity"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onGotoForthActivity"
+        android:text="Goto ForthActivity"/>
 </LinearLayout>

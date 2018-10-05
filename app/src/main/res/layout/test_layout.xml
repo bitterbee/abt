@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="47dp"
+    android:background="#FAFAFA"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/pre_month"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:id="@+id/tv_alert_content"
+            android:layout_width="7dp"
+            android:layout_height="12.5dp"
+            android:layout_gravity="center"
+            android:background="#3cd088" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/current_month"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="2018年5月"
+        android:textColor="#333333"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+    <FrameLayout
+        android:id="@+id/next_month"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:id="@+id/tv_next_month"
+            android:layout_width="7dp"
+            android:layout_height="12.5dp"
+            android:layout_gravity="center"
+            android:background="#3cd088" />
+    </FrameLayout>
+
+</LinearLayout>
