@@ -25,6 +25,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.netease.lib.abtest.util.CollectionUtil;
+import com.netease.libs.abtestbase.layout.csslayout.StubCSSLayout;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -138,6 +139,10 @@ public class ViewPathUtil {
             element.index = index;
         }
 
+        // guo/
+        if (vg instanceof StubCSSLayout && vg.getParent() instanceof ViewGroup) {
+            vg = (ViewGroup) vg.getParent();
+        }
         result = getViewPathList(vg);
         result.add(element);
         return result;
