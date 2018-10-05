@@ -254,3 +254,11 @@ r
 Bapp/src/main/java/com/netease/demo/abtest/second/HomeFragment.java,d/6/d65a909860212587acd227dc865b7f7edae36a4b
 t
 Dmodule/abtest/src/main/java/com/netease/lib/abtest/ABTestAspect.java,5/c/5c92227a02bca23406f5dde79fa8ef507b161c84
+r
+Bapp/src/main/java/com/netease/demo/abtest/forth/ForthActivity.java,6/f/6fec7cd8afee0171971e0d9c77395c3e728a5cb7
+Z
+*app/src/main/res/layout/activity_forth.xml,c/6/c6b0e2232d269262f8fd62f19d2b17693fdbbb93
+W
+'app/src/main/res/layout/test_layout.xml,3/a/3aeb31ae160e188ea646c143f02ac7486360dab9
+r
+Bapp/src/main/java/com/netease/demo/abtest/third/ThirdActivity.java,9/b/9b218c336be4818b5163bdff2c4cf344b89ec7e4

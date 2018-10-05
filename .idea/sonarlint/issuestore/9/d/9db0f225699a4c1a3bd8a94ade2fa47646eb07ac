@@ -1,15 +1,9 @@
 
-nsquid:CommentedOutCodeLinep"<This block of commented-out lines of code should be removed.(£†Îêøÿÿÿÿ8öÐÕ¨ß,
-Fsquid:S1148="#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ç„—àÝ,
-\squid:S1068"9Remove this unused "dynamicLayoutInflater" private field.(´ñùÿøÿÿÿÿ8öÐÕ¨ß,
-nsquid:CommentedOutCodeLinec"<This block of commented-out lines of code should be removed.(ÏÔÇüúÿÿÿÿ8öÐÕ¨ß,
-nsquid:CommentedOutCodeLiner"<This block of commented-out lines of code should be removed.(í¦¿¤ÿÿÿÿÿ8öÐÕ¨ß,
-Zsquid:UselessImportCheck"*Remove this unused import 'java.util.Map'.(¼è½Òþÿÿÿÿ8öÐÕ¨ß,
-Fsquid:S1148["#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8­š€àÝ,
-bsquid:S2147T"DCombine this catch with the one at line 82, which has the same body.(”ý¾8 ö”àÝ,
-esquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(²Ú±Ž
-Osquid:S1481-",Remove this unused "resName" local variable.(¿ÇÑ…úÿÿÿÿ8ÆêÜÑß,
-nsquid:CommentedOutCodeLinel"<This block of commented-out lines of code should be removed.(ÕïÔÙþÿÿÿÿ8öÐÕ¨ß,
-isquid:CommentedOutCodeLinew"<This block of commented-out lines of code should be removed.(Äí½§8öÐÕ¨ß,
-nsquid:CommentedOutCodeLinee"<This block of commented-out lines of code should be removed.(§¬žæûÿÿÿÿ8öÐÕ¨ß,
-^squid:S1854-";Remove this useless assignment to local variable "resName".(¿ÇÑ…úÿÿÿÿ8ÆêÜÑß,
+nsquid:CommentedOutCodeLine%"<This block of commented-out lines of code should be removed.(ÏÔÇüúÿÿÿÿ8öÐÕ¨ß,
+nsquid:CommentedOutCodeLine2"<This block of commented-out lines of code should be removed.(£†Îêøÿÿÿÿ8öÐÕ¨ß,
+nsquid:CommentedOutCodeLine4"<This block of commented-out lines of code should be removed.(í¦¿¤ÿÿÿÿÿ8öÐÕ¨ß,
+esquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(²Ú±Ž
+isquid:CommentedOutCodeLine9"<This block of commented-out lines of code should be removed.(Äí½§8öÐÕ¨ß,
+\squid:S1068"9Remove this unused "dynamicLayoutInflater" private field.(´ñùÿøÿÿÿÿ8öÐÕ¨ß,
+nsquid:CommentedOutCodeLine."<This block of commented-out lines of code should be removed.(ÕïÔÙþÿÿÿÿ8öÐÕ¨ß,
+nsquid:CommentedOutCodeLine'"<This block of commented-out lines of code should be removed.(§¬žæûÿÿÿÿ8öÐÕ¨ß,
