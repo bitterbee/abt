@@ -12,7 +12,11 @@ import java.util.List;
  */
 public class ABTestConfigModel extends BaseModel {
     // 业务逻辑 abtest 测试配置
-    public List<ABTestItem> abtestConfig = new LinkedList<>();
+    public List<ABTestItem> abtestNorCases = new LinkedList<>();
+
+    // 最新的业务逻辑 abtest 测试配置，程序后期请求更新得到的 abtest 数据
+    public List<ABTestItem> abtestLasestNorCases = new LinkedList<>();
+
     // UI 逻辑 abtest 测试配置
     public List<ABTestUICase> abtestUICases = new LinkedList<>();
 }

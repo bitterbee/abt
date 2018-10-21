@@ -12,4 +12,5 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ABTesterAnno {
     String itemId();
+    ABTestUpdateType updateType() default ABTestUpdateType.IMMEDIATE_UPDATE;
 }

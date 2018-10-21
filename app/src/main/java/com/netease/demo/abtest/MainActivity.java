@@ -67,21 +67,21 @@ public class MainActivity extends AppCompatActivity {
         final AlertDialog dialog = new AlertDialog.Builder(this).create();
         dialog.show();
 
-        View contentView = getLayoutInflater().inflate(R.layout.dlg_demo0, null);
-        contentView.findViewById(R.id.btn_alert_negative).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
-        contentView.findViewById(R.id.btn_alert_positive).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
+//        View contentView = getLayoutInflater().inflate(R.layout.dlg_demo0, null);
+//        contentView.findViewById(R.id.btn_alert_negative).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                dialog.dismiss();
+//            }
+//        });
+//        contentView.findViewById(R.id.btn_alert_positive).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                dialog.dismiss();
+//            }
+//        });
 
-        dialog.setContentView(contentView);
+        dialog.setContentView(R.layout.dlg_demo0);
     }
 
     public void onShowPopupWindow(View v) {

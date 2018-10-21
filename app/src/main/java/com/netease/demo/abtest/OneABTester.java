@@ -4,13 +4,15 @@ import android.support.annotation.Nullable;
 
 import com.netease.lib.abtest.BaseABTester;
 import com.netease.lib.abtest.anno.ABTestInitMethodAnnotation;
+import com.netease.lib.abtest.anno.ABTestUpdateType;
 import com.netease.lib.abtest.anno.ABTesterAnno;
 import com.netease.lib.abtest.model.ABTestCase;
 
 /**
  * Created by zyl06 on 2018/7/26.
  */
-@ABTesterAnno(itemId = "SimpleTest_001")
+
+@ABTesterAnno(itemId = "SimpleTest_001", updateType = ABTestUpdateType.IMMEDIATE_UPDATE)
 public class OneABTester extends BaseABTester {
 
     private String name;
@@ -28,11 +30,6 @@ public class OneABTester extends BaseABTester {
         name = "hanmeimei";
     }
 
-    /**
-     *
-     * @param accessory
-     * @param testVO
-     */
     @ABTestInitMethodAnnotation(caseId = "001")
     public void initB(@Nullable String accessory, @Nullable ABTestCase testVO) {
         name = "lilei";

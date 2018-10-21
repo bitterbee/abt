@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,8 +14,6 @@ import com.netease.libs.abtestbase.RefInvoker;
 import com.netease.tools.abtestuicreator.R;
 import com.netease.tools.abtestuicreator.view.MovableLayout;
 import com.netease.tools.abtestuicreator.view.SwitchManager;
-
-import java.sql.Ref;
 
 /**
  * Created by zyl06 on 2018/7/30.

@@ -4,6 +4,7 @@ import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
 import com.netease.lib.abtest.anno.ABTestInitMethodAnnotation;
+import com.netease.lib.abtest.anno.ABTestUpdateType;
 import com.netease.lib.abtest.anno.ABTesterAnno;
 import com.netease.lib.abtest.model.ABTestCase;
 import com.netease.lib.abtest.model.ABTestItem;
@@ -17,6 +18,10 @@ import java.lang.reflect.Method;
  * Created by zyl06 on 27/07/2017.
  */
 public abstract class BaseABTester {
+    public static final int IMMEDIATE_UPDATE = 0;
+    public static final int HOT_UPDATE = 1;
+    public static final int COLD_UPDATE = 1;
+
     protected ABTestItem mTestCase;
     protected String mItemId;
 
@@ -24,12 +29,14 @@ public abstract class BaseABTester {
     private Method mInitABMethod;
 
     private boolean mIsInited = false;
+    ABTestUpdateType mUpdateType;
 
     public BaseABTester() {
         ABTesterAnno anno = getClass().getAnnotation(ABTesterAnno.class);
         if (anno != null) {
+            mUpdateType = anno.updateType();
             mItemId = anno.itemId();
-            mTestCase = ABTestConfig.getInstance().getTestCase(mItemId);
+            mTestCase = ABTestConfig.getInstance().getNormalCase(mItemId, mUpdateType);
             chooseInitMethod(getTestCase());
 
             ABTestConfig.getInstance().mABTesterRefs.add(new ObjWeakRef<>(this));
