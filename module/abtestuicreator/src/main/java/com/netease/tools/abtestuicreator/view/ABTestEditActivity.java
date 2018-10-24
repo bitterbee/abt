@@ -99,7 +99,7 @@ public class ABTestEditActivity extends AppCompatActivity implements View.OnClic
         for (int i=0; i<count; i++) {
             EditPropView view = (EditPropView) mAttrsContainer.getChildAt(i);
             if (view.getId() == R.id.attr_path) {
-                uiCase.setViewPath(view.getValue());
+                uiCase.setViewID(view.getValue());
             } else {
                 Object value = view.getNewValue();
                 if (value != null) {

@@ -64,8 +64,8 @@ public class ABTestConfig {
     }
 
     public void init(Application app,
-                     List<ABTestItem> normalCases,
-                     List<ABTestUICase> uiCases) {
+                      List<ABTestItem> normalCases,
+                      List<ABTestUICase> uiCases) {
 
         ABTestContext.init(app);
 

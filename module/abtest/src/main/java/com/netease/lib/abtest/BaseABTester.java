@@ -18,9 +18,6 @@ import java.lang.reflect.Method;
  * Created by zyl06 on 27/07/2017.
  */
 public abstract class BaseABTester {
-    public static final int IMMEDIATE_UPDATE = 0;
-    public static final int HOT_UPDATE = 1;
-    public static final int COLD_UPDATE = 1;
 
     protected ABTestItem mTestCase;
     protected String mItemId;
