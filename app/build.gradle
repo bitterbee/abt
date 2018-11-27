@@ -4,6 +4,19 @@ apply plugin: 'android-aspectjx'
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
 
+repositories {
+    mavenLocal()
+//    maven { url 'https://raw.githubusercontent.com/bitterbee/mvn-repo/master/' }
+    maven { url uri('../repo') }
+    maven{ url 'https://dl.google.com/dl/android/maven2/'}
+    jcenter()
+    maven { url 'https://maven.google.com'}
+
+    flatDir {
+        dirs 'libs'
+    }
+}
+
 android {
     compileSdkVersion COMPILE_SDK_VERSION.toInteger()
     defaultConfig {
@@ -51,9 +64,15 @@ dependencies {
 
     implementation "com.facebook.fresco:fresco:${FRESCO_VERSION}"
 
-    implementation project(':abtest')
-    implementation project(':abtestuicreator')
-    implementation project(':abtestbase')
-    implementation project(':abtest-uiproptable')
-    annotationProcessor project(':abtest-uiproptable-process')
+//    implementation project(':abtest')
+//    implementation project(':abtestuicreator')
+//    implementation project(':abtestbase')
+//    implementation project(':abtest-uiproptable')
+//    annotationProcessor project(':abtest-uiproptable-process')
+
+    implementation "com.netease.libs:abtest:${ABTEST_VERSION}"
+    implementation "com.netease.libs:abtestuicreator:${ABTEST_VERSION}"
+    implementation "com.netease.libs:abtestbase:${ABTEST_VERSION}"
+    implementation "com.netease.libs:abtest-uiproptable:${ABTEST_VERSION}"
+    annotationProcessor "com.netease.libs:abtest-uiproptable-process:${ABTEST_VERSION}"
 }

@@ -19,3 +19,16 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keepattributes Signature
+-keep class sun.misc.Unsafe { *; }
+-keep class com.eyeofcloud.JSON.** { *; }
+-dontwarn okio.**
+
+-dontwarn com.squareup.okhttp.**
+-keep class com.squareup.okhttp.** { *; }
+-keep interface com.squareup.okhttp.** { *; }
+
+-dontwarn com.eyeofcloud.integrations.**
+-dontwarn com.mixpanel.android.mpmetrics.MixpanelApiRetriever*
+-dontwarn com.amplitude.api.EyeofcloudAmplitudeBridge

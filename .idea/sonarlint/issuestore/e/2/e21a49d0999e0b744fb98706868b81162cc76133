@@ -1,8 +1,8 @@
 
-fsquid:UselessImportCheck";Remove this unused import 'java.lang.reflect.TypeVariable'.(¯­å„8ÿÏ­áİ,
+csquid:UselessImportCheck"3Remove this unused import 'java.lang.reflect.Type'.(‰ûÕñıÿÿÿÿ8„Âáİ,
 Vsquid:S1118":Add a private constructor to hide the implicit public one.(Ÿ…½øÿÿÿÿ
 psquid:UselessImportCheck
 "@Remove this unused import 'java.lang.reflect.ParameterizedType'.(ÎÏ˜™ÿÿÿÿÿ8³®áİ,
-vsquid:UselessImportCheck"KRemove this unused import 'com.netease.libs.abtestbase.model.ABTestUICase'.(ÂôÅ˜8²ª­áİ,
+fsquid:UselessImportCheck";Remove this unused import 'java.lang.reflect.TypeVariable'.(¯­å„8ÿÏ­áİ,
 Bsquid:S1168/"+Return an empty collection instead of null.(¥¹ï
-csquid:UselessImportCheck"3Remove this unused import 'java.lang.reflect.Type'.(‰ûÕñıÿÿÿÿ8„Âáİ,
+vsquid:UselessImportCheck"KRemove this unused import 'com.netease.libs.abtestbase.model.ABTestUICase'.(ÂôÅ˜8²ª­áİ,

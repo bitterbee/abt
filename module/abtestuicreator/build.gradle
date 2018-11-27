@@ -1,4 +1,18 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
+repositories {
+    mavenLocal()
+//    maven { url 'https://raw.githubusercontent.com/bitterbee/mvn-repo/master/' }
+    maven { url uri('../../repo') }
+    maven{ url 'https://dl.google.com/dl/android/maven2/'}
+    jcenter()
+    maven { url 'https://maven.google.com'}
+
+    flatDir {
+        dirs 'libs'
+    }
+}
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION.toInteger()
@@ -34,6 +48,19 @@ dependencies {
     androidTestImplementation "com.android.support.test:runner:${TEST_RUNNER}"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:${TEST_ESPRESSO_CORE_VERSION}"
 
-    implementation project(':abtestbase')
-    implementation project(':abtest-uiproptable')
+//    implementation project(':abtestbase')
+//    implementation project(':abtest-uiproptable')
+    implementation "com.netease.libs:abtestbase:${ABTEST_VERSION}"
+    implementation "com.netease.libs:abtest-uiproptable:${ABTEST_VERSION}"
+}
+
+version = ABTEST_VERSION
+group = ABTEST_GROUP
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri("${rootProject.projectDir}/repo"))
+        }
+    }
 }

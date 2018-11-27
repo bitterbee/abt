@@ -29,8 +29,6 @@ U
 %app/src/main/res/layout/dlg_demo0.xml,c/5/c5602c70ae7682ea42f11cf240b69e13b6073f97
 Å
 Qmodule/abtest/src/main/java/com/netease/lib/abtest/ui/prop/ViewReplaceSetter.java,2/9/29f1e3d55ba9ff5721ff116826e67fca822d3c7a
-É
-Smodule/abtestbase/build/generated/source/r/debug/com/netease/libs/abtestbase/R.java,3/a/3a042814b9a1a96fa33f0282ce475819c166cb8f
 [
 +app/src/main/res/layout/activity_second.xml,e/e/ee7eb90ac1e8481c4edb1c2c70e9d3c85213a209
 Y
@@ -89,8 +87,6 @@ Emodule/abtestbase/src/main/java/com/facebook/csslayout/FloatUtil.java,d/8/d835
 Lmodule/abtestbase/src/main/java/com/facebook/csslayout/CSSLayoutContext.java,1/6/16cfc29429dd595a4c7f17a90a486fb19cebfb71
 y
 Imodule/abtestbase/src/main/java/com/facebook/csslayout/MeasureOutput.java,e/1/e1da935af30cb55ed4e1a02e79bb56bab2c63f58
-z
-Jmodule/abtest/build/generated/source/r/debug/com/netease/lib/abtest/R.java,f/b/fb0f0b467b4ccb4aef704ef62f264545cb19cadd
 ]
 -module/abtest/src/main/res/values/strings.xml,c/2/c2d81e6d579f43b9b8a996e69d6b1d9e49b5d09a
 Z
@@ -262,3 +258,17 @@ W
 'app/src/main/res/layout/test_layout.xml,3/a/3aeb31ae160e188ea646c143f02ac7486360dab9
 r
 Bapp/src/main/java/com/netease/demo/abtest/third/ThirdActivity.java,9/b/9b218c336be4818b5163bdff2c4cf344b89ec7e4
+w
+Gapp/src/main/java/com/netease/demo/abtest/prop/FrescoSrcPropSetter.java,f/6/f6fabf87d539607f66f0d2d53acfcf3295019b62
+á
+Wmodule/abtest-uiproptable/src/main/java/com/netease/abtest/uiprop/UIPropSetterAnno.java,9/3/93e6819367a384b046aea63344d0dd543ee82b4b
+X
+(gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
+~
+Nmodule/abtestbase/src/main/java/com/netease/libs/abtestbase/ABTestContext.java,9/d/9d43854936c19f7427aaacafcad31ac3ac07681b
+
+Omodule/abtest/src/main/java/com/netease/lib/abtest/model/ABTestConfigModel.java,d/3/d39249c54227f6715198540322ecfee662f907c7
+u
+Emodule/abtest/src/main/java/com/netease/lib/abtest/ABConfigStore.java,4/b/4b9f1aff2134800ed07e23f8ccfe892502430128
+}
+Mmodule/abtest/src/main/java/com/netease/lib/abtest/anno/ABTestUpdateType.java,4/a/4adf46ce4900342e5e93da3a21411800cb4480cb

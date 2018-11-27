@@ -1,14 +1,40 @@
 apply plugin: 'java'
+apply plugin: 'maven'
 
-sourceCompatibility = "1.7"
-targetCompatibility = "1.7"
+sourceCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_7
+
+repositories {
+    mavenLocal()
+//    maven { url 'https://raw.githubusercontent.com/bitterbee/mvn-repo/master/' }
+    maven { url uri('../../repo') }
+    maven{ url 'https://dl.google.com/dl/android/maven2/'}
+    jcenter()
+    maven { url 'https://maven.google.com'}
+
+    flatDir {
+        dirs 'libs'
+    }
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation project (':abtest-uiproptable')
+//    implementation project (':abtest-uiproptable')
+    implementation "com.netease.libs:abtest-uiproptable:${ABTEST_VERSION}"
 
     // auto-service库可以帮我们去生成META-INF等信息。
     implementation 'com.google.auto.service:auto-service:1.0-rc2'
     implementation 'com.squareup:javapoet:1.8.0'
+}
+
+version = ABTEST_VERSION
+group = ABTEST_GROUP
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri("${rootProject.projectDir}/repo"))
+        }
+    }
 }
